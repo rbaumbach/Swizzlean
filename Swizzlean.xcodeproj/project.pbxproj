@@ -16,6 +16,14 @@
 		AF32F087174671D400EC79F7 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = AF32F086174671D400EC79F7 /* Default.png */; };
 		AF32F089174671D400EC79F7 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AF32F088174671D400EC79F7 /* Default@2x.png */; };
 		AF32F08B174671D400EC79F7 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AF32F08A174671D400EC79F7 /* Default-568h@2x.png */; };
+		AF6B25CD1746737C006A312B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF32F074174671D400EC79F7 /* UIKit.framework */; };
+		AF6B25CE1746737C006A312B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF32F076174671D400EC79F7 /* Foundation.framework */; };
+		AF6B25CF1746737C006A312B /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF32F078174671D400EC79F7 /* CoreGraphics.framework */; };
+		AF6B25D51746737C006A312B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = AF6B25D31746737C006A312B /* InfoPlist.strings */; };
+		AF6B25D71746737C006A312B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AF6B25D61746737C006A312B /* main.m */; };
+		AF6B25DA1746737D006A312B /* Cedar-iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF6B25D91746737D006A312B /* Cedar-iOS.framework */; };
+		AF6B25DC1746737D006A312B /* ExampleSpec.mm in Sources */ = {isa = PBXBuildFile; fileRef = AF6B25DB1746737D006A312B /* ExampleSpec.mm */; };
+		AF6B25E1174673CB006A312B /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AF6B25E0174673CB006A312B /* Default-568h@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +40,14 @@
 		AF32F086174671D400EC79F7 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		AF32F088174671D400EC79F7 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		AF32F08A174671D400EC79F7 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		AF6B25CC1746737C006A312B /* Specs.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Specs.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AF6B25D21746737C006A312B /* Specs-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Specs-Info.plist"; sourceTree = "<group>"; };
+		AF6B25D41746737C006A312B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		AF6B25D61746737C006A312B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		AF6B25D81746737C006A312B /* Specs-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Specs-Prefix.pch"; sourceTree = "<group>"; };
+		AF6B25D91746737D006A312B /* Cedar-iOS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = "Cedar-iOS.framework"; path = "Frameworks/Cedar-iOS.framework"; sourceTree = "<group>"; };
+		AF6B25DB1746737D006A312B /* ExampleSpec.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = ExampleSpec.mm; sourceTree = "<group>"; };
+		AF6B25E0174673CB006A312B /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,13 +61,26 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		AF6B25C91746737C006A312B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AF6B25CD1746737C006A312B /* UIKit.framework in Frameworks */,
+				AF6B25CE1746737C006A312B /* Foundation.framework in Frameworks */,
+				AF6B25CF1746737C006A312B /* CoreGraphics.framework in Frameworks */,
+				AF6B25DA1746737D006A312B /* Cedar-iOS.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
 		AF32F068174671D400EC79F7 = {
 			isa = PBXGroup;
 			children = (
+				AF6B25E0174673CB006A312B /* Default-568h@2x.png */,
 				AF32F07A174671D400EC79F7 /* Swizzlean */,
+				AF6B25D01746737C006A312B /* Specs */,
 				AF32F073174671D400EC79F7 /* Frameworks */,
 				AF32F072174671D400EC79F7 /* Products */,
 			);
@@ -61,6 +90,7 @@
 			isa = PBXGroup;
 			children = (
 				AF32F071174671D400EC79F7 /* Swizzlean.app */,
+				AF6B25CC1746737C006A312B /* Specs.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -99,6 +129,27 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		AF6B25D01746737C006A312B /* Specs */ = {
+			isa = PBXGroup;
+			children = (
+				AF6B25D91746737D006A312B /* Cedar-iOS.framework */,
+				AF6B25DB1746737D006A312B /* ExampleSpec.mm */,
+				AF6B25D11746737C006A312B /* Supporting Files */,
+			);
+			path = Specs;
+			sourceTree = "<group>";
+		};
+		AF6B25D11746737C006A312B /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				AF6B25D21746737C006A312B /* Specs-Info.plist */,
+				AF6B25D31746737C006A312B /* InfoPlist.strings */,
+				AF6B25D61746737C006A312B /* main.m */,
+				AF6B25D81746737C006A312B /* Specs-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -117,6 +168,23 @@
 			name = Swizzlean;
 			productName = Swizzlean;
 			productReference = AF32F071174671D400EC79F7 /* Swizzlean.app */;
+			productType = "com.apple.product-type.application";
+		};
+		AF6B25CB1746737C006A312B /* Specs */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AF6B25DF1746737D006A312B /* Build configuration list for PBXNativeTarget "Specs" */;
+			buildPhases = (
+				AF6B25C81746737C006A312B /* Sources */,
+				AF6B25C91746737C006A312B /* Frameworks */,
+				AF6B25CA1746737C006A312B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Specs;
+			productName = Specs;
+			productReference = AF6B25CC1746737C006A312B /* Specs.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -141,6 +209,7 @@
 			projectRoot = "";
 			targets = (
 				AF32F070174671D400EC79F7 /* Swizzlean */,
+				AF6B25CB1746737C006A312B /* Specs */,
 			);
 		};
 /* End PBXProject section */
@@ -157,6 +226,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		AF6B25CA1746737C006A312B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AF6B25D51746737C006A312B /* InfoPlist.strings in Resources */,
+				AF6B25E1174673CB006A312B /* Default-568h@2x.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -169,6 +247,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		AF6B25C81746737C006A312B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AF6B25D71746737C006A312B /* main.m in Sources */,
+				AF6B25DC1746737D006A312B /* ExampleSpec.mm in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
@@ -176,6 +263,14 @@
 			isa = PBXVariantGroup;
 			children = (
 				AF32F07E174671D400EC79F7 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		AF6B25D31746737C006A312B /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AF6B25D41746737C006A312B /* en */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
@@ -261,6 +356,49 @@
 			};
 			name = Release;
 		};
+		AF6B25DD1746737D006A312B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/Specs/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Specs/Specs-Prefix.pch";
+				INFOPLIST_FILE = "Specs/Specs-Info.plist";
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-all_load",
+					"-lstdc++",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		AF6B25DE1746737D006A312B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/Specs/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Specs/Specs-Prefix.pch";
+				INFOPLIST_FILE = "Specs/Specs-Info.plist";
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-all_load",
+					"-lstdc++",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -278,6 +416,15 @@
 			buildConfigurations = (
 				AF32F08F174671D400EC79F7 /* Debug */,
 				AF32F090174671D400EC79F7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AF6B25DF1746737D006A312B /* Build configuration list for PBXNativeTarget "Specs" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AF6B25DD1746737D006A312B /* Debug */,
+				AF6B25DE1746737D006A312B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};
