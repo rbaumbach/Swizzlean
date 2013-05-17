@@ -24,6 +24,12 @@
 		AF6B25DA1746737D006A312B /* Cedar-iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF6B25D91746737D006A312B /* Cedar-iOS.framework */; };
 		AF6B25DC1746737D006A312B /* ExampleSpec.mm in Sources */ = {isa = PBXBuildFile; fileRef = AF6B25DB1746737D006A312B /* ExampleSpec.mm */; };
 		AF6B25E1174673CB006A312B /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AF6B25E0174673CB006A312B /* Default-568h@2x.png */; };
+		AF6B25E21746749B006A312B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AF32F084174671D400EC79F7 /* AppDelegate.m */; };
+		AF6B25E517467514006A312B /* AppDelegateSpec.mm in Sources */ = {isa = PBXBuildFile; fileRef = AF6B25E417467514006A312B /* AppDelegateSpec.mm */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		AF6B25E917467588006A312B /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF6B25E717467588006A312B /* FirstViewController.m */; };
+		AF6B25EA17467588006A312B /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF6B25E717467588006A312B /* FirstViewController.m */; };
+		AF6B25EB17467588006A312B /* FirstViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF6B25E817467588006A312B /* FirstViewController.xib */; };
+		AF6B25EC17467588006A312B /* FirstViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF6B25E817467588006A312B /* FirstViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,9 +51,13 @@
 		AF6B25D41746737C006A312B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		AF6B25D61746737C006A312B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		AF6B25D81746737C006A312B /* Specs-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Specs-Prefix.pch"; sourceTree = "<group>"; };
-		AF6B25D91746737D006A312B /* Cedar-iOS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = "Cedar-iOS.framework"; path = "Frameworks/Cedar-iOS.framework"; sourceTree = "<group>"; };
+		AF6B25D91746737D006A312B /* Cedar-iOS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = "Cedar-iOS.framework"; path = "Specs/Frameworks/Cedar-iOS.framework"; sourceTree = "<group>"; };
 		AF6B25DB1746737D006A312B /* ExampleSpec.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = ExampleSpec.mm; sourceTree = "<group>"; };
-		AF6B25E0174673CB006A312B /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		AF6B25E0174673CB006A312B /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "../Default-568h@2x.png"; sourceTree = "<group>"; };
+		AF6B25E417467514006A312B /* AppDelegateSpec.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = AppDelegateSpec.mm; sourceTree = "<group>"; };
+		AF6B25E617467588006A312B /* FirstViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
+		AF6B25E717467588006A312B /* FirstViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
+		AF6B25E817467588006A312B /* FirstViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FirstViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,7 +88,6 @@
 		AF32F068174671D400EC79F7 = {
 			isa = PBXGroup;
 			children = (
-				AF6B25E0174673CB006A312B /* Default-568h@2x.png */,
 				AF32F07A174671D400EC79F7 /* Swizzlean */,
 				AF6B25D01746737C006A312B /* Specs */,
 				AF32F073174671D400EC79F7 /* Frameworks */,
@@ -98,6 +107,7 @@
 		AF32F073174671D400EC79F7 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				AF6B25D91746737D006A312B /* Cedar-iOS.framework */,
 				AF32F074174671D400EC79F7 /* UIKit.framework */,
 				AF32F076174671D400EC79F7 /* Foundation.framework */,
 				AF32F078174671D400EC79F7 /* CoreGraphics.framework */,
@@ -111,6 +121,9 @@
 				AF32F083174671D400EC79F7 /* AppDelegate.h */,
 				AF32F084174671D400EC79F7 /* AppDelegate.m */,
 				AF32F07B174671D400EC79F7 /* Supporting Files */,
+				AF6B25E617467588006A312B /* FirstViewController.h */,
+				AF6B25E717467588006A312B /* FirstViewController.m */,
+				AF6B25E817467588006A312B /* FirstViewController.xib */,
 			);
 			path = Swizzlean;
 			sourceTree = "<group>";
@@ -132,8 +145,8 @@
 		AF6B25D01746737C006A312B /* Specs */ = {
 			isa = PBXGroup;
 			children = (
-				AF6B25D91746737D006A312B /* Cedar-iOS.framework */,
 				AF6B25DB1746737D006A312B /* ExampleSpec.mm */,
+				AF6B25E417467514006A312B /* AppDelegateSpec.mm */,
 				AF6B25D11746737C006A312B /* Supporting Files */,
 			);
 			path = Specs;
@@ -142,6 +155,7 @@
 		AF6B25D11746737C006A312B /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				AF6B25E0174673CB006A312B /* Default-568h@2x.png */,
 				AF6B25D21746737C006A312B /* Specs-Info.plist */,
 				AF6B25D31746737C006A312B /* InfoPlist.strings */,
 				AF6B25D61746737C006A312B /* main.m */,
@@ -223,6 +237,7 @@
 				AF32F087174671D400EC79F7 /* Default.png in Resources */,
 				AF32F089174671D400EC79F7 /* Default@2x.png in Resources */,
 				AF32F08B174671D400EC79F7 /* Default-568h@2x.png in Resources */,
+				AF6B25EB17467588006A312B /* FirstViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -232,6 +247,7 @@
 			files = (
 				AF6B25D51746737C006A312B /* InfoPlist.strings in Resources */,
 				AF6B25E1174673CB006A312B /* Default-568h@2x.png in Resources */,
+				AF6B25EC17467588006A312B /* FirstViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -244,6 +260,7 @@
 			files = (
 				AF32F081174671D400EC79F7 /* main.m in Sources */,
 				AF32F085174671D400EC79F7 /* AppDelegate.m in Sources */,
+				AF6B25E917467588006A312B /* FirstViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -251,8 +268,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AF6B25E21746749B006A312B /* AppDelegate.m in Sources */,
 				AF6B25D71746737C006A312B /* main.m in Sources */,
 				AF6B25DC1746737D006A312B /* ExampleSpec.mm in Sources */,
+				AF6B25E517467514006A312B /* AppDelegateSpec.mm in Sources */,
+				AF6B25EA17467588006A312B /* FirstViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
