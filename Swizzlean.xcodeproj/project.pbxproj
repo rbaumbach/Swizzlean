@@ -32,7 +32,7 @@
 		AF6B25EE1747EC42006A312B /* FirstViewControllerSpec.mm in Sources */ = {isa = PBXBuildFile; fileRef = AF6B25ED1747EC42006A312B /* FirstViewControllerSpec.mm */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		AF6B25F11747EE48006A312B /* Swizzlean.m in Sources */ = {isa = PBXBuildFile; fileRef = AF6B25F01747EE48006A312B /* Swizzlean.m */; };
 		AF6B25F21747EE48006A312B /* Swizzlean.m in Sources */ = {isa = PBXBuildFile; fileRef = AF6B25F01747EE48006A312B /* Swizzlean.m */; };
-		AF6B25F41747EE66006A312B /* SwizzleanSpec.mm in Sources */ = {isa = PBXBuildFile; fileRef = AF6B25F31747EE66006A312B /* SwizzleanSpec.mm */; };
+		AF6B25F41747EE66006A312B /* SwizzleanSpec.mm in Sources */ = {isa = PBXBuildFile; fileRef = AF6B25F31747EE66006A312B /* SwizzleanSpec.mm */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -129,9 +129,9 @@
 				AF6B25E617467588006A312B /* FirstViewController.h */,
 				AF6B25E717467588006A312B /* FirstViewController.m */,
 				AF6B25E817467588006A312B /* FirstViewController.xib */,
-				AF32F07B174671D400EC79F7 /* Supporting Files */,
 				AF6B25EF1747EE48006A312B /* Swizzlean.h */,
 				AF6B25F01747EE48006A312B /* Swizzlean.m */,
+				AF32F07B174671D400EC79F7 /* Supporting Files */,
 			);
 			path = Swizzlean;
 			sourceTree = "<group>";
@@ -155,8 +155,8 @@
 			children = (
 				AF6B25E417467514006A312B /* AppDelegateSpec.mm */,
 				AF6B25ED1747EC42006A312B /* FirstViewControllerSpec.mm */,
-				AF6B25D11746737C006A312B /* Supporting Files */,
 				AF6B25F31747EE66006A312B /* SwizzleanSpec.mm */,
+				AF6B25D11746737C006A312B /* Supporting Files */,
 			);
 			path = Specs;
 			sourceTree = "<group>";
@@ -459,6 +459,7 @@
 				AF6B25DE1746737D006A312B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
