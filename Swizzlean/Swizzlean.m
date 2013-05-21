@@ -1,5 +1,6 @@
 #import "Swizzlean.h"
 
+#define TEMP_CLASS_METHOD tempClassMethod
 
 @interface Swizzlean ()
 
@@ -32,10 +33,9 @@
     self.replacementImplementation = replacementImplementation;
     
     IMP replacementImp = imp_implementationWithBlock(self.replacementImplementation);
-    Class klass = object_getClass(NSClassFromString(@"Swizzlean"));
-    class_addMethod(klass, @selector(tempClassMethod), replacementImp, "@@:");
+    class_addMethod([Swizzlean class], @selector(TEMP_CLASS_METHOD), replacementImp, "@@:");
     
-    self.swizzleMethod = class_getClassMethod([Swizzlean class], @selector(tempClassMethod));
+    self.swizzleMethod = class_getClassMethod([Swizzlean class], @selector(TEMP_CLASS_METHOD));
 }
 
 @end

@@ -1,6 +1,9 @@
 #import "Swizzlean.h"
 #import <objc/runtime.h>
 
+#define TEMP_CLASS_METHOD tempClassMethod
+
+
 using namespace Cedar::Matchers;
 using namespace Cedar::Doubles;
 
@@ -34,23 +37,22 @@ describe(@"Swizzlean", ^{
         __block Method replacementMethod;
        
         __block IMP replacementImp;
-        __block id replacementImplementation;
+        __block id replacementImpBlock;
         
         beforeEach(^{
             method = @selector(stringWithString:);
             originalMethod = class_getClassMethod([NSString class], @selector(stringWithString:));
             
-            replacementImplementation = ^(id _self) {
+            replacementImpBlock = ^(id _self) {
                 NSLog(@"\nHit New implementation!!!");
                 return @"Uh-YAHH-YAHH";
             };
             
-            replacementImp = imp_implementationWithBlock(replacementImplementation);
-            Class klass = object_getClass(NSClassFromString(@"Swizzlean"));
-            class_addMethod(klass, @selector(tempClassMethod), replacementImp, "@@:");
-            replacementMethod = class_getClassMethod([Swizzlean class], @selector(tempClassMethod));
+            replacementImp = imp_implementationWithBlock(replacementImpBlock);
+            class_addMethod([Swizzlean class], @selector(TEMP_CLASS_METHOD), replacementImp, "@@:");
+            replacementMethod = class_getClassMethod([Swizzlean class], @selector(TEMP_CLASS_METHOD));
 
-            [swizzlean swizzleClassMethod:method withReplacementImplementation:replacementImplementation];
+            [swizzlean swizzleClassMethod:method withReplacementImplementation:replacementImpBlock];
         });
         
         it(@"stores the original method to be swizzled", ^{
@@ -59,7 +61,7 @@ describe(@"Swizzlean", ^{
         
         
         it(@"stores the implementation of the method swizzle", ^{
-            swizzlean.replacementImplementation should equal(replacementImplementation);
+            swizzlean.replacementImplementation should equal(replacementImpBlock);
         });
         
         it(@"stores the swizzled method", ^{
