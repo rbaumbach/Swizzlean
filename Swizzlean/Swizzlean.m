@@ -32,8 +32,9 @@
     self.originalMethod = class_getClassMethod(self.classToSwizzle, originalMethod);
     self.replacementImplementation = replacementImplementation;
     
+    Class klass = object_getClass(NSClassFromString(@"Swizzlean"));
     IMP replacementImp = imp_implementationWithBlock(self.replacementImplementation);
-    class_addMethod([Swizzlean class], @selector(TEMP_CLASS_METHOD), replacementImp, "@@:");
+    class_addMethod(klass, @selector(TEMP_CLASS_METHOD), replacementImp, "@@:");
     
     self.swizzleMethod = class_getClassMethod([Swizzlean class], @selector(TEMP_CLASS_METHOD));
 }
