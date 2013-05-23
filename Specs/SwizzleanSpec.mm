@@ -1,7 +1,7 @@
 #import "Swizzlean.h"
 #import <objc/runtime.h>
 
-#define TEMP_CLASS_METHOD           tempClassMethod
+#define TEMP_CLASS_METHOD           tempClassMethod:
 
 #define TEST_CLASS                  NSString
 #define TEST_CLASS_METHOD_SEL       stringWithString:
@@ -28,7 +28,7 @@ describe(@"Swizzlean", ^{
 
     beforeEach(^{
         testClass = [TEST_CLASS class];
-        swizzleanObj = [[Swizzlean alloc] initWithClassToSwizzle:testClass];
+        swizzleanObj = [[[Swizzlean alloc] initWithClassToSwizzle:testClass] autorelease];
     });
     
     it(@"stores the class", ^{
@@ -54,7 +54,7 @@ describe(@"Swizzlean", ^{
             
             replacementImp = imp_implementationWithBlock(replacementImpBlock);
             Class klass = object_getClass(NSClassFromString(@"Swizzlean"));
-            class_addMethod(klass, @selector(TEMP_CLASS_METHOD), replacementImp, "@@:");
+            class_addMethod(klass, @selector(TEMP_CLASS_METHOD), replacementImp, TEST_CLASS_METHOD_ENCODING);
             replacementMethod = class_getClassMethod([Swizzlean class], @selector(TEMP_CLASS_METHOD));
 
             [swizzleanObj swizzleClassMethod:methodSEL withReplacementImplementation:replacementImpBlock];
@@ -63,7 +63,6 @@ describe(@"Swizzlean", ^{
         it(@"stores the original method to be swizzled", ^{
             swizzleanObj.originalMethod should equal(originalMethod);
         });
-        
         
         it(@"stores the implementation of the method swizzle", ^{
             swizzleanObj.replacementImplementation should equal(replacementImpBlock);
