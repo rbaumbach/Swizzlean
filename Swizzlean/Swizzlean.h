@@ -5,6 +5,7 @@
 @interface Swizzlean : NSObject
 
 @property(nonatomic, readonly) Class classToSwizzle;
+@property(nonatomic) BOOL isClassMethodSwizzled;
 
 - (id)initWithClassToSwizzle:(Class)swizzleClass;
 
