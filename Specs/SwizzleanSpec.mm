@@ -48,7 +48,7 @@ describe(@"Swizzlean", ^{
             SEL methodSEL = @selector(returnString:);
             originalMethod = class_getClassMethod([TestClass class], methodSEL);
             
-            originalMethodIMP = [NSString methodForSelector:methodSEL];
+            originalMethodIMP = [TestClass methodForSelector:methodSEL];
             
             replacementImpBlock = ^(id _self, NSString *input) {
                 return [NSString stringWithFormat:@"return with input: %@",input];
