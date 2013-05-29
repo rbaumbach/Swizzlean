@@ -33,6 +33,7 @@
 		AF6B25F11747EE48006A312B /* Swizzlean.m in Sources */ = {isa = PBXBuildFile; fileRef = AF6B25F01747EE48006A312B /* Swizzlean.m */; };
 		AF6B25F21747EE48006A312B /* Swizzlean.m in Sources */ = {isa = PBXBuildFile; fileRef = AF6B25F01747EE48006A312B /* Swizzlean.m */; };
 		AF6B25F41747EE66006A312B /* SwizzleanSpec.mm in Sources */ = {isa = PBXBuildFile; fileRef = AF6B25F31747EE66006A312B /* SwizzleanSpec.mm */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		AFF1A93217563FE000E9E586 /* TestClass.m in Sources */ = {isa = PBXBuildFile; fileRef = AFF1A93117563FE000E9E586 /* TestClass.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -64,6 +65,8 @@
 		AF6B25EF1747EE48006A312B /* Swizzlean.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Swizzlean.h; sourceTree = "<group>"; };
 		AF6B25F01747EE48006A312B /* Swizzlean.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Swizzlean.m; sourceTree = "<group>"; };
 		AF6B25F31747EE66006A312B /* SwizzleanSpec.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = SwizzleanSpec.mm; sourceTree = "<group>"; };
+		AFF1A93017563FE000E9E586 /* TestClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestClass.h; sourceTree = "<group>"; };
+		AFF1A93117563FE000E9E586 /* TestClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestClass.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -156,6 +159,7 @@
 				AF6B25E417467514006A312B /* AppDelegateSpec.mm */,
 				AF6B25ED1747EC42006A312B /* FirstViewControllerSpec.mm */,
 				AF6B25F31747EE66006A312B /* SwizzleanSpec.mm */,
+				AFF1A933175640CC00E9E586 /* Test Classes */,
 				AF6B25D11746737C006A312B /* Supporting Files */,
 			);
 			path = Specs;
@@ -171,6 +175,15 @@
 				AF6B25D81746737C006A312B /* Specs-Prefix.pch */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		AFF1A933175640CC00E9E586 /* Test Classes */ = {
+			isa = PBXGroup;
+			children = (
+				AFF1A93017563FE000E9E586 /* TestClass.h */,
+				AFF1A93117563FE000E9E586 /* TestClass.m */,
+			);
+			name = "Test Classes";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -285,6 +298,7 @@
 				AF6B25EE1747EC42006A312B /* FirstViewControllerSpec.mm in Sources */,
 				AF6B25F21747EE48006A312B /* Swizzlean.m in Sources */,
 				AF6B25F41747EE66006A312B /* SwizzleanSpec.mm in Sources */,
+				AFF1A93217563FE000E9E586 /* TestClass.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

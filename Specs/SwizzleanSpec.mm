@@ -1,5 +1,7 @@
-#import "Swizzlean.h"
 #import <objc/runtime.h>
+#import "Swizzlean.h"
+#import "TestClass.h"
+
 
 using namespace Cedar::Matchers;
 using namespace Cedar::Doubles;
@@ -7,10 +9,11 @@ using namespace Cedar::Doubles;
 
 @interface Swizzlean ()
 
-@property(nonatomic, readonly) Method originalClassMethod;
+@property(nonatomic, readwrite) Method originalClassMethod;
 @property(nonatomic, readwrite) IMP originalClassMethodImplementation;
 @property(nonatomic, readwrite) Method swizzleClassMethod;
 @property(copy, nonatomic, readwrite) id replacementClassMethodImplementation;
+@property(nonatomic, readwrite) BOOL isClassMethodSwizzled;
 
 @end
 
@@ -21,7 +24,7 @@ describe(@"Swizzlean", ^{
     __block Class testClass;
 
     beforeEach(^{
-        testClass = [NSString class];
+        testClass = [TestClass class];
         swizzleanObj = [[[Swizzlean alloc] initWithClassToSwizzle:testClass] autorelease];
     });
     
@@ -34,22 +37,21 @@ describe(@"Swizzlean", ^{
     });
     
     context(@"#swizzleClassMethod:withReplacementImplementation:", ^{
-        __block SEL methodSEL;
         __block Method originalMethod;
         __block IMP originalMethodIMP;
         __block Method replacementMethod;
         
         __block IMP replacementImp;
         __block id replacementImpBlock;
-        
+
         beforeEach(^{
-            methodSEL = @selector(stringWithString:);
-            originalMethod = class_getClassMethod([NSString class], @selector(stringWithString:));
+            SEL methodSEL = @selector(returnString:);
+            originalMethod = class_getClassMethod([TestClass class], methodSEL);
             
             originalMethodIMP = [NSString methodForSelector:methodSEL];
             
             replacementImpBlock = ^(id _self, NSString *input) {
-                return @"return string";
+                return [NSString stringWithFormat:@"return with input: %@",input];
             };
             
             replacementImp = imp_implementationWithBlock(replacementImpBlock);
@@ -58,6 +60,10 @@ describe(@"Swizzlean", ^{
             replacementMethod = class_getClassMethod([Swizzlean class], @selector(tempClassMethod:));
             
             [swizzleanObj swizzleClassMethod:methodSEL withReplacementImplementation:replacementImpBlock];
+        });
+        
+        afterEach(^{
+            method_setImplementation(originalMethod, originalMethodIMP);
         });
         
         it(@"stores the original method to be swizzled", ^{
@@ -77,8 +83,7 @@ describe(@"Swizzlean", ^{
         });
         
         it(@"swaps original class method implementation with replacement implementation", ^{
-            NSString *testString = [NSString stringWithString:@"test"];
-            testString should equal(@"return string");
+            [TestClass returnString:@"inputTest"] should equal(@"return with input: inputTest");
         });
         
         it(@"sets the isClassMethodSwizzled to YES", ^{

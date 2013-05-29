@@ -13,6 +13,8 @@
 @property(nonatomic, readwrite) IMP originalClassMethodImplementation;
 @property(nonatomic, readwrite) Method swizzleClassMethod;
 @property(copy, nonatomic, readwrite) id replacementClassMethodImplementation;
+@property(nonatomic, readwrite) BOOL isClassMethodSwizzled;
+
 
 @end
 
@@ -43,19 +45,8 @@
     class_addMethod(klass, @selector(TEMP_CLASS_METHOD), replacementImp, TEMP_CLASS_METHOD_ENCODING);
     
     self.swizzleClassMethod = class_getClassMethod([Swizzlean class], @selector(TEMP_CLASS_METHOD_SEL));
-    
     self.originalClassMethodImplementation = method_setImplementation(self.originalClassMethod, replacementImp);
-    
     self.isClassMethodSwizzled = YES;
-}
-
-#pragma mark - Private Methods
-
-- (void)createTempClassMethod
-{
-    Class klass = object_getClass(NSClassFromString(SWIZZLEAN_CLASS_NAME));
-    IMP replacementImp = imp_implementationWithBlock(self.replacementClassMethodImplementation);
-    class_addMethod(klass, @selector(TEMP_CLASS_METHOD), replacementImp, TEMP_CLASS_METHOD_ENCODING);
 }
 
 @end
