@@ -15,7 +15,6 @@
 @property(copy, nonatomic, readwrite) id replacementClassMethodImplementation;
 @property(nonatomic, readwrite) BOOL isClassMethodSwizzled;
 
-
 @end
 
 
@@ -47,6 +46,17 @@
     self.swizzleClassMethod = class_getClassMethod([Swizzlean class], @selector(TEMP_CLASS_METHOD_SEL));
     self.originalClassMethodImplementation = method_setImplementation(self.originalClassMethod, replacementImp);
     self.isClassMethodSwizzled = YES;
+}
+
+- (void)unswizzleClassMethod
+{
+    method_setImplementation(self.originalClassMethod, self.originalClassMethodImplementation);
+    
+    self.originalClassMethod = nil;
+    self.originalClassMethodImplementation = nil;
+    self.swizzleClassMethod = nil;
+    self.replacementClassMethodImplementation = nil;
+    self.isClassMethodSwizzled = NO;
 }
 
 @end

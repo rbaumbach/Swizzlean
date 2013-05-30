@@ -10,5 +10,6 @@
 - (id)initWithClassToSwizzle:(Class)swizzleClass;
 
 - (void)swizzleClassMethod:(SEL)originalMethod withReplacementImplementation:(id)replacementImplementation;
+- (void)unswizzleClassMethod;
 
 @end
