@@ -2,9 +2,8 @@
 
 
 #define SWIZZLEAN_CLASS_NAME        @"Swizzlean"
+#define TEMP_CLASS_METHOD_SEL       tempClassMethod
 
-#define TEMP_CLASS_METHOD_SEL       tempClassMethod:
-#define TEMP_CLASS_METHOD_ENCODING  "@@:@"
 
 @interface Swizzlean ()
 
@@ -41,9 +40,9 @@
     
     Class klass = object_getClass(NSClassFromString(SWIZZLEAN_CLASS_NAME));
     IMP replacementImp = imp_implementationWithBlock(self.replacementClassMethodImplementation);
-    class_addMethod(klass, @selector(TEMP_CLASS_METHOD), replacementImp, TEMP_CLASS_METHOD_ENCODING);
+    class_addMethod(klass, @selector(TEMP_CLASS_METHOD), replacementImp, nil);
     
-    self.swizzleClassMethod = class_getClassMethod([Swizzlean class], @selector(TEMP_CLASS_METHOD_SEL));
+    self.swizzleClassMethod = class_getClassMethod(self.classToSwizzle, @selector(TEMP_CLASS_METHOD_SEL));
     self.originalClassMethodImplementation = method_setImplementation(self.originalClassMethod, replacementImp);
     self.isClassMethodSwizzled = YES;
 }

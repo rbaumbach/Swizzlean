@@ -17,6 +17,7 @@ using namespace Cedar::Doubles;
 
 @end
 
+
 SPEC_BEGIN(SwizzleanSpec)
 
 describe(@"Swizzlean", ^{
@@ -40,8 +41,8 @@ describe(@"Swizzlean", ^{
         
         IMP replacementImp = imp_implementationWithBlock(replacementImpBlock);
         Class klass = object_getClass(NSClassFromString(@"Swizzlean"));
-        class_addMethod(klass, @selector(tempClassMethod:), replacementImp, "@@:@");
-        swizzleReplacementMethod = class_getClassMethod([Swizzlean class], @selector(tempClassMethod:));
+        class_addMethod(klass, @selector(TEMP_CLASS_METHOD), replacementImp, nil);
+        swizzleReplacementMethod = class_getClassMethod(swizzleanObj.classToSwizzle, @selector(tempClassMethod));
     });
     
     afterEach(^{

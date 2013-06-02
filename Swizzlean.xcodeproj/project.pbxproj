@@ -33,6 +33,7 @@
 		AF6B25F11747EE48006A312B /* Swizzlean.m in Sources */ = {isa = PBXBuildFile; fileRef = AF6B25F01747EE48006A312B /* Swizzlean.m */; };
 		AF6B25F21747EE48006A312B /* Swizzlean.m in Sources */ = {isa = PBXBuildFile; fileRef = AF6B25F01747EE48006A312B /* Swizzlean.m */; };
 		AF6B25F41747EE66006A312B /* SwizzleanSpec.mm in Sources */ = {isa = PBXBuildFile; fileRef = AF6B25F31747EE66006A312B /* SwizzleanSpec.mm */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		AFD1566D175BBA6B000A83DF /* TestClass.m in Sources */ = {isa = PBXBuildFile; fileRef = AFF1A93117563FE000E9E586 /* TestClass.m */; };
 		AFF1A93217563FE000E9E586 /* TestClass.m in Sources */ = {isa = PBXBuildFile; fileRef = AFF1A93117563FE000E9E586 /* TestClass.m */; };
 /* End PBXBuildFile section */
 
@@ -280,6 +281,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AFD1566D175BBA6B000A83DF /* TestClass.m in Sources */,
 				AF32F081174671D400EC79F7 /* main.m in Sources */,
 				AF32F085174671D400EC79F7 /* AppDelegate.m in Sources */,
 				AF6B25E917467588006A312B /* FirstViewController.m in Sources */,
