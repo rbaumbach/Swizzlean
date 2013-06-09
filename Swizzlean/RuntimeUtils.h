@@ -9,6 +9,6 @@
 - (Method)getInstanceMethodWithClass:(Class)klass selector:(SEL)selector;
 
 - (IMP)getImplementationWithBlock:(id)blockImplemenation;
-- (IMP)setMethod:(Method)method withImplemenation:(IMP)implementation;
+- (IMP)updateMethod:(Method)method withImplemenation:(IMP)implementation;
 
 @end

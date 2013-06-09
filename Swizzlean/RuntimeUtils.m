@@ -24,7 +24,7 @@
     return imp_implementationWithBlock(blockImplemenation);
 }
 
-- (IMP)setMethod:(Method)method withImplemenation:(IMP)implementation
+- (IMP)updateMethod:(Method)method withImplemenation:(IMP)implementation
 {
     return method_setImplementation(method, implementation);
 }

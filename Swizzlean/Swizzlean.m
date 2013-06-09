@@ -1,4 +1,5 @@
 #import "Swizzlean.h"
+#import "RuntimeUtils.h"
 
 
 #define SWIZZLEAN_CLASS_NAME        @"Swizzlean"
@@ -7,6 +8,8 @@
 
 
 @interface Swizzlean ()
+
+@property(nonatomic, readwrite) RuntimeUtils *runtimeUtils;
 
 @property(nonatomic, readwrite) Class classToSwizzle;
 @property(nonatomic, readwrite) Method originalClassMethod;
@@ -17,7 +20,9 @@
 @property(nonatomic, readwrite) Method swizzleInstanceMethod;
 
 @property(copy, nonatomic, readwrite) id replacementClassMethodImplementation;
-@property(copy, nonatomic, readwrite) id replacementInstanceMethodImplementation;
+@property(copy, nonatomic, readwrite) id replacementInstanceMethodImplementationBlock;
+@property(nonatomic, readwrite) IMP replacementInstanceMethodImplementation;
+
 @property(nonatomic, readwrite) BOOL isClassMethodSwizzled;
 @property(nonatomic, readwrite) BOOL isInstanceMethodSwizzled;
 
@@ -32,6 +37,7 @@
 {
     self = [super init];
     if (self) {
+        self.runtimeUtils = [[RuntimeUtils alloc] init];
         self.classToSwizzle = swizzleClass;
         self.isClassMethodSwizzled = NO;
         self.isInstanceMethodSwizzled = NO;
@@ -57,14 +63,12 @@
 
 - (void)swizzleInstanceMethod:(SEL)originalMethod withReplacementImplementation:(id)replacementImplementation
 {
-    self.originalInstanceMethod = class_getInstanceMethod(self.classToSwizzle, originalMethod);
-    self.replacementInstanceMethodImplementation = replacementImplementation;
-    
-    IMP replacementImp = imp_implementationWithBlock(self.replacementInstanceMethodImplementation);
-    class_addMethod([self class], @selector(TEMP_INSTANCE_METHOD_SEL), replacementImp, nil);
-    
-    self.swizzleInstanceMethod = class_getInstanceMethod(self.classToSwizzle, @selector(TEMP_INSTANCE_METHOD_SEL));
-    self.originalInstanceMethodImplementation = method_setImplementation(self.originalInstanceMethod, replacementImp);
+    self.originalInstanceMethod = [self.runtimeUtils getInstanceMethodWithClass:self.classToSwizzle
+                                                                       selector:originalMethod];
+    self.replacementInstanceMethodImplementationBlock = replacementImplementation;
+    self.replacementInstanceMethodImplementation = [self.runtimeUtils getImplementationWithBlock:replacementImplementation];
+    self.originalInstanceMethodImplementation = [self.runtimeUtils updateMethod:self.originalInstanceMethod
+                                                              withImplemenation:self.replacementInstanceMethodImplementation];
     self.isInstanceMethodSwizzled = YES;
 }
 

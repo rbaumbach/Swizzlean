@@ -78,7 +78,7 @@ describe(@"RuntimeUtils", ^{
         });
     });
     
-    context(@"#setMethod:withImplemenation:", ^{
+    context(@"#updateMethod:withImplemenation:", ^{
         __block Method instanceMethod;
         __block IMP instanceMethodIMP;
         __block IMP oldMethodImplementation;
@@ -89,7 +89,7 @@ describe(@"RuntimeUtils", ^{
                 return @"Swizzled";
             });
             
-            oldMethodImplementation = [runtimeUtils setMethod:instanceMethod withImplemenation:instanceMethodIMP];
+            oldMethodImplementation = [runtimeUtils updateMethod:instanceMethod withImplemenation:instanceMethodIMP];
         });
         
         afterEach(^{

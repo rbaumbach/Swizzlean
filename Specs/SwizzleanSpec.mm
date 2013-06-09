@@ -1,13 +1,16 @@
 #import <objc/runtime.h>
 #import "Swizzlean.h"
 #import "TestClass.h"
+#import "RuntimeUtils.h"
 
 
 using namespace Cedar::Matchers;
 using namespace Cedar::Doubles;
 
 
-@interface Swizzlean ()
+@interface Swizzlean (Specs)
+
+@property(nonatomic, readwrite) RuntimeUtils *runtimeUtils;
 
 @property(nonatomic, readwrite) Method originalClassMethod;
 @property(nonatomic, readwrite) Method originalInstanceMethod;
@@ -18,7 +21,9 @@ using namespace Cedar::Doubles;
 
 
 @property(copy, nonatomic, readwrite) id replacementClassMethodImplementation;
-@property(copy, nonatomic, readwrite) id replacementInstanceMethodImplementation;
+@property(copy, nonatomic, readwrite) id replacementInstanceMethodImplementationBlock;
+@property(nonatomic, readwrite) IMP replacementInstanceMethodImplementation;
+
 
 @property(nonatomic, readwrite) BOOL isClassMethodSwizzled;
 @property(nonatomic, readwrite) BOOL isInstanceMethodSwizzled;
@@ -31,10 +36,17 @@ SPEC_BEGIN(SwizzleanSpec)
 describe(@"Swizzlean", ^{
     __block Swizzlean *swizzleanObj;
     __block Class testClass;
+    __block RuntimeUtils *fakeRuntimeUtils;
     
     beforeEach(^{
         testClass = [TestClass class];
-        swizzleanObj = [[[Swizzlean alloc] initWithClassToSwizzle:testClass] autorelease];
+        fakeRuntimeUtils = nice_fake_for([RuntimeUtils class]);
+        swizzleanObj = [[Swizzlean alloc] initWithClassToSwizzle:testClass];
+        swizzleanObj.runtimeUtils = fakeRuntimeUtils;
+    });
+    
+    it(@"has a reference to runtimeUtils", ^{
+        swizzleanObj.runtimeUtils should_not be_nil;
     });
 
     it(@"stores the class", ^{
@@ -138,54 +150,43 @@ describe(@"Swizzlean", ^{
     describe(@"Instance method swizzling", ^{
         __block SEL instanceMethodSEL;
         __block Method originalInstanceMethod;
-        __block IMP originalInstanceMethodIMP;
-        __block Method swizzleReplacementInstanceMethod;
         __block id replacementImpBlock;
+        __block IMP replacementImp;
+        __block IMP originalImp;
         
         beforeEach(^{
-            instanceMethodSEL = @selector(returnString:);
+            instanceMethodSEL = @selector(returnStringInstanceMethod:);
             originalInstanceMethod = class_getInstanceMethod(testClass, instanceMethodSEL);
-            originalInstanceMethodIMP = [TestClass methodForSelector:instanceMethodSEL];
-            replacementImpBlock = ^(id _self, NSString *input) {
-                return [NSString stringWithFormat:@"return with input: %@",input];
-            };
-
-            IMP replacementImp = imp_implementationWithBlock(replacementImpBlock);
-            class_addMethod([TestClass class], @selector(tempInstanceMethod), replacementImp, "@:@");
-            swizzleReplacementInstanceMethod = class_getInstanceMethod(swizzleanObj.classToSwizzle, @selector(tempInstanceMethod));
-        });
-        
-        afterEach(^{
-            method_setImplementation(originalInstanceMethod, originalInstanceMethodIMP);
+            replacementImpBlock = ^(id _self, NSString *input) { };
+            replacementImp = imp_implementationWithBlock(replacementImpBlock);
+            originalImp = [TestClass methodForSelector:instanceMethodSEL];
         });
         
         context(@"#swizzleInstanceMethod:withReplacementImplementation:", ^{
             beforeEach(^{
+                fakeRuntimeUtils stub_method("getInstanceMethodWithClass:selector:").with(swizzleanObj.classToSwizzle).and_with(instanceMethodSEL).and_return(originalInstanceMethod);
+                fakeRuntimeUtils stub_method("getImplementationWithBlock:").with(replacementImpBlock).and_return(replacementImp);
+                fakeRuntimeUtils stub_method("updateMethod:withImplemenation:").with(originalInstanceMethod).and_with(replacementImp).and_return(originalImp);
                 [swizzleanObj swizzleInstanceMethod:instanceMethodSEL withReplacementImplementation:replacementImpBlock];
             });
             
-            it(@"stores the original method to be swizzled", ^{
-                swizzleanObj.originalInstanceMethod should equal(originalInstanceMethod);
+            it(@"stores the original instance method to be swizzled", ^{
+                swizzleanObj.originalInstanceMethod should equal(originalInstanceMethod);                
             });
             
-            it(@"stores the implementation of the method swizzle", ^{
-                swizzleanObj.replacementInstanceMethodImplementation should equal(replacementImpBlock);
+            it(@"stores the replacement implementation block", ^{
+                swizzleanObj.replacementInstanceMethodImplementationBlock should equal(replacementImpBlock);
             });
-
-            it(@"stores the swizzled method", ^{
-                swizzleanObj.swizzleInstanceMethod should equal(swizzleReplacementInstanceMethod);
+            
+            it(@"stores the replacement implementation from block", ^{
+                swizzleanObj.replacementInstanceMethodImplementation should equal(replacementImp);
             });
-
-            it(@"stores the original implementation of the original method", ^{
-                swizzleanObj.originalInstanceMethodImplementation should equal(originalInstanceMethodIMP);
+            
+            it(@"stores the original instance method implementation", ^{
+                swizzleanObj.originalInstanceMethodImplementation should equal(originalImp);
             });
-
-            it(@"swaps original class method implementation with replacement implementation", ^{
-                TestClass *testClass = [[TestClass alloc] init];
-                [testClass returnString:@"inputTest"] should equal(@"return with input: inputTest");
-            });
-
-            it(@"sets the isClassMethodSwizzled to YES", ^{
+            
+            it(@"sets isInstanceMethodSwizzled to YES", ^{
                 swizzleanObj.isInstanceMethodSwizzled should be_truthy;
             });
         });
