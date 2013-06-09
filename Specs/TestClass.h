@@ -3,10 +3,8 @@
 
 @interface TestClass : NSObject
 
-- (NSString *)returnString:(NSString *)inputString;
 - (NSString *)returnStringInstanceMethod:(NSString *)inputString;
 
-+ (NSString *)returnString:(NSString *)inputString;
 + (NSString *)returnStringClassMethod:(NSString *)inputString;
 
 @end

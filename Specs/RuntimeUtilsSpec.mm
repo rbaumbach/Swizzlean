@@ -34,6 +34,21 @@ describe(@"RuntimeUtils", ^{
         });
     });
     
+    context(@"#getInstanceMethodWithClass:selector:", ^{
+        __block Method instanceMethod;
+        __block Method testMethod;
+        
+        beforeEach(^{
+            instanceMethod = [runtimeUtils getInstanceMethodWithClass:[fakeClass class]
+                                                             selector:@selector(returnStringInstanceMethod:)];
+            testMethod = class_getInstanceMethod([fakeClass class], @selector(returnStringInstanceMethod:));
+        });
+        
+        it(@"returns the instance method for class", ^{
+            instanceMethod should equal(testMethod);
+        });
+    });
+    
     context(@"#getClassMethodWithClass:selector:", ^{
         __block Method classMethod;
         __block Method testMethod;
@@ -46,21 +61,6 @@ describe(@"RuntimeUtils", ^{
         
         it(@"returns the class method for class", ^{
             classMethod should equal(testMethod);
-        });
-    });
-    
-    context(@"#getInstanceMethodWithClass:selector:", ^{
-        __block Method instanceMethod;
-        __block Method testMethod;
-        
-        beforeEach(^{
-            instanceMethod = [runtimeUtils getInstanceMethodWithClass:[fakeClass class]
-                                                       selector:@selector(returnStringInstanceMethod:)];
-            testMethod = class_getInstanceMethod([fakeClass class], @selector(returnStringInstanceMethod:));
-        });
-        
-        it(@"returns the instance method for class", ^{
-            instanceMethod should equal(testMethod);
         });
     });
     
@@ -85,7 +85,7 @@ describe(@"RuntimeUtils", ^{
         
         beforeEach(^{
             instanceMethod = class_getInstanceMethod([fakeClass class], @selector(returnStringInstanceMethod:));
-            instanceMethodIMP = imp_implementationWithBlock(^(id _self, NSString *inputParam){
+            instanceMethodIMP = imp_implementationWithBlock(^(id _self, NSString *inputParam) {
                 return @"Swizzled";
             });
             

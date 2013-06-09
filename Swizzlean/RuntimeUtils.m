@@ -9,14 +9,14 @@
     return object_getClass(NSClassFromString(className));
 }
 
-- (Method)getClassMethodWithClass:(Class)klass selector:(SEL)selector
-{
-    return class_getClassMethod(klass, selector);
-}
-
 - (Method)getInstanceMethodWithClass:(Class)klass selector:(SEL)selector
 {
     return class_getInstanceMethod(klass, selector);
+}
+
+- (Method)getClassMethodWithClass:(Class)klass selector:(SEL)selector
+{
+    return class_getClassMethod(klass, selector);
 }
 
 - (IMP)getImplementationWithBlock:(id)blockImplemenation

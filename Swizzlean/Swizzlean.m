@@ -2,11 +2,6 @@
 #import "RuntimeUtils.h"
 
 
-#define SWIZZLEAN_CLASS_NAME        @"Swizzlean"
-#define TEMP_CLASS_METHOD_SEL       tempClassMethod
-#define TEMP_INSTANCE_METHOD_SEL    tempInstanceMethod
-
-
 @interface Swizzlean ()
 
 @property(nonatomic, readwrite) RuntimeUtils *runtimeUtils;
@@ -16,12 +11,11 @@
 @property(nonatomic, readwrite) Method originalInstanceMethod;
 @property(nonatomic, readwrite) IMP originalClassMethodImplementation;
 @property(nonatomic, readwrite) IMP originalInstanceMethodImplementation;
-@property(nonatomic, readwrite) Method swizzleClassMethod;
-@property(nonatomic, readwrite) Method swizzleInstanceMethod;
 
-@property(copy, nonatomic, readwrite) id replacementClassMethodImplementation;
+@property(copy, nonatomic, readwrite) id replacementClassMethodImplementationBlock;
 @property(copy, nonatomic, readwrite) id replacementInstanceMethodImplementationBlock;
 @property(nonatomic, readwrite) IMP replacementInstanceMethodImplementation;
+@property(nonatomic, readwrite) IMP replacementClassMethodImplementation;
 
 @property(nonatomic, readwrite) BOOL isClassMethodSwizzled;
 @property(nonatomic, readwrite) BOOL isInstanceMethodSwizzled;
@@ -47,20 +41,6 @@
 
 #pragma mark - Public Methods
 
-- (void)swizzleClassMethod:(SEL)originalMethod withReplacementImplementation:(id)replacementImplementation
-{
-    self.originalClassMethod = class_getClassMethod(self.classToSwizzle, originalMethod);
-    self.replacementClassMethodImplementation = replacementImplementation;
-    
-    Class klass = object_getClass(NSClassFromString(SWIZZLEAN_CLASS_NAME));
-    IMP replacementImp = imp_implementationWithBlock(self.replacementClassMethodImplementation);
-    class_addMethod(klass, @selector(TEMP_CLASS_METHOD_SEL), replacementImp, nil);
-    
-    self.swizzleClassMethod = class_getClassMethod(self.classToSwizzle, @selector(TEMP_CLASS_METHOD_SEL));
-    self.originalClassMethodImplementation = method_setImplementation(self.originalClassMethod, replacementImp);
-    self.isClassMethodSwizzled = YES;
-}
-
 - (void)swizzleInstanceMethod:(SEL)originalMethod withReplacementImplementation:(id)replacementImplementation
 {
     self.originalInstanceMethod = [self.runtimeUtils getInstanceMethodWithClass:self.classToSwizzle
@@ -72,25 +52,38 @@
     self.isInstanceMethodSwizzled = YES;
 }
 
-- (void)unswizzleClassMethod
+- (void)swizzleClassMethod:(SEL)originalMethod withReplacementImplementation:(id)replacementImplementation
 {
-    method_setImplementation(self.originalClassMethod, self.originalClassMethodImplementation);
-    
-    self.originalClassMethod = nil;
-    self.originalClassMethodImplementation = nil;
-    self.swizzleClassMethod = nil;
-    self.replacementClassMethodImplementation = nil;
-    self.isClassMethodSwizzled = NO;
+    self.originalClassMethod = [self.runtimeUtils getClassMethodWithClass:self.classToSwizzle
+                                                                 selector:originalMethod];
+    self.replacementClassMethodImplementationBlock = replacementImplementation;
+    self.replacementClassMethodImplementation = [self.runtimeUtils getImplementationWithBlock:replacementImplementation];
+    self.originalClassMethodImplementation = [self.runtimeUtils updateMethod:self.originalClassMethod
+                                                           withImplemenation:self.replacementClassMethodImplementation];
+    self.isClassMethodSwizzled = YES;
 }
 
 - (void)resetSwizzledInstanceMethod
 {
     [self.runtimeUtils updateMethod:self.originalInstanceMethod
                   withImplemenation:self.originalInstanceMethodImplementation];
+    
     self.originalInstanceMethod = nil;
     self.originalInstanceMethodImplementation = nil;
     self.replacementInstanceMethodImplementation = nil;
     self.isInstanceMethodSwizzled = NO;
 }
+
+- (void)resetSwizzledClassMethod
+{
+    [self.runtimeUtils updateMethod:self.originalClassMethod
+                  withImplemenation:self.originalClassMethodImplementation];
+    
+    self.originalClassMethod = nil;
+    self.originalClassMethodImplementation = nil;
+    self.replacementClassMethodImplementation = nil;
+    self.isClassMethodSwizzled = NO;
+}
+
 
 @end

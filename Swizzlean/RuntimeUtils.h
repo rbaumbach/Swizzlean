@@ -5,8 +5,8 @@
 
 - (Class)getMetaClassFromClassString:(NSString *)klass;
 
-- (Method)getClassMethodWithClass:(Class)klass selector:(SEL)selector;
 - (Method)getInstanceMethodWithClass:(Class)klass selector:(SEL)selector;
+- (Method)getClassMethodWithClass:(Class)klass selector:(SEL)selector;
 
 - (IMP)getImplementationWithBlock:(id)blockImplemenation;
 - (IMP)updateMethod:(Method)method withImplemenation:(IMP)implementation;

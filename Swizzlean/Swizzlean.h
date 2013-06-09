@@ -5,15 +5,15 @@
 @interface Swizzlean : NSObject
 
 @property(nonatomic, readonly) Class classToSwizzle;
-@property(nonatomic, readonly) BOOL isClassMethodSwizzled;
 @property(nonatomic, readonly) BOOL isInstanceMethodSwizzled;
+@property(nonatomic, readonly) BOOL isClassMethodSwizzled;
 
 - (id)initWithClassToSwizzle:(Class)swizzleClass;
 
-- (void)swizzleClassMethod:(SEL)originalMethod withReplacementImplementation:(id)replacementImplementation;
 - (void)swizzleInstanceMethod:(SEL)originalMethod withReplacementImplementation:(id)replacementImplementation;
+- (void)swizzleClassMethod:(SEL)originalMethod withReplacementImplementation:(id)replacementImplementation;
 
-- (void)unswizzleClassMethod;
 - (void)resetSwizzledInstanceMethod;
+- (void)resetSwizzledClassMethod;
 
 @end
