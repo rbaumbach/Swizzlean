@@ -190,6 +190,33 @@ describe(@"Swizzlean", ^{
                 swizzleanObj.isInstanceMethodSwizzled should be_truthy;
             });
         });
+        
+        context(@"#resetSwizzledInstanceMethod", ^{
+            beforeEach(^{
+                swizzleanObj.originalInstanceMethod = originalInstanceMethod;
+                swizzleanObj.originalInstanceMethodImplementation = originalImp;
+                swizzleanObj.replacementInstanceMethodImplementation = replacementImp;
+                swizzleanObj.isInstanceMethodSwizzled = YES;
+                [swizzleanObj resetSwizzledInstanceMethod];
+            });
+            
+            it(@"unswizzles the instance method (sets original implementation of instance method)", ^{
+                swizzleanObj.runtimeUtils should have_received(@selector(updateMethod:withImplemenation:)).with(originalInstanceMethod).and_with(originalImp);
+            });
+            
+            it(@"resets instance method", ^{
+                swizzleanObj.originalInstanceMethod should be_nil;
+                swizzleanObj.originalInstanceMethodImplementation should be_nil;
+            });
+
+            it(@"resets replacement instance method implementation", ^{
+                swizzleanObj.replacementInstanceMethodImplementation should be_nil;
+            });
+
+            it(@"sets the isInstanceMethodSwizzled to NO", ^{
+                swizzleanObj.isInstanceMethodSwizzled should_not be_truthy;
+            });
+        });
     });
 });
 

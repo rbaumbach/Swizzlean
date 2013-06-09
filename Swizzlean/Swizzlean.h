@@ -14,5 +14,6 @@
 - (void)swizzleInstanceMethod:(SEL)originalMethod withReplacementImplementation:(id)replacementImplementation;
 
 - (void)unswizzleClassMethod;
+- (void)resetSwizzledInstanceMethod;
 
 @end

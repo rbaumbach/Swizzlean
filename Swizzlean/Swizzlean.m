@@ -83,4 +83,14 @@
     self.isClassMethodSwizzled = NO;
 }
 
+- (void)resetSwizzledInstanceMethod
+{
+    [self.runtimeUtils updateMethod:self.originalInstanceMethod
+                  withImplemenation:self.originalInstanceMethodImplementation];
+    self.originalInstanceMethod = nil;
+    self.originalInstanceMethodImplementation = nil;
+    self.replacementInstanceMethodImplementation = nil;
+    self.isInstanceMethodSwizzled = NO;
+}
+
 @end
