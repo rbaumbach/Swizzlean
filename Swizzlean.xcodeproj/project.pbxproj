@@ -35,6 +35,9 @@
 		AF6B25F41747EE66006A312B /* SwizzleanSpec.mm in Sources */ = {isa = PBXBuildFile; fileRef = AF6B25F31747EE66006A312B /* SwizzleanSpec.mm */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		AFD1566D175BBA6B000A83DF /* TestClass.m in Sources */ = {isa = PBXBuildFile; fileRef = AFF1A93117563FE000E9E586 /* TestClass.m */; };
 		AFF1A93217563FE000E9E586 /* TestClass.m in Sources */ = {isa = PBXBuildFile; fileRef = AFF1A93117563FE000E9E586 /* TestClass.m */; };
+		AFF63518176396150015998B /* RuntimeUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = AFF63517176396150015998B /* RuntimeUtils.m */; };
+		AFF63519176396150015998B /* RuntimeUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = AFF63517176396150015998B /* RuntimeUtils.m */; };
+		AFF6351B176396AD0015998B /* RuntimeUtilsSpec.mm in Sources */ = {isa = PBXBuildFile; fileRef = AFF6351A176396AD0015998B /* RuntimeUtilsSpec.mm */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -68,6 +71,9 @@
 		AF6B25F31747EE66006A312B /* SwizzleanSpec.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = SwizzleanSpec.mm; sourceTree = "<group>"; };
 		AFF1A93017563FE000E9E586 /* TestClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestClass.h; sourceTree = "<group>"; };
 		AFF1A93117563FE000E9E586 /* TestClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestClass.m; sourceTree = "<group>"; };
+		AFF63516176396150015998B /* RuntimeUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RuntimeUtils.h; sourceTree = "<group>"; };
+		AFF63517176396150015998B /* RuntimeUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RuntimeUtils.m; sourceTree = "<group>"; };
+		AFF6351A176396AD0015998B /* RuntimeUtilsSpec.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = RuntimeUtilsSpec.mm; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,6 +141,8 @@
 				AF6B25E817467588006A312B /* FirstViewController.xib */,
 				AF6B25EF1747EE48006A312B /* Swizzlean.h */,
 				AF6B25F01747EE48006A312B /* Swizzlean.m */,
+				AFF63516176396150015998B /* RuntimeUtils.h */,
+				AFF63517176396150015998B /* RuntimeUtils.m */,
 				AF32F07B174671D400EC79F7 /* Supporting Files */,
 			);
 			path = Swizzlean;
@@ -160,6 +168,7 @@
 				AF6B25E417467514006A312B /* AppDelegateSpec.mm */,
 				AF6B25ED1747EC42006A312B /* FirstViewControllerSpec.mm */,
 				AF6B25F31747EE66006A312B /* SwizzleanSpec.mm */,
+				AFF6351A176396AD0015998B /* RuntimeUtilsSpec.mm */,
 				AFF1A933175640CC00E9E586 /* Test Classes */,
 				AF6B25D11746737C006A312B /* Supporting Files */,
 			);
@@ -286,6 +295,7 @@
 				AF32F085174671D400EC79F7 /* AppDelegate.m in Sources */,
 				AF6B25E917467588006A312B /* FirstViewController.m in Sources */,
 				AF6B25F11747EE48006A312B /* Swizzlean.m in Sources */,
+				AFF63518176396150015998B /* RuntimeUtils.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -301,6 +311,8 @@
 				AF6B25F21747EE48006A312B /* Swizzlean.m in Sources */,
 				AF6B25F41747EE66006A312B /* SwizzleanSpec.mm in Sources */,
 				AFF1A93217563FE000E9E586 /* TestClass.m in Sources */,
+				AFF63519176396150015998B /* RuntimeUtils.m in Sources */,
+				AFF6351B176396AD0015998B /* RuntimeUtilsSpec.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
