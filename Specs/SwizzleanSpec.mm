@@ -37,7 +37,7 @@ describe(@"Swizzlean", ^{
     
     beforeEach(^{
         testClass = [TestClass class];
-        swizzleanObj = [[Swizzlean alloc] initWithClassToSwizzle:testClass];
+        swizzleanObj = [[[Swizzlean alloc] initWithClassToSwizzle:testClass] autorelease];
         
         fakeRuntimeUtils = nice_fake_for([RuntimeUtils class]);
         swizzleanObj.runtimeUtils = fakeRuntimeUtils;

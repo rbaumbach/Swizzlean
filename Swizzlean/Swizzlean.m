@@ -85,5 +85,4 @@
     self.isClassMethodSwizzled = NO;
 }
 
-
 @end

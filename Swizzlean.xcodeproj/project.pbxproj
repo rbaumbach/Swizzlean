@@ -37,7 +37,7 @@
 		AFF1A93217563FE000E9E586 /* TestClass.m in Sources */ = {isa = PBXBuildFile; fileRef = AFF1A93117563FE000E9E586 /* TestClass.m */; };
 		AFF63518176396150015998B /* RuntimeUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = AFF63517176396150015998B /* RuntimeUtils.m */; };
 		AFF63519176396150015998B /* RuntimeUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = AFF63517176396150015998B /* RuntimeUtils.m */; };
-		AFF6351B176396AD0015998B /* RuntimeUtilsSpec.mm in Sources */ = {isa = PBXBuildFile; fileRef = AFF6351A176396AD0015998B /* RuntimeUtilsSpec.mm */; };
+		AFF6351B176396AD0015998B /* RuntimeUtilsSpec.mm in Sources */ = {isa = PBXBuildFile; fileRef = AFF6351A176396AD0015998B /* RuntimeUtilsSpec.mm */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */

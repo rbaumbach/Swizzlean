@@ -12,8 +12,8 @@ describe(@"RuntimeUtils", ^{
     __block TestClass *fakeClass;
 
     beforeEach(^{
-        runtimeUtils = [[RuntimeUtils alloc] init];
-        fakeClass = [[TestClass alloc] init];
+        runtimeUtils = [[[RuntimeUtils alloc] init] autorelease];
+        fakeClass = [[[TestClass alloc] init] autorelease];
     });
     
     context(@"#getMetaClassFromClassString:", ^{
