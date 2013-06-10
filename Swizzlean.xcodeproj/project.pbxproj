@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AF19C39F176543230007D198 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF19C39E176543230007D198 /* SenTestingKit.framework */; };
+		AF19C3A0176543230007D198 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF32F074174671D400EC79F7 /* UIKit.framework */; };
+		AF19C3A1176543230007D198 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF32F076174671D400EC79F7 /* Foundation.framework */; };
+		AF19C3A7176543230007D198 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = AF19C3A5176543230007D198 /* InfoPlist.strings */; };
+		AF19C3B51765469C0007D198 /* SwizzleanIntegrationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = AF19C3B41765469C0007D198 /* SwizzleanIntegrationTests.m */; };
+		AF19C3B717654B530007D198 /* Swizzlean.m in Sources */ = {isa = PBXBuildFile; fileRef = AF6B25F01747EE48006A312B /* Swizzlean.m */; };
+		AF19C3B917654B690007D198 /* RuntimeUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = AFF63517176396150015998B /* RuntimeUtils.m */; };
+		AF19C3BC176551530007D198 /* IntegrationTestClass.m in Sources */ = {isa = PBXBuildFile; fileRef = AF19C3BB176551530007D198 /* IntegrationTestClass.m */; };
 		AF32F075174671D400EC79F7 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF32F074174671D400EC79F7 /* UIKit.framework */; };
 		AF32F077174671D400EC79F7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF32F076174671D400EC79F7 /* Foundation.framework */; };
 		AF32F079174671D400EC79F7 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF32F078174671D400EC79F7 /* CoreGraphics.framework */; };
@@ -40,7 +48,26 @@
 		AFF6351B176396AD0015998B /* RuntimeUtilsSpec.mm in Sources */ = {isa = PBXBuildFile; fileRef = AFF6351A176396AD0015998B /* RuntimeUtilsSpec.mm */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		AF19C3B1176545930007D198 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AF32F069174671D400EC79F7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AF32F070174671D400EC79F7;
+			remoteInfo = Swizzlean;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		AF19C39D176543230007D198 /* IntegrationTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IntegrationTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		AF19C39E176543230007D198 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		AF19C3A4176543230007D198 /* IntegrationTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "IntegrationTests-Info.plist"; sourceTree = "<group>"; };
+		AF19C3A6176543230007D198 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		AF19C3AB176543230007D198 /* IntegrationTests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "IntegrationTests-Prefix.pch"; sourceTree = "<group>"; };
+		AF19C3B31765469C0007D198 /* SwizzleanIntegrationTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwizzleanIntegrationTests.h; sourceTree = "<group>"; };
+		AF19C3B41765469C0007D198 /* SwizzleanIntegrationTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SwizzleanIntegrationTests.m; sourceTree = "<group>"; };
+		AF19C3BA176551530007D198 /* IntegrationTestClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IntegrationTestClass.h; sourceTree = "<group>"; };
+		AF19C3BB176551530007D198 /* IntegrationTestClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IntegrationTestClass.m; sourceTree = "<group>"; };
 		AF32F071174671D400EC79F7 /* Swizzlean.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Swizzlean.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF32F074174671D400EC79F7 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		AF32F076174671D400EC79F7 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -77,6 +104,16 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		AF19C399176543230007D198 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AF19C39F176543230007D198 /* SenTestingKit.framework in Frameworks */,
+				AF19C3A0176543230007D198 /* UIKit.framework in Frameworks */,
+				AF19C3A1176543230007D198 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		AF32F06E174671D400EC79F7 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -101,11 +138,42 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AF19C3A2176543230007D198 /* IntegrationTests */ = {
+			isa = PBXGroup;
+			children = (
+				AF19C3B31765469C0007D198 /* SwizzleanIntegrationTests.h */,
+				AF19C3B41765469C0007D198 /* SwizzleanIntegrationTests.m */,
+				AF19C3BD176551690007D198 /* Test Classes */,
+				AF19C3A3176543230007D198 /* Supporting Files */,
+			);
+			path = IntegrationTests;
+			sourceTree = "<group>";
+		};
+		AF19C3A3176543230007D198 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				AF19C3A4176543230007D198 /* IntegrationTests-Info.plist */,
+				AF19C3A5176543230007D198 /* InfoPlist.strings */,
+				AF19C3AB176543230007D198 /* IntegrationTests-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		AF19C3BD176551690007D198 /* Test Classes */ = {
+			isa = PBXGroup;
+			children = (
+				AF19C3BA176551530007D198 /* IntegrationTestClass.h */,
+				AF19C3BB176551530007D198 /* IntegrationTestClass.m */,
+			);
+			name = "Test Classes";
+			sourceTree = "<group>";
+		};
 		AF32F068174671D400EC79F7 = {
 			isa = PBXGroup;
 			children = (
 				AF32F07A174671D400EC79F7 /* Swizzlean */,
 				AF6B25D01746737C006A312B /* Specs */,
+				AF19C3A2176543230007D198 /* IntegrationTests */,
 				AF32F073174671D400EC79F7 /* Frameworks */,
 				AF32F072174671D400EC79F7 /* Products */,
 			);
@@ -116,6 +184,7 @@
 			children = (
 				AF32F071174671D400EC79F7 /* Swizzlean.app */,
 				AF6B25CC1746737C006A312B /* Specs.app */,
+				AF19C39D176543230007D198 /* IntegrationTests.octest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -127,6 +196,7 @@
 				AF32F074174671D400EC79F7 /* UIKit.framework */,
 				AF32F076174671D400EC79F7 /* Foundation.framework */,
 				AF32F078174671D400EC79F7 /* CoreGraphics.framework */,
+				AF19C39E176543230007D198 /* SenTestingKit.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -199,6 +269,25 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		AF19C39C176543230007D198 /* IntegrationTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AF19C3AE176543230007D198 /* Build configuration list for PBXNativeTarget "IntegrationTests" */;
+			buildPhases = (
+				AF19C398176543230007D198 /* Sources */,
+				AF19C399176543230007D198 /* Frameworks */,
+				AF19C39A176543230007D198 /* Resources */,
+				AF19C39B176543230007D198 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AF19C3B2176545930007D198 /* PBXTargetDependency */,
+			);
+			name = IntegrationTests;
+			productName = IntegrationTests;
+			productReference = AF19C39D176543230007D198 /* IntegrationTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
 		AF32F070174671D400EC79F7 /* Swizzlean */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = AF32F08E174671D400EC79F7 /* Build configuration list for PBXNativeTarget "Swizzlean" */;
@@ -256,11 +345,20 @@
 			targets = (
 				AF32F070174671D400EC79F7 /* Swizzlean */,
 				AF6B25CB1746737C006A312B /* Specs */,
+				AF19C39C176543230007D198 /* IntegrationTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		AF19C39A176543230007D198 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AF19C3A7176543230007D198 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		AF32F06F174671D400EC79F7 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -285,7 +383,34 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		AF19C39B176543230007D198 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
+		AF19C398176543230007D198 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AF19C3B917654B690007D198 /* RuntimeUtils.m in Sources */,
+				AF19C3B717654B530007D198 /* Swizzlean.m in Sources */,
+				AF19C3B51765469C0007D198 /* SwizzleanIntegrationTests.m in Sources */,
+				AF19C3BC176551530007D198 /* IntegrationTestClass.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		AF32F06D174671D400EC79F7 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -318,7 +443,23 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		AF19C3B2176545930007D198 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AF32F070174671D400EC79F7 /* Swizzlean */;
+			targetProxy = AF19C3B1176545930007D198 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
+		AF19C3A5176543230007D198 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AF19C3A6176543230007D198 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
 		AF32F07D174671D400EC79F7 /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -338,6 +479,36 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		AF19C3AC176543230007D198 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "IntegrationTests/IntegrationTests-Prefix.pch";
+				INFOPLIST_FILE = "IntegrationTests/IntegrationTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		AF19C3AD176543230007D198 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "IntegrationTests/IntegrationTests-Prefix.pch";
+				INFOPLIST_FILE = "IntegrationTests/IntegrationTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
 		AF32F08C174671D400EC79F7 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -462,6 +633,14 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		AF19C3AE176543230007D198 /* Build configuration list for PBXNativeTarget "IntegrationTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AF19C3AC176543230007D198 /* Debug */,
+				AF19C3AD176543230007D198 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		AF32F06C174671D400EC79F7 /* Build configuration list for PBXProject "Swizzlean" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
