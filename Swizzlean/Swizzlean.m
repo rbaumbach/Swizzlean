@@ -7,18 +7,18 @@
 @property(nonatomic, readwrite) RuntimeUtils *runtimeUtils;
 
 @property(nonatomic, readwrite) Class classToSwizzle;
-@property(nonatomic, readwrite) Method originalClassMethod;
 @property(nonatomic, readwrite) Method originalInstanceMethod;
-@property(nonatomic, readwrite) IMP originalClassMethodImplementation;
+@property(nonatomic, readwrite) Method originalClassMethod;
 @property(nonatomic, readwrite) IMP originalInstanceMethodImplementation;
+@property(nonatomic, readwrite) IMP originalClassMethodImplementation;
 
-@property(copy, nonatomic, readwrite) id replacementClassMethodImplementationBlock;
 @property(copy, nonatomic, readwrite) id replacementInstanceMethodImplementationBlock;
+@property(copy, nonatomic, readwrite) id replacementClassMethodImplementationBlock;
 @property(nonatomic, readwrite) IMP replacementInstanceMethodImplementation;
 @property(nonatomic, readwrite) IMP replacementClassMethodImplementation;
 
-@property(nonatomic, readwrite) BOOL isClassMethodSwizzled;
 @property(nonatomic, readwrite) BOOL isInstanceMethodSwizzled;
+@property(nonatomic, readwrite) BOOL isClassMethodSwizzled;
 
 @end
 
@@ -43,6 +43,10 @@
 
 - (void)swizzleInstanceMethod:(SEL)originalMethod withReplacementImplementation:(id)replacementImplementation
 {
+    if (self.isInstanceMethodSwizzled) {
+        return;
+    }
+    
     self.originalInstanceMethod = [self.runtimeUtils getInstanceMethodWithClass:self.classToSwizzle
                                                                        selector:originalMethod];
     self.replacementInstanceMethodImplementationBlock = replacementImplementation;
@@ -54,6 +58,10 @@
 
 - (void)swizzleClassMethod:(SEL)originalMethod withReplacementImplementation:(id)replacementImplementation
 {
+    if (self.isClassMethodSwizzled) {
+        return;
+    }
+    
     self.originalClassMethod = [self.runtimeUtils getClassMethodWithClass:self.classToSwizzle
                                                                  selector:originalMethod];
     self.replacementClassMethodImplementationBlock = replacementImplementation;
@@ -65,6 +73,10 @@
 
 - (void)resetSwizzledInstanceMethod
 {
+    if (!self.isInstanceMethodSwizzled) {
+        return;
+    }
+    
     [self.runtimeUtils updateMethod:self.originalInstanceMethod
                   withImplemenation:self.originalInstanceMethodImplementation];
     
@@ -76,6 +88,10 @@
 
 - (void)resetSwizzledClassMethod
 {
+    if (!self.isClassMethodSwizzled) {
+        return;
+    }
+    
     [self.runtimeUtils updateMethod:self.originalClassMethod
                   withImplemenation:self.originalClassMethodImplementation];
     
