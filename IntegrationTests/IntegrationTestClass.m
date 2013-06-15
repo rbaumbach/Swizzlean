@@ -10,15 +10,10 @@
     NSLog(@"Void instance method with no input.");
 }
 
-- (NSString *)instanceMethodReturnStringWithInput:(NSString *)input
-{
-    return input;
-}
-
 - (NSString *)instanceMethodReturnStringWithInput:(NSString *)inputA
                                          andInput:(NSString *)inputB
 {
-    return [NSString stringWithFormat:@"%@ + %@", inputA, inputB];
+    return [NSString stringWithFormat:@"Instance Method: %@ + %@", inputA, inputB];
 }
 
 #pragma mark - Class Methods
@@ -28,15 +23,10 @@
     NSLog(@"Void class method with no input");
 }
 
-+ (NSString *)classMethodReturnStringWithInput:(NSString *)input
-{
-    return input;
-}
-
 + (NSString *)classMethodReturnStringWithInput:(NSString *)inputA
                                       andInput:(NSString *)inputB
 {
-    return [NSString stringWithFormat:@"%@ + %@", inputA, inputB];
+    return [NSString stringWithFormat:@"Class Method: %@ + %@", inputA, inputB];
 }
 
 @end

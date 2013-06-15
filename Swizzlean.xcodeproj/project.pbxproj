@@ -64,7 +64,6 @@
 		AF19C3A4176543230007D198 /* IntegrationTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "IntegrationTests-Info.plist"; sourceTree = "<group>"; };
 		AF19C3A6176543230007D198 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		AF19C3AB176543230007D198 /* IntegrationTests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "IntegrationTests-Prefix.pch"; sourceTree = "<group>"; };
-		AF19C3B31765469C0007D198 /* SwizzleanIntegrationTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwizzleanIntegrationTests.h; sourceTree = "<group>"; };
 		AF19C3B41765469C0007D198 /* SwizzleanIntegrationTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SwizzleanIntegrationTests.m; sourceTree = "<group>"; };
 		AF19C3BA176551530007D198 /* IntegrationTestClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IntegrationTestClass.h; sourceTree = "<group>"; };
 		AF19C3BB176551530007D198 /* IntegrationTestClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IntegrationTestClass.m; sourceTree = "<group>"; };
@@ -96,6 +95,7 @@
 		AF6B25EF1747EE48006A312B /* Swizzlean.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Swizzlean.h; sourceTree = "<group>"; };
 		AF6B25F01747EE48006A312B /* Swizzlean.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Swizzlean.m; sourceTree = "<group>"; };
 		AF6B25F31747EE66006A312B /* SwizzleanSpec.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = SwizzleanSpec.mm; sourceTree = "<group>"; };
+		AFE194DD176C0B250009D34D /* SwizzleanIntegrationTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwizzleanIntegrationTests.h; sourceTree = "<group>"; };
 		AFF1A93017563FE000E9E586 /* TestClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestClass.h; sourceTree = "<group>"; };
 		AFF1A93117563FE000E9E586 /* TestClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestClass.m; sourceTree = "<group>"; };
 		AFF63516176396150015998B /* RuntimeUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RuntimeUtils.h; sourceTree = "<group>"; };
@@ -141,7 +141,7 @@
 		AF19C3A2176543230007D198 /* IntegrationTests */ = {
 			isa = PBXGroup;
 			children = (
-				AF19C3B31765469C0007D198 /* SwizzleanIntegrationTests.h */,
+				AFE194DD176C0B250009D34D /* SwizzleanIntegrationTests.h */,
 				AF19C3B41765469C0007D198 /* SwizzleanIntegrationTests.m */,
 				AF19C3BD176551690007D198 /* Test Classes */,
 				AF19C3A3176543230007D198 /* Supporting Files */,
@@ -640,6 +640,7 @@
 				AF19C3AD176543230007D198 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		AF32F06C174671D400EC79F7 /* Build configuration list for PBXProject "Swizzlean" */ = {
 			isa = XCConfigurationList;

@@ -19,23 +19,98 @@
     self.swizzlean = [[Swizzlean alloc] initWithClassToSwizzle:[IntegrationTestClass class]];
 }
 
-- (void)tearDown
+#pragma mark - Instance Method Testing
+
+- (void)testIsInstanceMethodSwizzledIsNoAfterInit
 {
-    [super tearDown];
+    STAssertFalse(self.swizzlean.isInstanceMethodSwizzled, @"isInstanceMethodSwizzled should be NO before instance method swizzle");
+}
+
+- (void)testIsInstanceMethodSwizzledIsYesAfterMethodSwizzle
+{
+    [self.swizzlean swizzleInstanceMethod:@selector(instanceMethod)
+         withReplacementImplementation:^(id _self) { }];
+    STAssertTrue(self.swizzlean.isInstanceMethodSwizzled, @"isInstanceMethodSwizzled should be YES after instance method swizzle");
 }
 
 - (void)testInstanceMethodWithVoidReturnAndNoParams
 {
     __block NSString *testString;
     
-    [self.swizzlean swizzleClassMethod:@selector(classMethod)
+    [self.swizzlean swizzleInstanceMethod:@selector(instanceMethod)
          withReplacementImplementation:^(id _self) {
              testString = @"Swizzled";
     }];
     
+    IntegrationTestClass *testClass = [[IntegrationTestClass alloc] init];
+    [testClass instanceMethod];
+    
+    STAssertEqualObjects(testString, @"Swizzled", @"Instance method was not swizzled");
+    
+    [self.swizzlean resetSwizzledInstanceMethod];
+}
+
+- (void)testInstanceMethodWithReturnAndParams
+{
+    IntegrationTestClass *testClass = [[IntegrationTestClass alloc] init];
+    NSString *stringBeforeSwizzle = [testClass instanceMethodReturnStringWithInput:@"A" andInput:@"B"];
+    STAssertEqualObjects(stringBeforeSwizzle, @"Instance Method: A + B", @"Incorrect integration test class string return");
+    
+    [self.swizzlean swizzleInstanceMethod:@selector(instanceMethodReturnStringWithInput:andInput:)
+            withReplacementImplementation:^(id _self, NSString *param1, NSString *param2) {
+                return [NSString stringWithFormat:@"Swizzled: %@ + %@", param1, param2];
+            }];
+    
+    NSString *stringAfterSwizzle = [testClass instanceMethodReturnStringWithInput:@"A" andInput:@"B"];
+    STAssertEqualObjects(stringAfterSwizzle, @"Swizzled: A + B", @"Instance method was not swizzled");
+    
+    [self.swizzlean resetSwizzledInstanceMethod];
+}
+
+#pragma mark - Class Method Testing
+
+- (void)testIsClassMethodSwizzledIsNoAfterInit
+{
+    STAssertFalse(self.swizzlean.isClassMethodSwizzled, @"isClassMethodSwizzled should be NO before class method swizzle");
+}
+
+- (void)testIsClassMethodSwizzledIsYesAfterMethodSwizzle
+{
+    [self.swizzlean swizzleClassMethod:@selector(classMethod)
+            withReplacementImplementation:^(id _self) { }];
+    STAssertTrue(self.swizzlean.isClassMethodSwizzled, @"isClassMethodSwizzled should be YES after class method swizzle");
+}
+
+- (void)testClassMethodWithVoidReturnAndNoParams
+{
+    __block NSString *testString;
+    
+    [self.swizzlean swizzleClassMethod:@selector(classMethod)
+            withReplacementImplementation:^(id _self) {
+                testString = @"Swizzled";
+            }];
+    
     [IntegrationTestClass classMethod];
     
-    STAssertEqualObjects(testString, @"Swizzled", @"Method was not swizzed");
+    STAssertEqualObjects(testString, @"Swizzled", @"Class method was not swizzled");
+    
+    [self.swizzlean resetSwizzledClassMethod];
+}
+
+- (void)testClassMethodWithReturnAndParams
+{
+    NSString *stringBeforeSwizzle = [IntegrationTestClass classMethodReturnStringWithInput:@"A" andInput:@"B"];
+    STAssertEqualObjects(stringBeforeSwizzle, @"Class Method: A + B", @"Incorrect integration test class string return");
+    
+    [self.swizzlean swizzleClassMethod:@selector(classMethodReturnStringWithInput:andInput:)
+            withReplacementImplementation:^(id _self, NSString *param1, NSString *param2) {
+                return [NSString stringWithFormat:@"Swizzled: %@ + %@", param1, param2];
+            }];
+    
+    NSString *stringAfterSwizzle = [IntegrationTestClass classMethodReturnStringWithInput:@"A" andInput:@"B"];
+    STAssertEqualObjects(stringAfterSwizzle, @"Swizzled: A + B", @"Class method was not swizzled");
+    
+    [self.swizzlean resetSwizzledClassMethod];
 }
 
 @end
