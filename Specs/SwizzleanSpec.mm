@@ -23,6 +23,7 @@ using namespace Cedar::Doubles;
 @property(nonatomic, readwrite) IMP replacementClassMethodImplementation;
 
 @property(nonatomic, readwrite) SEL currentInstanceMethodSwizzled;
+@property(nonatomic, readwrite) SEL currentClassMethodSwizzled;
 
 @property(nonatomic, readwrite) BOOL isInstanceMethodSwizzled;
 @property(nonatomic, readwrite) BOOL isClassMethodSwizzled;
@@ -139,6 +140,7 @@ describe(@"Swizzlean", ^{
                     swizzleanObj.originalInstanceMethod = originalInstanceMethod;
                     swizzleanObj.originalInstanceMethodImplementation = originalImp;
                     swizzleanObj.replacementInstanceMethodImplementation = replacementImp;
+                    swizzleanObj.currentInstanceMethodSwizzled = instanceMethodSEL;
                     swizzleanObj.isInstanceMethodSwizzled = YES;
                     [swizzleanObj resetSwizzledInstanceMethod];
                 });
@@ -154,6 +156,10 @@ describe(@"Swizzlean", ^{
                 
                 it(@"resets replacement instance method implementation", ^{
                     swizzleanObj.replacementInstanceMethodImplementation should be_nil;
+                });
+                
+                it(@"resets the SEL of the original instance method swizzled", ^{
+                    swizzleanObj.currentInstanceMethodSwizzled should be_nil;
                 });
                 
                 it(@"sets the isInstanceMethodSwizzled to NO", ^{
@@ -242,6 +248,7 @@ describe(@"Swizzlean", ^{
                     swizzleanObj.originalClassMethod = originalClassMethod;
                     swizzleanObj.originalClassMethodImplementation = originalImp;
                     swizzleanObj.replacementClassMethodImplementation = replacementImp;
+                    swizzleanObj.currentClassMethodSwizzled = classMethodSEL;
                     swizzleanObj.isClassMethodSwizzled = YES;
                     [swizzleanObj resetSwizzledClassMethod];
                 });
@@ -257,6 +264,10 @@ describe(@"Swizzlean", ^{
                 
                 it(@"resets replacement class method implementation", ^{
                     swizzleanObj.replacementClassMethodImplementation should be_nil;
+                });
+                
+                it(@"resets the SEL of the original class method swizzled", ^{
+                    swizzleanObj.currentClassMethodSwizzled should be_nil;
                 });
                 
                 it(@"sets the isClassMethodSwizzled to NO", ^{

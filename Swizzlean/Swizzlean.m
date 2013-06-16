@@ -89,6 +89,7 @@
     self.originalInstanceMethod = nil;
     self.originalInstanceMethodImplementation = nil;
     self.replacementInstanceMethodImplementation = nil;
+    self.currentInstanceMethodSwizzled = nil;
     self.isInstanceMethodSwizzled = NO;
 }
 
@@ -104,6 +105,7 @@
     self.originalClassMethod = nil;
     self.originalClassMethodImplementation = nil;
     self.replacementClassMethodImplementation = nil;
+    self.currentClassMethodSwizzled = nil;
     self.isClassMethodSwizzled = NO;
 }
 
