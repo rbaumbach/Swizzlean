@@ -22,6 +22,8 @@ using namespace Cedar::Doubles;
 @property(nonatomic, readwrite) IMP replacementInstanceMethodImplementation;
 @property(nonatomic, readwrite) IMP replacementClassMethodImplementation;
 
+@property(nonatomic, readwrite) SEL currentInstanceMethodSwizzled;
+
 @property(nonatomic, readwrite) BOOL isInstanceMethodSwizzled;
 @property(nonatomic, readwrite) BOOL isClassMethodSwizzled;
 
@@ -59,6 +61,14 @@ describe(@"Swizzlean", ^{
         swizzleanObj.isInstanceMethodSwizzled should_not be_truthy;
     });
     
+    it(@"has a currentInstanceMethodSwizzled: that is nil", ^{
+        swizzleanObj.currentInstanceMethodSwizzled should be_nil;
+    });
+    
+    it(@"has a currentClassMethodSwizzled: that is nil", ^{
+        swizzleanObj.currentClassMethodSwizzled should be_nil;
+    });
+    
     describe(@"Instance method swizzling", ^{
         __block SEL instanceMethodSEL;
         __block Method originalInstanceMethod;
@@ -82,6 +92,10 @@ describe(@"Swizzlean", ^{
                     fakeRuntimeUtils stub_method("updateMethod:withImplemenation:").with(originalInstanceMethod).and_with(replacementImp).and_return(originalImp);
                     swizzleanObj.isInstanceMethodSwizzled = NO;
                     [swizzleanObj swizzleInstanceMethod:instanceMethodSEL withReplacementImplementation:replacementImpBlock];
+                });
+                
+                it(@"stores the selector of original method", ^{
+                    swizzleanObj.currentInstanceMethodSwizzled should equal(instanceMethodSEL);
                 });
                 
                 it(@"stores the original instance method to be swizzled", ^{
@@ -183,6 +197,10 @@ describe(@"Swizzlean", ^{
                     fakeRuntimeUtils stub_method("updateMethod:withImplemenation:").with(originalClassMethod).and_with(replacementImp).and_return(originalImp);
                     swizzleanObj.isClassMethodSwizzled = NO;
                     [swizzleanObj swizzleClassMethod:classMethodSEL withReplacementImplementation:replacementImpBlock];
+                });
+                
+                it(@"stores the selector of class method", ^{
+                    swizzleanObj.currentClassMethodSwizzled should equal(classMethodSEL);
                 });
                 
                 it(@"stores the original class method to be swizzled", ^{

@@ -6,6 +6,8 @@
 @property(nonatomic, readonly) Class classToSwizzle;
 @property(nonatomic, readonly) BOOL isInstanceMethodSwizzled;
 @property(nonatomic, readonly) BOOL isClassMethodSwizzled;
+@property(nonatomic, readonly) SEL currentInstanceMethodSwizzled;
+@property(nonatomic, readonly) SEL currentClassMethodSwizzled;
 
 - (id)initWithClassToSwizzle:(Class)swizzleClass;
 

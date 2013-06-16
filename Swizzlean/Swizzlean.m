@@ -7,6 +7,7 @@
 @property(nonatomic, readwrite) RuntimeUtils *runtimeUtils;
 
 @property(nonatomic, readwrite) Class classToSwizzle;
+
 @property(nonatomic, readwrite) Method originalInstanceMethod;
 @property(nonatomic, readwrite) Method originalClassMethod;
 @property(nonatomic, readwrite) IMP originalInstanceMethodImplementation;
@@ -16,6 +17,9 @@
 @property(copy, nonatomic, readwrite) id replacementClassMethodImplementationBlock;
 @property(nonatomic, readwrite) IMP replacementInstanceMethodImplementation;
 @property(nonatomic, readwrite) IMP replacementClassMethodImplementation;
+
+@property(nonatomic, readwrite) SEL currentInstanceMethodSwizzled;
+@property(nonatomic, readwrite) SEL currentClassMethodSwizzled;
 
 @property(nonatomic, readwrite) BOOL isInstanceMethodSwizzled;
 @property(nonatomic, readwrite) BOOL isClassMethodSwizzled;
@@ -53,6 +57,7 @@
     self.replacementInstanceMethodImplementation = [self.runtimeUtils getImplementationWithBlock:replacementImplementation];
     self.originalInstanceMethodImplementation = [self.runtimeUtils updateMethod:self.originalInstanceMethod
                                                               withImplemenation:self.replacementInstanceMethodImplementation];
+    self.currentInstanceMethodSwizzled = originalMethod;
     self.isInstanceMethodSwizzled = YES;
 }
 
@@ -68,6 +73,7 @@
     self.replacementClassMethodImplementation = [self.runtimeUtils getImplementationWithBlock:replacementImplementation];
     self.originalClassMethodImplementation = [self.runtimeUtils updateMethod:self.originalClassMethod
                                                            withImplemenation:self.replacementClassMethodImplementation];
+    self.currentClassMethodSwizzled = originalMethod;
     self.isClassMethodSwizzled = YES;
 }
 
