@@ -47,6 +47,9 @@
     
     STAssertEqualObjects(testString, @"Swizzled", @"Instance method was not swizzled");
     
+    NSString *methodNameOfSwizzledMethod = NSStringFromSelector(self.swizzlean.currentInstanceMethodSwizzled);
+    STAssertEqualObjects(methodNameOfSwizzledMethod, @"instanceMethod", @"current swizzled method not stored");
+    
     [self.swizzlean resetSwizzledInstanceMethod];
 }
 
@@ -63,6 +66,9 @@
     
     NSString *stringAfterSwizzle = [testClass instanceMethodReturnStringWithInput:@"A" andInput:@"B"];
     STAssertEqualObjects(stringAfterSwizzle, @"Swizzled: A + B", @"Instance method was not swizzled");
+    
+    NSString *methodNameOfSwizzledMethod = NSStringFromSelector(self.swizzlean.currentInstanceMethodSwizzled);
+    STAssertEqualObjects(methodNameOfSwizzledMethod, @"instanceMethodReturnStringWithInput:andInput:", @"current swizzled method not stored");
     
     [self.swizzlean resetSwizzledInstanceMethod];
 }
@@ -94,6 +100,9 @@
     
     STAssertEqualObjects(testString, @"Swizzled", @"Class method was not swizzled");
     
+    NSString *methodNameOfSwizzledMethod = NSStringFromSelector(self.swizzlean.currentClassMethodSwizzled);
+    STAssertEqualObjects(methodNameOfSwizzledMethod, @"classMethod", @"current swizzled method not stored");
+    
     [self.swizzlean resetSwizzledClassMethod];
 }
 
@@ -109,6 +118,9 @@
     
     NSString *stringAfterSwizzle = [IntegrationTestClass classMethodReturnStringWithInput:@"A" andInput:@"B"];
     STAssertEqualObjects(stringAfterSwizzle, @"Swizzled: A + B", @"Class method was not swizzled");
+    
+    NSString *methodNameOfSwizzledMethod = NSStringFromSelector(self.swizzlean.currentClassMethodSwizzled);
+    STAssertEqualObjects(methodNameOfSwizzledMethod, @"classMethodReturnStringWithInput:andInput:", @"current swizzled method not stored");
     
     [self.swizzlean resetSwizzledClassMethod];
 }
