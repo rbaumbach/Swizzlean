@@ -14,7 +14,7 @@ A quick and "lean" way to swizzle methods for your Objective-C development needs
 * Call swizzleInstanceMethod:withReplacementImplementation: for an instance method passing 
   in the selector of the method to be swizzled with the replacement implementation.  When
   passing in the replacement implementation block, the first parameter is always id _self
-  (pointer to the block), and the followed by any other parameters for the method being
+  (pointer to the 'Class' being swizzled), and the followed by any other parameters for the method being
   swizzled.  
 * Call swizzleClassMethod:withReplacementImplementation: for a class method passing in
   the selector of the method to be swizzled with the replacement implementation.
