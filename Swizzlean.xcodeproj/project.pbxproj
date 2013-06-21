@@ -206,11 +206,7 @@
 		AF32F07A174671D400EC79F7 /* Swizzlean */ = {
 			isa = PBXGroup;
 			children = (
-				AF32F083174671D400EC79F7 /* AppDelegate.h */,
-				AF32F084174671D400EC79F7 /* AppDelegate.m */,
-				AF6B25E617467588006A312B /* FirstViewController.h */,
-				AF6B25E717467588006A312B /* FirstViewController.m */,
-				AF6B25E817467588006A312B /* FirstViewController.xib */,
+				AF7268121774CF8A0073205C /* AppCode */,
 				AF6B25EF1747EE48006A312B /* Swizzlean.h */,
 				AF6B25F01747EE48006A312B /* Swizzlean.m */,
 				AFF63516176396150015998B /* RuntimeUtils.h */,
@@ -257,6 +253,18 @@
 				AF6B25D81746737C006A312B /* Specs-Prefix.pch */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		AF7268121774CF8A0073205C /* AppCode */ = {
+			isa = PBXGroup;
+			children = (
+				AF32F083174671D400EC79F7 /* AppDelegate.h */,
+				AF32F084174671D400EC79F7 /* AppDelegate.m */,
+				AF6B25E617467588006A312B /* FirstViewController.h */,
+				AF6B25E717467588006A312B /* FirstViewController.m */,
+				AF6B25E817467588006A312B /* FirstViewController.xib */,
+			);
+			name = AppCode;
 			sourceTree = "<group>";
 		};
 		AFF1A933175640CC00E9E586 /* Test Classes */ = {
