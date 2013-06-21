@@ -16,24 +16,6 @@ describe(@"RuntimeUtils", ^{
         fakeClass = [[[TestClass alloc] init] autorelease];
     });
     
-    context(@"#getMetaClassFromClassString:", ^{
-        __block Class metaClass;
-        __block Class testClass;
-        
-        beforeEach(^{
-            metaClass = [runtimeUtils getMetaClassFromClassString:@"TestClass"];
-            testClass = object_getClass(NSClassFromString(@"TestClass"));
-        });
-        
-        it(@"returns a metaclass", ^{
-            class_isMetaClass(metaClass) should be_truthy;
-        });
-        
-        it(@"returns metaclass of class passed in", ^{
-            metaClass should equal(testClass);
-        });
-    });
-    
     context(@"#getInstanceMethodWithClass:selector:", ^{
         __block Method instanceMethod;
         __block Method testMethod;

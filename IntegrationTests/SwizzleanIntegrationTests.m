@@ -1,9 +1,9 @@
-#import "SwizzleanIntegrationTests.h"
+#import <SenTestingKit/SenTestingKit.h>
 #import "Swizzlean.h"
 #import "IntegrationTestClass.h"
 
 
-@interface SwizzleanIntegrationTests ()
+@interface SwizzleanIntegrationTests : SenTestCase
 
 @property (strong, nonatomic) Swizzlean *swizzlean;
 
