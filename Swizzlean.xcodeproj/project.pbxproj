@@ -333,7 +333,7 @@
 				LastUpgradeCheck = 0460;
 				ORGANIZATIONNAME = "RKB Designs";
 			};
-			buildConfigurationList = AF32F06C174671D400EC79F7 /* Build configuration list for PBXProject "swizzlean" */;
+			buildConfigurationList = AF32F06C174671D400EC79F7 /* Build configuration list for PBXProject "Swizzlean" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -644,7 +644,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		AF32F06C174671D400EC79F7 /* Build configuration list for PBXProject "swizzlean" */ = {
+		AF32F06C174671D400EC79F7 /* Build configuration list for PBXProject "Swizzlean" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				AF32F08C174671D400EC79F7 /* Debug */,
