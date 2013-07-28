@@ -2,13 +2,22 @@
 
 A quick and "lean" way to swizzle methods for your Objective-C development needs.
 
-##How To
+## Adding Swizzlean to your project
+
+### Cocoapods
+
+[CocoaPods](http://cocoapods.org) is the recommended way to add Swizzlean to your project.
+
+1.  Add Swizzlean to your Podfile `pod 'Swizzlean', '~> 0.1.0'`.
+2.  Install the pod(s) by running `pod install`.
+3.  Include Swizzlean to your files with `#import "Swizzlean.h"`.
 
 ### Clone from Github
 
-* Add Swizzlean and RuntimeUtils (.h and .m) files to your project.
+1.  Clone repository from github and copy files directly, or add it as a git submodule.
+2.  Add Swizzlean and RuntimeUtils (.h and .m) files to your project.
 
-### How-To
+## How To
 
 * Create an instance of swizzlean passing in the class of the methods you want to swizzle.
 * Call swizzleInstanceMethod:withReplacementImplementation: for an instance method passing 
