@@ -2,6 +2,8 @@
 
 A quick and "lean" way to swizzle methods for your Objective-C development needs.
 
+[![Build Status](https://travis-ci.org/rbaumbach/Swizzlean.png)](https://travis-ci.org/rbaumbach/Swizzlean)
+
 ##How To
 
 ### Clone from Github
