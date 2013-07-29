@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset='utf-8' />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+    <meta name="description" content="Swizzlean : Swizzlean, an Objective-C Swizzle Helper Class." />
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>Swizzlean</title>
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/rbaumbach/Swizzlean">View on GitHub</a>
+
+          <h1 id="project_title">Swizzlean</h1>
+          <h2 id="project_tagline">Swizzlean, an Objective-C Swizzle Helper Class.</h2>
+
+            <section id="downloads">
+              <a class="zip_download_link" href="https://github.com/rbaumbach/Swizzlean/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/rbaumbach/Swizzlean/tarball/master">Download this project as a tar.gz file</a>
+            </section>
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <h1>
+<a name="swizzlean" class="anchor" href="#swizzlean"><span class="octicon octicon-link"></span></a>Swizzlean</h1>
+
+<p>A quick and "lean" way to swizzle methods for your Objective-C development needs.</p>
+
+<h2>
+<a name="adding-swizzlean-to-your-project" class="anchor" href="#adding-swizzlean-to-your-project"><span class="octicon octicon-link"></span></a>Adding Swizzlean to your project</h2>
+
+<h3>
+<a name="cocoapods" class="anchor" href="#cocoapods"><span class="octicon octicon-link"></span></a>Cocoapods</h3>
+
+<p><a href="http://cocoapods.org">CocoaPods</a> is the recommended way to add Swizzlean to your project.</p>
+
+<ol>
+<li> Add Swizzlean to your Podfile <code>pod 'Swizzlean', '~&gt; 0.1.0'</code>.</li>
+<li> Install the pod(s) by running <code>pod install</code>.</li>
+<li> Include Swizzlean to your files with <code>#import "Swizzlean.h"</code>.</li>
+</ol><h3>
+<a name="clone-from-github" class="anchor" href="#clone-from-github"><span class="octicon octicon-link"></span></a>Clone from Github</h3>
+
+<ol>
+<li> Clone repository from github and copy files directly, or add it as a git submodule.</li>
+<li> Add Swizzlean and RuntimeUtils (.h and .m) files to your project.</li>
+</ol><h2>
+<a name="how-to" class="anchor" href="#how-to"><span class="octicon octicon-link"></span></a>How To</h2>
+
+<ul>
+<li>Create an instance of swizzlean passing in the class of the methods you want to swizzle.</li>
+<li>Call swizzleInstanceMethod:withReplacementImplementation: for an instance method passing 
+in the selector of the method to be swizzled with the replacement implementation.  When
+passing in the replacement implementation block, the first parameter is always id _self
+(pointer to the 'Class' being swizzled), and the followed by any other parameters for the
+method being swizzled.</li>
+<li>Call swizzleClassMethod:withReplacementImplementation: for a class method passing in
+the selector of the method to be swizzled with the replacement implementation.</li>
+<li>You can check the current instance/class method that is swizzled by using the 
+currentInstanceMethodSwizzled and currentClassMethodSwizzled methods.</li>
+<li>The status of the swizzled methods can be seen by calling isInstanceMethodSwizzled and
+isClassMethodSwizzled.</li>
+<li>Use reset methods to unswizzle the instance/class methods that are currently being
+swizzled.</li>
+</ul><h3>
+<a name="example-usage" class="anchor" href="#example-usage"><span class="octicon octicon-link"></span></a>Example Usage</h3>
+
+<div class="highlight"><pre><span class="n">Swizzlean</span> <span class="o">*</span><span class="n">swizzle</span> <span class="o">=</span> <span class="p">[[</span><span class="n">Swizzlean</span> <span class="n">alloc</span><span class="p">]</span> <span class="n">initWithClassToSwizzle</span><span class="o">:</span><span class="p">[</span><span class="n">NSString</span> <span class="n">class</span><span class="p">]];</span>
+<span class="p">[</span><span class="n">swizzle</span> <span class="n">swizzleInstanceMethod</span><span class="o">:</span><span class="k">@selector</span><span class="p">(</span><span class="n">intValue</span><span class="p">)</span> <span class="n">withReplacementImplementation</span><span class="o">:^</span><span class="p">(</span><span class="kt">id</span> <span class="n">_self</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="mi">42</span><span class="p">;</span>
+<span class="p">}];</span>
+<span class="n">NSString</span> <span class="o">*</span><span class="n">number7</span> <span class="o">=</span> <span class="s">@"7"</span><span class="p">;</span>
+<span class="n">NSLog</span><span class="p">(</span><span class="s">@"The int value for number7 is: %d"</span><span class="p">,</span> <span class="p">[</span><span class="n">number7</span> <span class="n">intValue</span><span class="p">]);</span>
+<span class="c1">// returns - The int value for number7 is: 42</span>
+<span class="p">[</span><span class="n">swizzle</span> <span class="n">resetSwizzledInstanceMethod</span><span class="p">];</span>
+<span class="n">NSLog</span><span class="p">(</span><span class="s">@"The int value for number7 is: %d"</span><span class="p">,</span> <span class="p">[</span><span class="n">number7</span> <span class="n">intValue</span><span class="p">]);</span>
+<span class="c1">// returns - The int value for number7 is: 7</span>
+</pre></div>
+
+<h2>
+<a name="suggestions-requests-and-feedback" class="anchor" href="#suggestions-requests-and-feedback"><span class="octicon octicon-link"></span></a>Suggestions, requests and feedback</h2>
+
+<p>Thanks for checking out Swizzlean for your swizzling.  Any feedback can be 
+can be sent to: <a href="mailto:rbaumbach.github@gmail.com">rbaumbach.github@gmail.com</a>.</p>
+
+<p>This software is licensed under the MIT License.</p>
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">Swizzlean maintained by <a href="https://github.com/rbaumbach">rbaumbach</a></p>
+        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+    
+
+  </body>
+</html>
