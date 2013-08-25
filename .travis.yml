@@ -1,2 +1,2 @@
 language: objective-c
-xcode_sdk: iphonesimulator
+script: xctool -workspace Swizzlean.xcworkspace -scheme 'Swizzlean' -configuration Release -sdk iphonesimulator -arch i386 build
