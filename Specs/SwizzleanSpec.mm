@@ -86,6 +86,24 @@ describe(@"Swizzlean", ^{
         });
         
         context(@"#swizzleInstanceMethod:withReplacementImplementation:", ^{
+            __block SEL classMethodSEL;
+            
+            describe(@"when instance method doesn't exist", ^{
+                beforeEach(^{
+                    classMethodSEL = @selector(returnStringClassMethod:);
+                    fakeRuntimeUtils stub_method("getInstanceMethodWithClass:selector:").with(swizzleanObj.classToSwizzle).and_with(classMethodSEL).and_return((Method)NULL);
+                    swizzleanObj.isInstanceMethodSwizzled = NO;
+                });
+                
+                it(@"throws an exception", ^{
+                    NSString *methodName = NSStringFromSelector(classMethodSEL);
+                    NSString *reasonStr = [NSString stringWithFormat:@"Instance method doesn't exist: %@", methodName];
+                    ^{
+                        [swizzleanObj swizzleInstanceMethod:classMethodSEL withReplacementImplementation:replacementImpBlock];
+                    } should raise_exception([NSException exceptionWithName:@"Swizzlean" reason:reasonStr userInfo:nil]);
+                });
+            });
+            
             describe(@"when instance method hasn't been swizzled", ^{
                 beforeEach(^{
                     fakeRuntimeUtils stub_method("getInstanceMethodWithClass:selector:").with(swizzleanObj.classToSwizzle).and_with(instanceMethodSEL).and_return(originalInstanceMethod);
@@ -134,7 +152,7 @@ describe(@"Swizzlean", ^{
             });
         });
         
-        context(@"#resetSwizzledInstanceMethod", ^{
+        context(@"#resetSwizzledInstanceMethod", ^{            
             describe(@"when instance method has been swizzled", ^{
                 beforeEach(^{
                     swizzleanObj.originalInstanceMethod = originalInstanceMethod;
@@ -196,6 +214,24 @@ describe(@"Swizzlean", ^{
         });
         
         context(@"#swizzleClassMethod:withReplacementImplementation:", ^{
+            __block SEL instanceMethodSEL;
+            
+            describe(@"when class method doesn't exist", ^{
+                beforeEach(^{
+                    instanceMethodSEL = @selector(returnStringInstanceMethod:);
+                    fakeRuntimeUtils stub_method("getClassMethodWithClass:selector:").with(swizzleanObj.classToSwizzle).and_with(instanceMethodSEL).and_return((Method)NULL);
+                    swizzleanObj.isClassMethodSwizzled = NO;
+                });
+                
+                it(@"throws an exception", ^{
+                    NSString *methodName = NSStringFromSelector(instanceMethodSEL);
+                    NSString *reasonStr = [NSString stringWithFormat:@"Class method doesn't exist: %@", methodName];
+                    ^{
+                        [swizzleanObj swizzleClassMethod:instanceMethodSEL withReplacementImplementation:replacementImpBlock];
+                    } should raise_exception([NSException exceptionWithName:@"Swizzlean" reason:reasonStr userInfo:nil]);
+                });
+            });
+            
             describe(@"when class method hasn't been swizzled", ^{
                 beforeEach(^{
                     fakeRuntimeUtils stub_method("getClassMethodWithClass:selector:").with(swizzleanObj.classToSwizzle).and_with(classMethodSEL).and_return(originalClassMethod);
