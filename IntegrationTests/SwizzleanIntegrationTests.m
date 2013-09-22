@@ -125,4 +125,22 @@
     [self.swizzlean resetSwizzledClassMethod];
 }
 
+- (void)testExceptionIsThrownIfInstanceMethodBeingSwizzledDoesNotExist
+{
+    STAssertThrowsSpecificNamed(
+                                [self.swizzlean swizzleInstanceMethod:@selector(instanceMethodDoesNotExist) withReplacementImplementation:^(id self) {
+                                        return @"This doesn't matter";
+                                }],
+    NSException, @"Swizzlean", @"exception is not thrown for non-existant instance method");
+}
+
+- (void)testExceptionIsThrownIfClassMethodBeingSwizzledDoesNotExist
+{
+    STAssertThrowsSpecificNamed(
+                                [self.swizzlean swizzleClassMethod:@selector(classMethodDoesNotExist) withReplacementImplementation:^(id self) {
+                                        return @"This doesn't matter";
+                                }],
+    NSException, @"Swizzlean", @"exception is not thrown for non-existant class method");
+}
+
 @end
