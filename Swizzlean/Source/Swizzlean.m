@@ -75,6 +75,13 @@
     
     self.originalInstanceMethod = [self.runtimeUtils getInstanceMethodWithClass:self.classToSwizzle
                                                                        selector:originalMethod];
+    
+    if (!self.originalInstanceMethod) {
+        NSString *methodName = NSStringFromSelector(originalMethod);
+        NSString *reasonStr = [NSString stringWithFormat:@"Instance method doesn't exist: %@", methodName];
+        @throw [NSException exceptionWithName:@"Swizzlean" reason:reasonStr userInfo:nil];
+    }
+    
     self.replacementInstanceMethodImplementationBlock = replacementImplementation;
     self.replacementInstanceMethodImplementation = [self.runtimeUtils getImplementationWithBlock:replacementImplementation];
     self.originalInstanceMethodImplementation = [self.runtimeUtils updateMethod:self.originalInstanceMethod
@@ -91,6 +98,12 @@
     
     self.originalClassMethod = [self.runtimeUtils getClassMethodWithClass:self.classToSwizzle
                                                                  selector:originalMethod];
+    
+    if (!self.originalClassMethod) {
+        NSString *methodName = NSStringFromSelector(originalMethod);
+        NSString *reasonStr = [NSString stringWithFormat:@"Class method doesn't exist: %@", methodName];
+        @throw [NSException exceptionWithName:@"Swizzlean" reason:reasonStr userInfo:nil];
+    }
     self.replacementClassMethodImplementationBlock = replacementImplementation;
     self.replacementClassMethodImplementation = [self.runtimeUtils getImplementationWithBlock:replacementImplementation];
     self.originalClassMethodImplementation = [self.runtimeUtils updateMethod:self.originalClassMethod
