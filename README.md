@@ -49,9 +49,13 @@ NSLog(@"The int value for number7 is: %d", [number7 intValue]);
 // returns - The int value for number7 is: 7
 ```
 
-## Suggestions, requests and feedback
+## Suggestions, requests, feedback and acknowledgements
 
 Thanks for checking out Swizzlean for your swizzling.  Any feedback can be 
 can be sent to: rbaumbach.github@gmail.com.
 
 This software is licensed under the MIT License.
+
+Thanks to the following contributors for keeping Swizzlean Swizzletastic:
+Erik Stromlund
+
