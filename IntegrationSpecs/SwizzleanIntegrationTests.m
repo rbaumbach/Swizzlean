@@ -1,9 +1,9 @@
-#import <SenTestingKit/SenTestingKit.h>
+#import <XCTest/XCTest.h>
 #import "Swizzlean.h"
 #import "IntegrationTestClass.h"
 
 
-@interface SwizzleanIntegrationTests : SenTestCase
+@interface SwizzleanIntegrationTests : XCTestCase
 
 @property (strong, nonatomic) Swizzlean *swizzlean;
 
@@ -23,14 +23,14 @@
 
 - (void)testIsInstanceMethodSwizzledIsNoAfterInit
 {
-    STAssertFalse(self.swizzlean.isInstanceMethodSwizzled, @"isInstanceMethodSwizzled should be NO before instance method swizzle");
+    XCTAssertFalse(self.swizzlean.isInstanceMethodSwizzled, @"isInstanceMethodSwizzled should be NO before instance method swizzle");
 }
 
 - (void)testIsInstanceMethodSwizzledIsYesAfterMethodSwizzle
 {
     [self.swizzlean swizzleInstanceMethod:@selector(instanceMethod)
          withReplacementImplementation:^(id _self) { }];
-    STAssertTrue(self.swizzlean.isInstanceMethodSwizzled, @"isInstanceMethodSwizzled should be YES after instance method swizzle");
+    XCTAssertTrue(self.swizzlean.isInstanceMethodSwizzled, @"isInstanceMethodSwizzled should be YES after instance method swizzle");
 }
 
 - (void)testInstanceMethodWithVoidReturnAndNoParams
@@ -45,10 +45,10 @@
     IntegrationTestClass *testClass = [[IntegrationTestClass alloc] init];
     [testClass instanceMethod];
     
-    STAssertEqualObjects(testString, @"Swizzled", @"Instance method was not swizzled");
+    XCTAssertEqualObjects(testString, @"Swizzled", @"Instance method was not swizzled");
     
     NSString *methodNameOfSwizzledMethod = NSStringFromSelector(self.swizzlean.currentInstanceMethodSwizzled);
-    STAssertEqualObjects(methodNameOfSwizzledMethod, @"instanceMethod", @"current swizzled method not stored");
+    XCTAssertEqualObjects(methodNameOfSwizzledMethod, @"instanceMethod", @"current swizzled method not stored");
     
     [self.swizzlean resetSwizzledInstanceMethod];
 }
@@ -57,7 +57,7 @@
 {
     IntegrationTestClass *testClass = [[IntegrationTestClass alloc] init];
     NSString *stringBeforeSwizzle = [testClass instanceMethodReturnStringWithInput:@"A" andInput:@"B"];
-    STAssertEqualObjects(stringBeforeSwizzle, @"Instance Method: A + B", @"Incorrect integration test class string return");
+    XCTAssertEqualObjects(stringBeforeSwizzle, @"Instance Method: A + B", @"Incorrect integration test class string return");
     
     [self.swizzlean swizzleInstanceMethod:@selector(instanceMethodReturnStringWithInput:andInput:)
             withReplacementImplementation:^(id _self, NSString *param1, NSString *param2) {
@@ -65,10 +65,10 @@
             }];
     
     NSString *stringAfterSwizzle = [testClass instanceMethodReturnStringWithInput:@"A" andInput:@"B"];
-    STAssertEqualObjects(stringAfterSwizzle, @"Swizzled: A + B", @"Instance method was not swizzled");
+    XCTAssertEqualObjects(stringAfterSwizzle, @"Swizzled: A + B", @"Instance method was not swizzled");
     
     NSString *methodNameOfSwizzledMethod = NSStringFromSelector(self.swizzlean.currentInstanceMethodSwizzled);
-    STAssertEqualObjects(methodNameOfSwizzledMethod, @"instanceMethodReturnStringWithInput:andInput:", @"current swizzled method not stored");
+    XCTAssertEqualObjects(methodNameOfSwizzledMethod, @"instanceMethodReturnStringWithInput:andInput:", @"current swizzled method not stored");
     
     [self.swizzlean resetSwizzledInstanceMethod];
 }
@@ -77,14 +77,14 @@
 
 - (void)testIsClassMethodSwizzledIsNoAfterInit
 {
-    STAssertFalse(self.swizzlean.isClassMethodSwizzled, @"isClassMethodSwizzled should be NO before class method swizzle");
+    XCTAssertFalse(self.swizzlean.isClassMethodSwizzled, @"isClassMethodSwizzled should be NO before class method swizzle");
 }
 
 - (void)testIsClassMethodSwizzledIsYesAfterMethodSwizzle
 {
     [self.swizzlean swizzleClassMethod:@selector(classMethod)
             withReplacementImplementation:^(id _self) { }];
-    STAssertTrue(self.swizzlean.isClassMethodSwizzled, @"isClassMethodSwizzled should be YES after class method swizzle");
+    XCTAssertTrue(self.swizzlean.isClassMethodSwizzled, @"isClassMethodSwizzled should be YES after class method swizzle");
 }
 
 - (void)testClassMethodWithVoidReturnAndNoParams
@@ -98,10 +98,10 @@
     
     [IntegrationTestClass classMethod];
     
-    STAssertEqualObjects(testString, @"Swizzled", @"Class method was not swizzled");
+    XCTAssertEqualObjects(testString, @"Swizzled", @"Class method was not swizzled");
     
     NSString *methodNameOfSwizzledMethod = NSStringFromSelector(self.swizzlean.currentClassMethodSwizzled);
-    STAssertEqualObjects(methodNameOfSwizzledMethod, @"classMethod", @"current swizzled method not stored");
+    XCTAssertEqualObjects(methodNameOfSwizzledMethod, @"classMethod", @"current swizzled method not stored");
     
     [self.swizzlean resetSwizzledClassMethod];
 }
@@ -109,7 +109,7 @@
 - (void)testClassMethodWithReturnAndParams
 {
     NSString *stringBeforeSwizzle = [IntegrationTestClass classMethodReturnStringWithInput:@"A" andInput:@"B"];
-    STAssertEqualObjects(stringBeforeSwizzle, @"Class Method: A + B", @"Incorrect integration test class string return");
+    XCTAssertEqualObjects(stringBeforeSwizzle, @"Class Method: A + B", @"Incorrect integration test class string return");
     
     [self.swizzlean swizzleClassMethod:@selector(classMethodReturnStringWithInput:andInput:)
             withReplacementImplementation:^(id _self, NSString *param1, NSString *param2) {
@@ -117,29 +117,43 @@
             }];
     
     NSString *stringAfterSwizzle = [IntegrationTestClass classMethodReturnStringWithInput:@"A" andInput:@"B"];
-    STAssertEqualObjects(stringAfterSwizzle, @"Swizzled: A + B", @"Class method was not swizzled");
+    XCTAssertEqualObjects(stringAfterSwizzle, @"Swizzled: A + B", @"Class method was not swizzled");
     
     NSString *methodNameOfSwizzledMethod = NSStringFromSelector(self.swizzlean.currentClassMethodSwizzled);
-    STAssertEqualObjects(methodNameOfSwizzledMethod, @"classMethodReturnStringWithInput:andInput:", @"current swizzled method not stored");
+    XCTAssertEqualObjects(methodNameOfSwizzledMethod, @"classMethodReturnStringWithInput:andInput:", @"current swizzled method not stored");
     
     [self.swizzlean resetSwizzledClassMethod];
 }
 
 - (void)testExceptionIsThrownIfInstanceMethodBeingSwizzledDoesNotExist
 {
-    STAssertThrowsSpecificNamed(
-                                [self.swizzlean swizzleInstanceMethod:@selector(instanceMethodDoesNotExist) withReplacementImplementation:^(id self) {
-                                        return @"This doesn't matter";
-                                }],
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wundeclared-selector"
+    
+    XCTAssertThrowsSpecificNamed(
+        [self.swizzlean swizzleInstanceMethod:@selector(diamondEyes)
+                withReplacementImplementation:^(id self) {
+                    return @"This doesn't matter";
+        }],
+                                 
+#pragma clang diagnostic pop
+                                 
     NSException, @"Swizzlean", @"exception is not thrown for non-existant instance method");
 }
 
 - (void)testExceptionIsThrownIfClassMethodBeingSwizzledDoesNotExist
 {
-    STAssertThrowsSpecificNamed(
-                                [self.swizzlean swizzleClassMethod:@selector(classMethodDoesNotExist) withReplacementImplementation:^(id self) {
-                                        return @"This doesn't matter";
-                                }],
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wundeclared-selector"
+    
+    XCTAssertThrowsSpecificNamed(
+        [self.swizzlean swizzleClassMethod:@selector(myOwnSummer)
+             withReplacementImplementation:^(id self) {
+                return @"This doesn't matter";
+    }],
+                                 
+#pragma clang diagnostic pop
+                                 
     NSException, @"Swizzlean", @"exception is not thrown for non-existant class method");
 }
 

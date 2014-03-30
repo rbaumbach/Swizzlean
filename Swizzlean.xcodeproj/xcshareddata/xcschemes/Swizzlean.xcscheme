@@ -28,6 +28,16 @@
       shouldUseLaunchSchemeArgsEnv = "YES"
       buildConfiguration = "Debug">
       <Testables>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "AF02D0C418E884FE003F42D0"
+               BuildableName = "IntegrationSpecs.xctest"
+               BlueprintName = "IntegrationSpecs"
+               ReferencedContainer = "container:Swizzlean.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference

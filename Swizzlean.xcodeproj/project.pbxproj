@@ -7,12 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		AF19C39F176543230007D198 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF19C39E176543230007D198 /* SenTestingKit.framework */; };
-		AF19C3A0176543230007D198 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF32F074174671D400EC79F7 /* UIKit.framework */; };
-		AF19C3A1176543230007D198 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF32F076174671D400EC79F7 /* Foundation.framework */; };
-		AF19C3A7176543230007D198 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = AF19C3A5176543230007D198 /* InfoPlist.strings */; };
-		AF19C3B51765469C0007D198 /* SwizzleanIntegrationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = AF19C3B41765469C0007D198 /* SwizzleanIntegrationTests.m */; };
-		AF19C3BC176551530007D198 /* IntegrationTestClass.m in Sources */ = {isa = PBXBuildFile; fileRef = AF19C3BB176551530007D198 /* IntegrationTestClass.m */; };
+		AF02D0C718E884FE003F42D0 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF02D0C618E884FE003F42D0 /* XCTest.framework */; };
+		AF02D0C818E884FE003F42D0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF32F076174671D400EC79F7 /* Foundation.framework */; };
+		AF02D0C918E884FE003F42D0 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF32F074174671D400EC79F7 /* UIKit.framework */; };
+		AF02D0CF18E884FE003F42D0 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = AF02D0CD18E884FE003F42D0 /* InfoPlist.strings */; };
+		AF02D0DB18E88753003F42D0 /* IntegrationTestClass.m in Sources */ = {isa = PBXBuildFile; fileRef = AF02D0D918E88753003F42D0 /* IntegrationTestClass.m */; };
+		AF02D0DC18E88753003F42D0 /* SwizzleanIntegrationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = AF02D0DA18E88753003F42D0 /* SwizzleanIntegrationTests.m */; };
 		AF32F075174671D400EC79F7 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF32F074174671D400EC79F7 /* UIKit.framework */; };
 		AF32F077174671D400EC79F7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF32F076174671D400EC79F7 /* Foundation.framework */; };
 		AF32F079174671D400EC79F7 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF32F078174671D400EC79F7 /* CoreGraphics.framework */; };
@@ -44,13 +44,11 @@
 		AFF33E1617A01FD300B1F7ED /* Swizzlean.m in Sources */ = {isa = PBXBuildFile; fileRef = AFF33E1417A01FD300B1F7ED /* Swizzlean.m */; };
 		AFF33E1717A01FF500B1F7ED /* Swizzlean.m in Sources */ = {isa = PBXBuildFile; fileRef = AFF33E1417A01FD300B1F7ED /* Swizzlean.m */; };
 		AFF33E1817A01FFB00B1F7ED /* RuntimeUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = AFF33E1217A01FD300B1F7ED /* RuntimeUtils.m */; };
-		AFF33E1917A0200E00B1F7ED /* RuntimeUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = AFF33E1217A01FD300B1F7ED /* RuntimeUtils.m */; };
-		AFF33E1A17A0201300B1F7ED /* Swizzlean.m in Sources */ = {isa = PBXBuildFile; fileRef = AFF33E1417A01FD300B1F7ED /* Swizzlean.m */; };
 		AFF6351B176396AD0015998B /* RuntimeUtilsSpec.mm in Sources */ = {isa = PBXBuildFile; fileRef = AFF6351A176396AD0015998B /* RuntimeUtilsSpec.mm */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		AF19C3B1176545930007D198 /* PBXContainerItemProxy */ = {
+		AF02D0D318E884FE003F42D0 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = AF32F069174671D400EC79F7 /* Project object */;
 			proxyType = 1;
@@ -60,14 +58,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		AF19C39D176543230007D198 /* IntegrationTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IntegrationTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
-		AF19C39E176543230007D198 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
-		AF19C3A4176543230007D198 /* IntegrationTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "IntegrationTests-Info.plist"; sourceTree = "<group>"; };
-		AF19C3A6176543230007D198 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		AF19C3AB176543230007D198 /* IntegrationTests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "IntegrationTests-Prefix.pch"; sourceTree = "<group>"; };
-		AF19C3B41765469C0007D198 /* SwizzleanIntegrationTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SwizzleanIntegrationTests.m; sourceTree = "<group>"; };
-		AF19C3BA176551530007D198 /* IntegrationTestClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IntegrationTestClass.h; sourceTree = "<group>"; };
-		AF19C3BB176551530007D198 /* IntegrationTestClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IntegrationTestClass.m; sourceTree = "<group>"; };
+		AF02D0C518E884FE003F42D0 /* IntegrationSpecs.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IntegrationSpecs.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		AF02D0C618E884FE003F42D0 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		AF02D0CC18E884FE003F42D0 /* IntegrationSpecs-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "IntegrationSpecs-Info.plist"; sourceTree = "<group>"; };
+		AF02D0CE18E884FE003F42D0 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		AF02D0D218E884FE003F42D0 /* IntegrationSpecs-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "IntegrationSpecs-Prefix.pch"; sourceTree = "<group>"; };
+		AF02D0D818E88753003F42D0 /* IntegrationTestClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IntegrationTestClass.h; sourceTree = "<group>"; };
+		AF02D0D918E88753003F42D0 /* IntegrationTestClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IntegrationTestClass.m; sourceTree = "<group>"; };
+		AF02D0DA18E88753003F42D0 /* SwizzleanIntegrationTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SwizzleanIntegrationTests.m; sourceTree = "<group>"; };
 		AF32F071174671D400EC79F7 /* Swizzlean.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Swizzlean.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF32F074174671D400EC79F7 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		AF32F076174671D400EC79F7 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -108,13 +106,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		AF19C399176543230007D198 /* Frameworks */ = {
+		AF02D0C218E884FE003F42D0 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AF19C39F176543230007D198 /* SenTestingKit.framework in Frameworks */,
-				AF19C3A0176543230007D198 /* UIKit.framework in Frameworks */,
-				AF19C3A1176543230007D198 /* Foundation.framework in Frameworks */,
+				AF02D0C718E884FE003F42D0 /* XCTest.framework in Frameworks */,
+				AF02D0C918E884FE003F42D0 /* UIKit.framework in Frameworks */,
+				AF02D0C818E884FE003F42D0 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -142,33 +140,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		AF19C3A2176543230007D198 /* IntegrationTests */ = {
+		AF02D0CA18E884FE003F42D0 /* IntegrationSpecs */ = {
 			isa = PBXGroup;
 			children = (
-				AF19C3B41765469C0007D198 /* SwizzleanIntegrationTests.m */,
-				AF19C3BD176551690007D198 /* Test Classes */,
-				AF19C3A3176543230007D198 /* Supporting Files */,
+				AF02D0DA18E88753003F42D0 /* SwizzleanIntegrationTests.m */,
+				AF02D0D818E88753003F42D0 /* IntegrationTestClass.h */,
+				AF02D0D918E88753003F42D0 /* IntegrationTestClass.m */,
+				AF02D0CB18E884FE003F42D0 /* Supporting Files */,
 			);
-			path = IntegrationTests;
+			path = IntegrationSpecs;
 			sourceTree = "<group>";
 		};
-		AF19C3A3176543230007D198 /* Supporting Files */ = {
+		AF02D0CB18E884FE003F42D0 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				AF19C3A4176543230007D198 /* IntegrationTests-Info.plist */,
-				AF19C3A5176543230007D198 /* InfoPlist.strings */,
-				AF19C3AB176543230007D198 /* IntegrationTests-Prefix.pch */,
+				AF02D0CC18E884FE003F42D0 /* IntegrationSpecs-Info.plist */,
+				AF02D0CD18E884FE003F42D0 /* InfoPlist.strings */,
+				AF02D0D218E884FE003F42D0 /* IntegrationSpecs-Prefix.pch */,
 			);
 			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		AF19C3BD176551690007D198 /* Test Classes */ = {
-			isa = PBXGroup;
-			children = (
-				AF19C3BA176551530007D198 /* IntegrationTestClass.h */,
-				AF19C3BB176551530007D198 /* IntegrationTestClass.m */,
-			);
-			name = "Test Classes";
 			sourceTree = "<group>";
 		};
 		AF32F068174671D400EC79F7 = {
@@ -178,7 +168,7 @@
 				AFE194DE176F538B0009D34D /* README.md */,
 				AF32F07A174671D400EC79F7 /* Swizzlean */,
 				AF6B25D01746737C006A312B /* Specs */,
-				AF19C3A2176543230007D198 /* IntegrationTests */,
+				AF02D0CA18E884FE003F42D0 /* IntegrationSpecs */,
 				AF32F073174671D400EC79F7 /* Frameworks */,
 				AF32F072174671D400EC79F7 /* Products */,
 			);
@@ -189,7 +179,7 @@
 			children = (
 				AF32F071174671D400EC79F7 /* Swizzlean.app */,
 				AF6B25CC1746737C006A312B /* Specs.app */,
-				AF19C39D176543230007D198 /* IntegrationTests.octest */,
+				AF02D0C518E884FE003F42D0 /* IntegrationSpecs.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -201,7 +191,7 @@
 				AF32F074174671D400EC79F7 /* UIKit.framework */,
 				AF32F076174671D400EC79F7 /* Foundation.framework */,
 				AF32F078174671D400EC79F7 /* CoreGraphics.framework */,
-				AF19C39E176543230007D198 /* SenTestingKit.framework */,
+				AF02D0C618E884FE003F42D0 /* XCTest.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -284,24 +274,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		AF19C39C176543230007D198 /* IntegrationTests */ = {
+		AF02D0C418E884FE003F42D0 /* IntegrationSpecs */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = AF19C3AE176543230007D198 /* Build configuration list for PBXNativeTarget "IntegrationTests" */;
+			buildConfigurationList = AF02D0D518E884FE003F42D0 /* Build configuration list for PBXNativeTarget "IntegrationSpecs" */;
 			buildPhases = (
-				AF19C398176543230007D198 /* Sources */,
-				AF19C399176543230007D198 /* Frameworks */,
-				AF19C39A176543230007D198 /* Resources */,
-				AF19C39B176543230007D198 /* ShellScript */,
+				AF02D0C118E884FE003F42D0 /* Sources */,
+				AF02D0C218E884FE003F42D0 /* Frameworks */,
+				AF02D0C318E884FE003F42D0 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				AF19C3B2176545930007D198 /* PBXTargetDependency */,
+				AF02D0D418E884FE003F42D0 /* PBXTargetDependency */,
 			);
-			name = IntegrationTests;
-			productName = IntegrationTests;
-			productReference = AF19C39D176543230007D198 /* IntegrationTests.octest */;
-			productType = "com.apple.product-type.bundle";
+			name = IntegrationSpecs;
+			productName = IntegrationSpecs;
+			productReference = AF02D0C518E884FE003F42D0 /* IntegrationSpecs.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
 		};
 		AF32F070174671D400EC79F7 /* Swizzlean */ = {
 			isa = PBXNativeTarget;
@@ -343,8 +332,14 @@
 		AF32F069174671D400EC79F7 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastTestingUpgradeCheck = 0510;
 				LastUpgradeCheck = 0460;
 				ORGANIZATIONNAME = "RKB Designs";
+				TargetAttributes = {
+					AF02D0C418E884FE003F42D0 = {
+						TestTargetID = AF32F070174671D400EC79F7;
+					};
+				};
 			};
 			buildConfigurationList = AF32F06C174671D400EC79F7 /* Build configuration list for PBXProject "Swizzlean" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -360,17 +355,17 @@
 			targets = (
 				AF32F070174671D400EC79F7 /* Swizzlean */,
 				AF6B25CB1746737C006A312B /* Specs */,
-				AF19C39C176543230007D198 /* IntegrationTests */,
+				AF02D0C418E884FE003F42D0 /* IntegrationSpecs */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		AF19C39A176543230007D198 /* Resources */ = {
+		AF02D0C318E884FE003F42D0 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AF19C3A7176543230007D198 /* InfoPlist.strings in Resources */,
+				AF02D0CF18E884FE003F42D0 /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -398,31 +393,13 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
-/* Begin PBXShellScriptBuildPhase section */
-		AF19C39B176543230007D198 /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
-		};
-/* End PBXShellScriptBuildPhase section */
-
 /* Begin PBXSourcesBuildPhase section */
-		AF19C398176543230007D198 /* Sources */ = {
+		AF02D0C118E884FE003F42D0 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AFF33E1A17A0201300B1F7ED /* Swizzlean.m in Sources */,
-				AFF33E1917A0200E00B1F7ED /* RuntimeUtils.m in Sources */,
-				AF19C3B51765469C0007D198 /* SwizzleanIntegrationTests.m in Sources */,
-				AF19C3BC176551530007D198 /* IntegrationTestClass.m in Sources */,
+				AF02D0DC18E88753003F42D0 /* SwizzleanIntegrationTests.m in Sources */,
+				AF02D0DB18E88753003F42D0 /* IntegrationTestClass.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -460,18 +437,18 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		AF19C3B2176545930007D198 /* PBXTargetDependency */ = {
+		AF02D0D418E884FE003F42D0 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = AF32F070174671D400EC79F7 /* Swizzlean */;
-			targetProxy = AF19C3B1176545930007D198 /* PBXContainerItemProxy */;
+			targetProxy = AF02D0D318E884FE003F42D0 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		AF19C3A5176543230007D198 /* InfoPlist.strings */ = {
+		AF02D0CD18E884FE003F42D0 /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
-				AF19C3A6176543230007D198 /* en */,
+				AF02D0CE18E884FE003F42D0 /* en */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
@@ -495,33 +472,64 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		AF19C3AC176543230007D198 /* Debug */ = {
+		AF02D0D618E884FE003F42D0 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Swizzlean.app/Swizzlean";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				FRAMEWORK_SEARCH_PATHS = (
-					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
-					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "IntegrationTests/IntegrationTests-Prefix.pch";
-				INFOPLIST_FILE = "IntegrationTests/IntegrationTests-Info.plist";
+				GCC_PREFIX_HEADER = "IntegrationSpecs/IntegrationSpecs-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				INFOPLIST_FILE = "IntegrationSpecs/IntegrationSpecs-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				WRAPPER_EXTENSION = octest;
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
 			};
 			name = Debug;
 		};
-		AF19C3AD176543230007D198 /* Release */ = {
+		AF02D0D718E884FE003F42D0 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Swizzlean.app/Swizzlean";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				ENABLE_NS_ASSERTIONS = NO;
 				FRAMEWORK_SEARCH_PATHS = (
-					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
-					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "IntegrationTests/IntegrationTests-Prefix.pch";
-				INFOPLIST_FILE = "IntegrationTests/IntegrationTests-Info.plist";
+				GCC_PREFIX_HEADER = "IntegrationSpecs/IntegrationSpecs-Prefix.pch";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				INFOPLIST_FILE = "IntegrationSpecs/IntegrationSpecs-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				WRAPPER_EXTENSION = octest;
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
 			};
 			name = Release;
 		};
@@ -649,14 +657,13 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		AF19C3AE176543230007D198 /* Build configuration list for PBXNativeTarget "IntegrationTests" */ = {
+		AF02D0D518E884FE003F42D0 /* Build configuration list for PBXNativeTarget "IntegrationSpecs" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				AF19C3AC176543230007D198 /* Debug */,
-				AF19C3AD176543230007D198 /* Release */,
+				AF02D0D618E884FE003F42D0 /* Debug */,
+				AF02D0D718E884FE003F42D0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
 		};
 		AF32F06C174671D400EC79F7 /* Build configuration list for PBXProject "Swizzlean" */ = {
 			isa = XCConfigurationList;

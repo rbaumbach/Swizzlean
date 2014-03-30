@@ -16,9 +16,9 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "AF19C39C176543230007D198"
-               BuildableName = "IntegrationTests.octest"
-               BlueprintName = "IntegrationTests"
+               BlueprintIdentifier = "AF02D0C418E884FE003F42D0"
+               BuildableName = "IntegrationSpecs.xctest"
+               BlueprintName = "IntegrationSpecs"
                ReferencedContainer = "container:Swizzlean.xcodeproj">
             </BuildableReference>
          </TestableReference>
