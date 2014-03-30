@@ -27,10 +27,14 @@ namespace Cedar { namespace Doubles {
         StubbedMethod & with(const Argument::shared_ptr_t argument);
         StubbedMethod & and_with(const Argument::shared_ptr_t argument);
 
+        template<typename T, typename... ArgumentPack>
+        StubbedMethod & with(const T &, ArgumentPack... pack);
+
         template<typename T>
         StubbedMethod & with(const T &);
         template<typename T>
         StubbedMethod & and_with(const T &);
+        inline StubbedMethod & with(const char *argument);
 
         StubbedMethod & and_raise_exception();
         StubbedMethod & and_raise_exception(NSObject * exception);
@@ -43,12 +47,16 @@ namespace Cedar { namespace Doubles {
             }
         };
         typedef std::shared_ptr<StubbedMethod> shared_ptr_t;
-        typedef std::map<SEL, shared_ptr_t, SelCompare> selector_map_t;
+        typedef std::vector<shared_ptr_t> stubbed_method_vector_t;
+        typedef std::map<SEL, stubbed_method_vector_t, SelCompare> selector_map_t;
 
         const SEL selector() const;
+        bool matches_arguments(const StubbedMethod &) const;
         bool matches(NSInvocation * const invocation) const;
+        bool contains_anything_argument() const;
         bool invoke(NSInvocation * invocation) const;
         void validate_against_instance(id instance) const;
+        NSString *arguments_string() const;
 
     private:
         bool has_return_value() const { return return_value_argument_.get(); };
@@ -78,9 +86,19 @@ namespace Cedar { namespace Doubles {
         return with(Argument::shared_ptr_t(new ValueArgument<T>(argument)));
     }
 
+    StubbedMethod & StubbedMethod::with(const char *argument) {
+        return with(Argument::shared_ptr_t(new CharValueArgument(argument)));
+    }
+
     template<typename T>
     StubbedMethod & StubbedMethod::and_with(const T & argument) {
         return with(argument);
     }
 
+    template<typename T, typename... ArgumentPack>
+    StubbedMethod & StubbedMethod::with(const T & value, ArgumentPack... pack) {
+        this->with(value);
+        this->with(pack...);
+        return *this;
+    }
 }}

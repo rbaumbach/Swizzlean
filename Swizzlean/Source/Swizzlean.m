@@ -117,7 +117,7 @@
     if (!self.isInstanceMethodSwizzled) {
         return;
     }
-    
+        
     [self.runtimeUtils updateMethod:self.originalInstanceMethod
                   withImplemenation:self.originalInstanceMethodImplementation];
     

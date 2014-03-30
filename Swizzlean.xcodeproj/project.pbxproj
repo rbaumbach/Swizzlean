@@ -36,8 +36,9 @@
 		AF6B25EB17467588006A312B /* FirstViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF6B25E817467588006A312B /* FirstViewController.xib */; };
 		AF6B25EC17467588006A312B /* FirstViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF6B25E817467588006A312B /* FirstViewController.xib */; };
 		AF6B25EE1747EC42006A312B /* FirstViewControllerSpec.mm in Sources */ = {isa = PBXBuildFile; fileRef = AF6B25ED1747EC42006A312B /* FirstViewControllerSpec.mm */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		AF6B25F41747EE66006A312B /* SwizzleanSpec.mm in Sources */ = {isa = PBXBuildFile; fileRef = AF6B25F31747EE66006A312B /* SwizzleanSpec.mm */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		AF6B25F41747EE66006A312B /* SwizzleanSpec.mm in Sources */ = {isa = PBXBuildFile; fileRef = AF6B25F31747EE66006A312B /* SwizzleanSpec.mm */; };
 		AFD1566D175BBA6B000A83DF /* TestClass.m in Sources */ = {isa = PBXBuildFile; fileRef = AFF1A93117563FE000E9E586 /* TestClass.m */; };
+		AFD6872318E2A3CE00B85026 /* FakeRuntimeUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = AFD6872218E2A3CE00B85026 /* FakeRuntimeUtils.m */; };
 		AFF1A93217563FE000E9E586 /* TestClass.m in Sources */ = {isa = PBXBuildFile; fileRef = AFF1A93117563FE000E9E586 /* TestClass.m */; };
 		AFF33E1517A01FD300B1F7ED /* RuntimeUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = AFF33E1217A01FD300B1F7ED /* RuntimeUtils.m */; };
 		AFF33E1617A01FD300B1F7ED /* Swizzlean.m in Sources */ = {isa = PBXBuildFile; fileRef = AFF33E1417A01FD300B1F7ED /* Swizzlean.m */; };
@@ -94,6 +95,8 @@
 		AF6B25ED1747EC42006A312B /* FirstViewControllerSpec.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = FirstViewControllerSpec.mm; sourceTree = "<group>"; };
 		AF6B25F31747EE66006A312B /* SwizzleanSpec.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = SwizzleanSpec.mm; sourceTree = "<group>"; };
 		AF97A4D71771FA4000664D38 /* MIT.LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = MIT.LICENSE; sourceTree = "<group>"; };
+		AFD6872118E2A3CE00B85026 /* FakeRuntimeUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FakeRuntimeUtils.h; sourceTree = "<group>"; };
+		AFD6872218E2A3CE00B85026 /* FakeRuntimeUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FakeRuntimeUtils.m; sourceTree = "<group>"; };
 		AFE194DE176F538B0009D34D /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
 		AFF1A93017563FE000E9E586 /* TestClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestClass.h; sourceTree = "<group>"; };
 		AFF1A93117563FE000E9E586 /* TestClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestClass.m; sourceTree = "<group>"; };
@@ -270,6 +273,8 @@
 		AFF1A933175640CC00E9E586 /* Test Classes */ = {
 			isa = PBXGroup;
 			children = (
+				AFD6872118E2A3CE00B85026 /* FakeRuntimeUtils.h */,
+				AFD6872218E2A3CE00B85026 /* FakeRuntimeUtils.m */,
 				AFF1A93017563FE000E9E586 /* TestClass.h */,
 				AFF1A93117563FE000E9E586 /* TestClass.m */,
 			);
@@ -444,6 +449,7 @@
 				AF6B25D71746737C006A312B /* main.m in Sources */,
 				AF6B25E517467514006A312B /* AppDelegateSpec.mm in Sources */,
 				AF6B25EA17467588006A312B /* FirstViewController.m in Sources */,
+				AFD6872318E2A3CE00B85026 /* FakeRuntimeUtils.m in Sources */,
 				AF6B25EE1747EC42006A312B /* FirstViewControllerSpec.mm in Sources */,
 				AF6B25F41747EE66006A312B /* SwizzleanSpec.mm in Sources */,
 				AFF1A93217563FE000E9E586 /* TestClass.m in Sources */,

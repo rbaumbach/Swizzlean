@@ -2,6 +2,7 @@
 #import "Swizzlean.h"
 #import "TestClass.h"
 #import "RuntimeUtils.h"
+#import "FakeRuntimeUtils.h"
 
 
 using namespace Cedar::Matchers;
@@ -36,13 +37,13 @@ SPEC_BEGIN(SwizzleanSpec)
 describe(@"Swizzlean", ^{
     __block Swizzlean *swizzleanObj;
     __block Class testClass;
-    __block RuntimeUtils *fakeRuntimeUtils;
+    __block FakeRuntimeUtils *fakeRuntimeUtils;
     
     beforeEach(^{
         testClass = [TestClass class];
-        swizzleanObj = [[[Swizzlean alloc] initWithClassToSwizzle:testClass] autorelease];
+        swizzleanObj = [[Swizzlean alloc] initWithClassToSwizzle:testClass];
         
-        fakeRuntimeUtils = nice_fake_for([RuntimeUtils class]);
+        fakeRuntimeUtils = [[FakeRuntimeUtils alloc] init];
         swizzleanObj.runtimeUtils = fakeRuntimeUtils;
     });
     
@@ -86,34 +87,36 @@ describe(@"Swizzlean", ^{
         });
         
         context(@"#swizzleInstanceMethod:withReplacementImplementation:", ^{
-            __block SEL classMethodSEL;
-            
             describe(@"when instance method doesn't exist", ^{
+                __block SEL tacoMethodSEL;
+
                 beforeEach(^{
-                    classMethodSEL = @selector(returnStringClassMethod:);
-                    fakeRuntimeUtils stub_method("getInstanceMethodWithClass:selector:").with(swizzleanObj.classToSwizzle).and_with(classMethodSEL).and_return((Method)NULL);
                     swizzleanObj.isInstanceMethodSwizzled = NO;
+                    swizzleanObj.runtimeUtils = nice_fake_for([RuntimeUtils class]);
+                    
+                    tacoMethodSEL = @selector(tacosAreYummy:);
+                    swizzleanObj.runtimeUtils stub_method("getInstanceMethodWithClass:selector:").with(swizzleanObj.classToSwizzle).and_with(tacoMethodSEL).and_return((Method)NULL);
                 });
                 
                 it(@"throws an exception", ^{
-                    NSString *methodName = NSStringFromSelector(classMethodSEL);
+                    NSString *methodName = NSStringFromSelector(tacoMethodSEL);
                     NSString *reasonStr = [NSString stringWithFormat:@"Instance method doesn't exist: %@", methodName];
                     ^{
-                        [swizzleanObj swizzleInstanceMethod:classMethodSEL withReplacementImplementation:replacementImpBlock];
+                        [swizzleanObj swizzleInstanceMethod:tacoMethodSEL withReplacementImplementation:replacementImpBlock];
                     } should raise_exception([NSException exceptionWithName:@"Swizzlean" reason:reasonStr userInfo:nil]);
                 });
             });
             
             describe(@"when instance method hasn't been swizzled", ^{
                 beforeEach(^{
-                    fakeRuntimeUtils stub_method("getInstanceMethodWithClass:selector:").with(swizzleanObj.classToSwizzle).and_with(instanceMethodSEL).and_return(originalInstanceMethod);
-                    fakeRuntimeUtils stub_method("getImplementationWithBlock:").with(replacementImpBlock).and_return(replacementImp);
-                    fakeRuntimeUtils stub_method("updateMethod:withImplemenation:").with(originalInstanceMethod).and_with(replacementImp).and_return(originalImp);
                     swizzleanObj.isInstanceMethodSwizzled = NO;
-                    [swizzleanObj swizzleInstanceMethod:instanceMethodSEL withReplacementImplementation:replacementImpBlock];
+                    [swizzleanObj swizzleInstanceMethod:instanceMethodSEL
+                          withReplacementImplementation:replacementImpBlock];
                 });
                 
                 it(@"stores the selector of original method", ^{
+                    fakeRuntimeUtils.getInstanceMethodClass should equal(swizzleanObj.classToSwizzle);
+                    fakeRuntimeUtils.getInstanceMethodSelector should equal(instanceMethodSEL);
                     swizzleanObj.currentInstanceMethodSwizzled should equal(instanceMethodSEL);
                 });
                 
@@ -122,15 +125,20 @@ describe(@"Swizzlean", ^{
                 });
                 
                 it(@"stores the replacement implementation block", ^{
+                    fakeRuntimeUtils.getImplementationBlock should equal(replacementImpBlock);
                     swizzleanObj.replacementInstanceMethodImplementationBlock should equal(replacementImpBlock);
                 });
                 
                 it(@"stores the replacement implementation from block", ^{
-                    swizzleanObj.replacementInstanceMethodImplementation should equal(replacementImp);
+                    IMP fakeBlockImp = fakeRuntimeUtils.getImplementationBlockImp;
+                    swizzleanObj.replacementInstanceMethodImplementation should equal(fakeBlockImp);
                 });
                 
                 it(@"stores the original instance method implementation", ^{
-                    swizzleanObj.originalInstanceMethodImplementation should equal(originalImp);
+                    IMP fakeBlockImp = fakeRuntimeUtils.getImplementationBlockImp;
+                    
+                    fakeRuntimeUtils.updateMethodImplementation should equal(fakeBlockImp);
+                    swizzleanObj.originalInstanceMethodImplementation should equal(fakeRuntimeUtils.updateMethodSetImplementation);
                 });
                 
                 it(@"sets isInstanceMethodSwizzled to YES", ^{
@@ -141,7 +149,13 @@ describe(@"Swizzlean", ^{
             describe(@"when instance method has already been swizzled", ^{
                 beforeEach(^{
                     swizzleanObj.isInstanceMethodSwizzled = YES;
-                    [swizzleanObj swizzleInstanceMethod:instanceMethodSEL withReplacementImplementation:replacementImpBlock];
+                    spy_on(swizzleanObj.runtimeUtils);
+                    [swizzleanObj swizzleInstanceMethod:instanceMethodSEL
+                          withReplacementImplementation:replacementImpBlock];
+                });
+                
+                afterEach(^{
+                    stop_spying_on(swizzleanObj.runtimeUtils);
                 });
                 
                 it(@"immediately returns", ^{
@@ -152,19 +166,21 @@ describe(@"Swizzlean", ^{
             });
         });
         
-        context(@"#resetSwizzledInstanceMethod", ^{            
+        context(@"#resetSwizzledInstanceMethod", ^{
             describe(@"when instance method has been swizzled", ^{
                 beforeEach(^{
+                    swizzleanObj.isInstanceMethodSwizzled = YES;
                     swizzleanObj.originalInstanceMethod = originalInstanceMethod;
                     swizzleanObj.originalInstanceMethodImplementation = originalImp;
                     swizzleanObj.replacementInstanceMethodImplementation = replacementImp;
                     swizzleanObj.currentInstanceMethodSwizzled = instanceMethodSEL;
-                    swizzleanObj.isInstanceMethodSwizzled = YES;
+                    
                     [swizzleanObj resetSwizzledInstanceMethod];
                 });
                 
                 it(@"unswizzles the instance method (sets original implementation of instance method)", ^{
-                    swizzleanObj.runtimeUtils should have_received(@selector(updateMethod:withImplemenation:)).with(originalInstanceMethod).and_with(originalImp);
+                    fakeRuntimeUtils.updateMethod should equal(originalInstanceMethod);
+                    fakeRuntimeUtils.updateMethodImplementation should equal(originalImp);
                 });
                 
                 it(@"resets instance method", ^{
@@ -188,7 +204,13 @@ describe(@"Swizzlean", ^{
             describe(@"when instance method has not been swizzled", ^{
                 beforeEach(^{
                     swizzleanObj.isInstanceMethodSwizzled = NO;
+                    
+                    spy_on(swizzleanObj.runtimeUtils);
                     [swizzleanObj resetSwizzledInstanceMethod];
+                });
+                
+                afterEach(^{
+                    stop_spying_on(swizzleanObj.runtimeUtils);
                 });
                 
                 it(@"immediately returns", ^{
@@ -214,34 +236,35 @@ describe(@"Swizzlean", ^{
         });
         
         context(@"#swizzleClassMethod:withReplacementImplementation:", ^{
-            __block SEL instanceMethodSEL;
-            
             describe(@"when class method doesn't exist", ^{
+                __block SEL burritoMethodSEL;
+
                 beforeEach(^{
-                    instanceMethodSEL = @selector(returnStringInstanceMethod:);
-                    fakeRuntimeUtils stub_method("getClassMethodWithClass:selector:").with(swizzleanObj.classToSwizzle).and_with(instanceMethodSEL).and_return((Method)NULL);
                     swizzleanObj.isClassMethodSwizzled = NO;
+                    swizzleanObj.runtimeUtils = nice_fake_for([RuntimeUtils class]);
+                    
+                    burritoMethodSEL = @selector(returnStringInstanceMethod:);
+                    swizzleanObj.runtimeUtils stub_method("getClassMethodWithClass:selector:").with(swizzleanObj.classToSwizzle).and_with(burritoMethodSEL).and_return((Method)NULL);
                 });
                 
                 it(@"throws an exception", ^{
-                    NSString *methodName = NSStringFromSelector(instanceMethodSEL);
+                    NSString *methodName = NSStringFromSelector(burritoMethodSEL);
                     NSString *reasonStr = [NSString stringWithFormat:@"Class method doesn't exist: %@", methodName];
                     ^{
-                        [swizzleanObj swizzleClassMethod:instanceMethodSEL withReplacementImplementation:replacementImpBlock];
+                        [swizzleanObj swizzleClassMethod:burritoMethodSEL withReplacementImplementation:replacementImpBlock];
                     } should raise_exception([NSException exceptionWithName:@"Swizzlean" reason:reasonStr userInfo:nil]);
                 });
             });
             
             describe(@"when class method hasn't been swizzled", ^{
                 beforeEach(^{
-                    fakeRuntimeUtils stub_method("getClassMethodWithClass:selector:").with(swizzleanObj.classToSwizzle).and_with(classMethodSEL).and_return(originalClassMethod);
-                    fakeRuntimeUtils stub_method("getImplementationWithBlock:").with(replacementImpBlock).and_return(replacementImp);
-                    fakeRuntimeUtils stub_method("updateMethod:withImplemenation:").with(originalClassMethod).and_with(replacementImp).and_return(originalImp);
                     swizzleanObj.isClassMethodSwizzled = NO;
                     [swizzleanObj swizzleClassMethod:classMethodSEL withReplacementImplementation:replacementImpBlock];
                 });
                 
                 it(@"stores the selector of class method", ^{
+                    fakeRuntimeUtils.getClassMethodClass should equal(swizzleanObj.classToSwizzle);
+                    fakeRuntimeUtils.getClassMethodSelector should equal(classMethodSEL);
                     swizzleanObj.currentClassMethodSwizzled should equal(classMethodSEL);
                 });
                 
@@ -250,15 +273,20 @@ describe(@"Swizzlean", ^{
                 });
                 
                 it(@"stores the replacement implementation block", ^{
+                    fakeRuntimeUtils.getImplementationBlock should equal(replacementImpBlock);
                     swizzleanObj.replacementClassMethodImplementationBlock should equal(replacementImpBlock);
                 });
                 
                 it(@"stores the replacement implementation from block", ^{
-                    swizzleanObj.replacementClassMethodImplementation should equal(replacementImp);
+                    IMP fakeBlockImp = fakeRuntimeUtils.getImplementationBlockImp;
+                    swizzleanObj.replacementClassMethodImplementation should equal(fakeBlockImp);
                 });
                 
                 it(@"stores the original class method implementation", ^{
-                    swizzleanObj.originalClassMethodImplementation should equal(originalImp);
+                    IMP fakeBlockImp = fakeRuntimeUtils.getImplementationBlockImp;
+                    
+                    fakeRuntimeUtils.updateMethodImplementation should equal(fakeBlockImp);
+                    swizzleanObj.originalClassMethodImplementation should equal(fakeRuntimeUtils.updateMethodSetImplementation);
                 });
                 
                 it(@"sets isInstanceMethodSwizzled to YES", ^{
@@ -269,7 +297,12 @@ describe(@"Swizzlean", ^{
             describe(@"when class method has already been swizzled", ^{
                 beforeEach(^{
                     swizzleanObj.isClassMethodSwizzled = YES;
+                    spy_on(swizzleanObj.runtimeUtils);
                     [swizzleanObj swizzleClassMethod:classMethodSEL withReplacementImplementation:replacementImpBlock];
+                });
+                
+                afterEach(^{
+                    stop_spying_on(swizzleanObj.runtimeUtils);
                 });
                 
                 it(@"immediately returns", ^{
@@ -281,16 +314,17 @@ describe(@"Swizzlean", ^{
         context(@"#resetSwizzledClassMethod", ^{
             describe(@"when class method has already been swizzled", ^{
                 beforeEach(^{
+                    swizzleanObj.isClassMethodSwizzled = YES;
                     swizzleanObj.originalClassMethod = originalClassMethod;
                     swizzleanObj.originalClassMethodImplementation = originalImp;
                     swizzleanObj.replacementClassMethodImplementation = replacementImp;
                     swizzleanObj.currentClassMethodSwizzled = classMethodSEL;
-                    swizzleanObj.isClassMethodSwizzled = YES;
                     [swizzleanObj resetSwizzledClassMethod];
                 });
                 
                 it(@"unswizzles the class method (sets original implementation of class method)", ^{
-                    swizzleanObj.runtimeUtils should have_received(@selector(updateMethod:withImplemenation:)).with(originalClassMethod).and_with(originalImp);
+                    fakeRuntimeUtils.updateMethod should equal(originalClassMethod);
+                    fakeRuntimeUtils.updateMethodImplementation should equal(originalImp);
                 });
                 
                 it(@"resets class method", ^{
@@ -314,7 +348,12 @@ describe(@"Swizzlean", ^{
             describe(@"when class method has not been swizzled", ^{
                 beforeEach(^{
                     swizzleanObj.isClassMethodSwizzled = NO;
+                    spy_on(swizzleanObj.runtimeUtils);
                     [swizzleanObj resetSwizzledClassMethod];
+                });
+                
+                afterEach(^{
+                    stop_spying_on(swizzleanObj.runtimeUtils);
                 });
                 
                 it(@"immediately returns", ^{
