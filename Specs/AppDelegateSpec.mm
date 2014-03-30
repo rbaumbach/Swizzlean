@@ -17,7 +17,7 @@ describe(@"AppDelegate", ^{
     __block AppDelegate *appDelegate;
     
     beforeEach(^{
-        appDelegate = [[[AppDelegate alloc] init] autorelease];
+        appDelegate = [[AppDelegate alloc] init];
     });
     
     it(@"conforms to <UIApplicationDelegate>", ^{

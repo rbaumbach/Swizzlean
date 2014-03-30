@@ -12,8 +12,8 @@ describe(@"RuntimeUtils", ^{
     __block TestClass *fakeClass;
 
     beforeEach(^{
-        runtimeUtils = [[[RuntimeUtils alloc] init] autorelease];
-        fakeClass = [[[TestClass alloc] init] autorelease];
+        runtimeUtils = [[RuntimeUtils alloc] init];
+        fakeClass = [[TestClass alloc] init];
     });
     
     context(@"#getInstanceMethodWithClass:selector:", ^{
