@@ -32,7 +32,6 @@ end
 desc "Run Specs"
 task :specs => :build_specs do
   require 'tmpdir'
-  puts SIMULATOR_VERSION
   puts "Running specs on iOS Simulator -> #{SIMULATOR_VERSION}"
 
   run_specs
