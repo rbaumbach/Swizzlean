@@ -9,11 +9,6 @@ BUILD_DIR = File.join(PROJECT_ROOT, "build")
 
 task :default => ["specs"]
 
-desc "Setup Submodules"
-task :setup_submodules do
-  system_or_exit("git submodule init && git submodule update")
-end
-
 desc "Clean all targets"
 task :clean do
   system_or_exit "rm -rf #{BUILD_DIR}/*", output_file("clean")
