@@ -21,12 +21,12 @@ end
 
 desc "Build Swizzlean"
 task :build_swizzlean => [:clean, :setup_submodules] do
-  build(PRODUCT_NAME)
+  build PRODUCT_NAME
 end
 
 desc "Build Specs"
 task :build_specs => [:clean, :setup_submodules] do
-  build(SPECS_TARGET_NAME)
+  build SPECS_TARGET_NAME
 end
 
 desc "Run specs"
