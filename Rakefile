@@ -29,7 +29,7 @@ task :build_specs => [:clean, :setup_submodules] do
   build SPECS_TARGET_NAME
 end
 
-desc "Run specs"
+desc "Run Specs"
 task :specs => :build_specs do
   require 'tmpdir'
   puts SIMULATOR_VERSION
