@@ -9,23 +9,28 @@ BUILD_DIR = File.join(PROJECT_ROOT, "build")
 
 task :default => ["specs"]
 
+desc "Setup Submodules"
+task :setup_submodules do
+  system_or_exit("git submodule init && git submodule update")
+end
+
 desc "Clean all targets"
 task :clean do
   system_or_exit "rm -rf #{BUILD_DIR}/*", output_file("clean")
 end
 
 desc "Build Swizzlean"
-task :build_swizzlean => 'clean' do
+task :build_swizzlean => [:clean, :setup_submodules] do
   build(PRODUCT_NAME)
 end
 
 desc "Build specs"
-task :build_specs => 'clean' do
+task :build_specs => [:clean, :setup_submodules] do
   build(SPECS_TARGET_NAME)
 end
 
 desc "Run specs"
-task :specs => 'build_specs' do
+task :specs => :build_specs do
   require 'tmpdir'
   puts SIMULATOR_VERSION
   puts "Running specs on iOS Simulator -> #{SIMULATOR_VERSION}"
