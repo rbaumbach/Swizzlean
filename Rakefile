@@ -15,12 +15,12 @@ task :clean do
 end
 
 desc "Build Swizzlean"
-task :build_swizzlean => [:clean, :setup_submodules] do
+task :build_swizzlean => :clean do
   build PRODUCT_NAME
 end
 
 desc "Build Specs"
-task :build_specs => [:clean, :setup_submodules] do
+task :build_specs => :clean do
   build SPECS_TARGET_NAME
 end
 
