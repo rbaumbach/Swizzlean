@@ -1,2 +1,6 @@
 language: objective-c
-script: xctool -project Swizzlean.xcodeproj -scheme Swizzlean -configuration Release -sdk iphonesimulator -arch i386 build
+before_install:
+    - gem install cocoapods --no-rdoc --no-ri --no-document --quiet
+    - gem install xcpretty --no-rdoc --no-ri --no-document --quiet
+script: 
+  - xcodebuild -workspace Swizzlean.xcworkspace -scheme Swizzlean -sdk iphonesimulator -configuration Release build | xcpretty -c
