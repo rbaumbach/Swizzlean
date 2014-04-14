@@ -18,12 +18,22 @@
 		AF32F08B174671D400EC79F7 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AF32F08A174671D400EC79F7 /* Default-568h@2x.png */; };
 		AF6B25E917467588006A312B /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF6B25E717467588006A312B /* FirstViewController.m */; };
 		AF6B25EB17467588006A312B /* FirstViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF6B25E817467588006A312B /* FirstViewController.xib */; };
+		AF9AE52B18FB8D0200C87424 /* Swizzlean.m in Sources */ = {isa = PBXBuildFile; fileRef = AFF33E1417A01FD300B1F7ED /* Swizzlean.m */; };
+		AF9AE52C18FB8D0600C87424 /* RuntimeUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = AFF33E1217A01FD300B1F7ED /* RuntimeUtils.m */; };
+		AF9AE52D18FB8D0A00C87424 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AF32F084174671D400EC79F7 /* AppDelegate.m */; };
+		AF9AE52E18FB8D0D00C87424 /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF6B25E717467588006A312B /* FirstViewController.m */; };
+		AF9AE52F18FB8D1500C87424 /* FirstViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF6B25E817467588006A312B /* FirstViewController.xib */; };
+		AF9AE53418FB8E6700C87424 /* AppDelegateSpec.mm in Sources */ = {isa = PBXBuildFile; fileRef = AF9AE53018FB8E6700C87424 /* AppDelegateSpec.mm */; };
+		AF9AE53518FB8E6700C87424 /* FirstViewControllerSpec.mm in Sources */ = {isa = PBXBuildFile; fileRef = AF9AE53118FB8E6700C87424 /* FirstViewControllerSpec.mm */; };
+		AF9AE53618FB8E6700C87424 /* RuntimeUtilsSpec.mm in Sources */ = {isa = PBXBuildFile; fileRef = AF9AE53218FB8E6700C87424 /* RuntimeUtilsSpec.mm */; };
+		AF9AE53718FB8E6700C87424 /* SwizzleanSpec.mm in Sources */ = {isa = PBXBuildFile; fileRef = AF9AE53318FB8E6700C87424 /* SwizzleanSpec.mm */; };
+		AF9AE53D18FB8E8400C87424 /* FakeRuntimeUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = AF9AE53A18FB8E8400C87424 /* FakeRuntimeUtils.m */; };
+		AF9AE53E18FB8E8400C87424 /* TestClass.m in Sources */ = {isa = PBXBuildFile; fileRef = AF9AE53C18FB8E8400C87424 /* TestClass.m */; };
 		AFEBB7B218FB560400129A10 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFEBB7B118FB560400129A10 /* SenTestingKit.framework */; };
 		AFEBB7B318FB560400129A10 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF32F078174671D400EC79F7 /* CoreGraphics.framework */; };
 		AFEBB7B418FB560400129A10 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF32F074174671D400EC79F7 /* UIKit.framework */; };
 		AFEBB7B518FB560400129A10 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF32F076174671D400EC79F7 /* Foundation.framework */; };
 		AFEBB7BB18FB560400129A10 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = AFEBB7B918FB560400129A10 /* InfoPlist.strings */; };
-		AFEBB7BD18FB560400129A10 /* ExampleSpec.mm in Sources */ = {isa = PBXBuildFile; fileRef = AFEBB7BC18FB560400129A10 /* ExampleSpec.mm */; };
 		AFF33E1517A01FD300B1F7ED /* RuntimeUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = AFF33E1217A01FD300B1F7ED /* RuntimeUtils.m */; };
 		AFF33E1617A01FD300B1F7ED /* Swizzlean.m in Sources */ = {isa = PBXBuildFile; fileRef = AFF33E1417A01FD300B1F7ED /* Swizzlean.m */; };
 		B5EC04E20AFF46A19189C83B /* libPods-Specs.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8864377F4522485E83D44623 /* libPods-Specs.a */; };
@@ -56,12 +66,19 @@
 		AF6B25E717467588006A312B /* FirstViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
 		AF6B25E817467588006A312B /* FirstViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FirstViewController.xib; sourceTree = "<group>"; };
 		AF97A4D71771FA4000664D38 /* MIT.LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = MIT.LICENSE; sourceTree = "<group>"; };
+		AF9AE53018FB8E6700C87424 /* AppDelegateSpec.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = AppDelegateSpec.mm; sourceTree = "<group>"; };
+		AF9AE53118FB8E6700C87424 /* FirstViewControllerSpec.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = FirstViewControllerSpec.mm; sourceTree = "<group>"; };
+		AF9AE53218FB8E6700C87424 /* RuntimeUtilsSpec.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = RuntimeUtilsSpec.mm; sourceTree = "<group>"; };
+		AF9AE53318FB8E6700C87424 /* SwizzleanSpec.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = SwizzleanSpec.mm; sourceTree = "<group>"; };
+		AF9AE53918FB8E8400C87424 /* FakeRuntimeUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FakeRuntimeUtils.h; sourceTree = "<group>"; };
+		AF9AE53A18FB8E8400C87424 /* FakeRuntimeUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FakeRuntimeUtils.m; sourceTree = "<group>"; };
+		AF9AE53B18FB8E8400C87424 /* TestClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestClass.h; sourceTree = "<group>"; };
+		AF9AE53C18FB8E8400C87424 /* TestClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestClass.m; sourceTree = "<group>"; };
 		AFE194DE176F538B0009D34D /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
 		AFEBB7B018FB560400129A10 /* Specs.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Specs.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFEBB7B118FB560400129A10 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		AFEBB7B818FB560400129A10 /* Specs-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Specs-Info.plist"; sourceTree = "<group>"; };
 		AFEBB7BA18FB560400129A10 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		AFEBB7BC18FB560400129A10 /* ExampleSpec.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = ExampleSpec.mm; sourceTree = "<group>"; };
 		AFEBB7BF18FB560400129A10 /* Specs-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Specs-Prefix.pch"; sourceTree = "<group>"; };
 		AFF33E1117A01FD300B1F7ED /* RuntimeUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RuntimeUtils.h; path = Source/RuntimeUtils.h; sourceTree = "<group>"; };
 		AFF33E1217A01FD300B1F7ED /* RuntimeUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RuntimeUtils.m; path = Source/RuntimeUtils.m; sourceTree = "<group>"; };
@@ -146,8 +163,8 @@
 				AF32F076174671D400EC79F7 /* Foundation.framework */,
 				AF32F078174671D400EC79F7 /* CoreGraphics.framework */,
 				AF02D0C618E884FE003F42D0 /* XCTest.framework */,
-				8864377F4522485E83D44623 /* libPods-Specs.a */,
 				AFEBB7B118FB560400129A10 /* SenTestingKit.framework */,
+				8864377F4522485E83D44623 /* libPods-Specs.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -191,10 +208,25 @@
 			name = AppCode;
 			sourceTree = "<group>";
 		};
+		AF9AE53818FB8E6C00C87424 /* TestClasses */ = {
+			isa = PBXGroup;
+			children = (
+				AF9AE53918FB8E8400C87424 /* FakeRuntimeUtils.h */,
+				AF9AE53A18FB8E8400C87424 /* FakeRuntimeUtils.m */,
+				AF9AE53B18FB8E8400C87424 /* TestClass.h */,
+				AF9AE53C18FB8E8400C87424 /* TestClass.m */,
+			);
+			name = TestClasses;
+			sourceTree = "<group>";
+		};
 		AFEBB7B618FB560400129A10 /* Specs */ = {
 			isa = PBXGroup;
 			children = (
-				AFEBB7BC18FB560400129A10 /* ExampleSpec.mm */,
+				AF9AE53018FB8E6700C87424 /* AppDelegateSpec.mm */,
+				AF9AE53118FB8E6700C87424 /* FirstViewControllerSpec.mm */,
+				AF9AE53218FB8E6700C87424 /* RuntimeUtilsSpec.mm */,
+				AF9AE53318FB8E6700C87424 /* SwizzleanSpec.mm */,
+				AF9AE53818FB8E6C00C87424 /* TestClasses */,
 				AFEBB7B718FB560400129A10 /* Supporting Files */,
 			);
 			path = Specs;
@@ -301,6 +333,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AFEBB7BB18FB560400129A10 /* InfoPlist.strings in Resources */,
+				AF9AE52F18FB8D1500C87424 /* FirstViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -369,7 +402,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AFEBB7BD18FB560400129A10 /* ExampleSpec.mm in Sources */,
+				AF9AE53E18FB8E8400C87424 /* TestClass.m in Sources */,
+				AF9AE53618FB8E6700C87424 /* RuntimeUtilsSpec.mm in Sources */,
+				AF9AE52C18FB8D0600C87424 /* RuntimeUtils.m in Sources */,
+				AF9AE53718FB8E6700C87424 /* SwizzleanSpec.mm in Sources */,
+				AF9AE53418FB8E6700C87424 /* AppDelegateSpec.mm in Sources */,
+				AF9AE53518FB8E6700C87424 /* FirstViewControllerSpec.mm in Sources */,
+				AF9AE53D18FB8E8400C87424 /* FakeRuntimeUtils.m in Sources */,
+				AF9AE52B18FB8D0200C87424 /* Swizzlean.m in Sources */,
+				AF9AE52D18FB8D0A00C87424 /* AppDelegate.m in Sources */,
+				AF9AE52E18FB8D0D00C87424 /* FirstViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
