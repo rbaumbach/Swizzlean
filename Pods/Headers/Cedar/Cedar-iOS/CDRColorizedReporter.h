@@ -1,1 +1,0 @@
-../../../Cedar/Source/Headers/Reporters/CDRColorizedReporter.h

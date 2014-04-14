@@ -1,1 +1,0 @@
-../../../Cedar/Source/Headers/Matchers/UIKit/UIGeometryCompareEqual.h
