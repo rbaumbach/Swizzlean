@@ -18,6 +18,11 @@
 		AF32F08B174671D400EC79F7 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AF32F08A174671D400EC79F7 /* Default-568h@2x.png */; };
 		AF6B25E917467588006A312B /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF6B25E717467588006A312B /* FirstViewController.m */; };
 		AF6B25EB17467588006A312B /* FirstViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF6B25E817467588006A312B /* FirstViewController.xib */; };
+		AF83C5D218FC2C42004C63BF /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFEBB7B118FB560400129A10 /* SenTestingKit.framework */; };
+		AF83C5D318FC2C42004C63BF /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF32F078174671D400EC79F7 /* CoreGraphics.framework */; };
+		AF83C5D418FC2C42004C63BF /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF32F074174671D400EC79F7 /* UIKit.framework */; };
+		AF83C5D518FC2C42004C63BF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF32F076174671D400EC79F7 /* Foundation.framework */; };
+		AF83C5DB18FC2C42004C63BF /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = AF83C5D918FC2C42004C63BF /* InfoPlist.strings */; };
 		AF9AE52B18FB8D0200C87424 /* Swizzlean.m in Sources */ = {isa = PBXBuildFile; fileRef = AFF33E1417A01FD300B1F7ED /* Swizzlean.m */; };
 		AF9AE52C18FB8D0600C87424 /* RuntimeUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = AFF33E1217A01FD300B1F7ED /* RuntimeUtils.m */; };
 		AF9AE52D18FB8D0A00C87424 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AF32F084174671D400EC79F7 /* AppDelegate.m */; };
@@ -37,18 +42,14 @@
 		AFF33E1517A01FD300B1F7ED /* RuntimeUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = AFF33E1217A01FD300B1F7ED /* RuntimeUtils.m */; };
 		AFF33E1617A01FD300B1F7ED /* Swizzlean.m in Sources */ = {isa = PBXBuildFile; fileRef = AFF33E1417A01FD300B1F7ED /* Swizzlean.m */; };
 		B5EC04E20AFF46A19189C83B /* libPods-Specs.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8864377F4522485E83D44623 /* libPods-Specs.a */; };
+		B655AE52B3734C72A5ABB5D2 /* libPods-IntegrationSpecs.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FB74F9CBB7994476A057ECFA /* libPods-IntegrationSpecs.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		1605CAC6AD2D4E1DA42A4891 /* Pods-Specs.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Specs.xcconfig"; path = "Pods/Pods-Specs.xcconfig"; sourceTree = "<group>"; };
+		7C128FC982CE4914AED8F2D3 /* Pods-IntegrationSpecs.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IntegrationSpecs.xcconfig"; path = "Pods/Pods-IntegrationSpecs.xcconfig"; sourceTree = "<group>"; };
 		8864377F4522485E83D44623 /* libPods-Specs.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Specs.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF02D0C618E884FE003F42D0 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
-		AF02D0CC18E884FE003F42D0 /* IntegrationSpecs-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "IntegrationSpecs-Info.plist"; sourceTree = "<group>"; };
-		AF02D0CE18E884FE003F42D0 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		AF02D0D218E884FE003F42D0 /* IntegrationSpecs-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "IntegrationSpecs-Prefix.pch"; sourceTree = "<group>"; };
-		AF02D0D818E88753003F42D0 /* IntegrationTestClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IntegrationTestClass.h; sourceTree = "<group>"; };
-		AF02D0D918E88753003F42D0 /* IntegrationTestClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IntegrationTestClass.m; sourceTree = "<group>"; };
-		AF02D0DA18E88753003F42D0 /* SwizzleanIntegrationTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SwizzleanIntegrationTests.m; sourceTree = "<group>"; };
 		AF32F071174671D400EC79F7 /* Swizzlean.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Swizzlean.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF32F074174671D400EC79F7 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		AF32F076174671D400EC79F7 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -65,6 +66,10 @@
 		AF6B25E617467588006A312B /* FirstViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
 		AF6B25E717467588006A312B /* FirstViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
 		AF6B25E817467588006A312B /* FirstViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FirstViewController.xib; sourceTree = "<group>"; };
+		AF83C5D118FC2C42004C63BF /* IntegrationSpecs.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IntegrationSpecs.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		AF83C5D818FC2C42004C63BF /* IntegrationSpecs-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "IntegrationSpecs-Info.plist"; sourceTree = "<group>"; };
+		AF83C5DA18FC2C42004C63BF /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		AF83C5DF18FC2C42004C63BF /* IntegrationSpecs-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "IntegrationSpecs-Prefix.pch"; sourceTree = "<group>"; };
 		AF97A4D71771FA4000664D38 /* MIT.LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = MIT.LICENSE; sourceTree = "<group>"; };
 		AF9AE53018FB8E6700C87424 /* AppDelegateSpec.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = AppDelegateSpec.mm; sourceTree = "<group>"; };
 		AF9AE53118FB8E6700C87424 /* FirstViewControllerSpec.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = FirstViewControllerSpec.mm; sourceTree = "<group>"; };
@@ -84,6 +89,7 @@
 		AFF33E1217A01FD300B1F7ED /* RuntimeUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RuntimeUtils.m; path = Source/RuntimeUtils.m; sourceTree = "<group>"; };
 		AFF33E1317A01FD300B1F7ED /* Swizzlean.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Swizzlean.h; path = Source/Swizzlean.h; sourceTree = "<group>"; };
 		AFF33E1417A01FD300B1F7ED /* Swizzlean.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Swizzlean.m; path = Source/Swizzlean.m; sourceTree = "<group>"; };
+		FB74F9CBB7994476A057ECFA /* libPods-IntegrationSpecs.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-IntegrationSpecs.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +100,18 @@
 				AF32F075174671D400EC79F7 /* UIKit.framework in Frameworks */,
 				AF32F077174671D400EC79F7 /* Foundation.framework in Frameworks */,
 				AF32F079174671D400EC79F7 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AF83C5CD18FC2C42004C63BF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AF83C5D318FC2C42004C63BF /* CoreGraphics.framework in Frameworks */,
+				AF83C5D418FC2C42004C63BF /* UIKit.framework in Frameworks */,
+				AF83C5D218FC2C42004C63BF /* SenTestingKit.framework in Frameworks */,
+				AF83C5D518FC2C42004C63BF /* Foundation.framework in Frameworks */,
+				B655AE52B3734C72A5ABB5D2 /* libPods-IntegrationSpecs.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -112,27 +130,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		AF02D0CA18E884FE003F42D0 /* IntegrationSpecs */ = {
-			isa = PBXGroup;
-			children = (
-				AF02D0DA18E88753003F42D0 /* SwizzleanIntegrationTests.m */,
-				AF02D0D818E88753003F42D0 /* IntegrationTestClass.h */,
-				AF02D0D918E88753003F42D0 /* IntegrationTestClass.m */,
-				AF02D0CB18E884FE003F42D0 /* Supporting Files */,
-			);
-			path = IntegrationSpecs;
-			sourceTree = "<group>";
-		};
-		AF02D0CB18E884FE003F42D0 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				AF02D0CC18E884FE003F42D0 /* IntegrationSpecs-Info.plist */,
-				AF02D0CD18E884FE003F42D0 /* InfoPlist.strings */,
-				AF02D0D218E884FE003F42D0 /* IntegrationSpecs-Prefix.pch */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
 		AF32F068174671D400EC79F7 = {
 			isa = PBXGroup;
 			children = (
@@ -140,10 +137,11 @@
 				AFE194DE176F538B0009D34D /* README.md */,
 				AF32F07A174671D400EC79F7 /* Swizzlean */,
 				AFEBB7B618FB560400129A10 /* Specs */,
-				AF02D0CA18E884FE003F42D0 /* IntegrationSpecs */,
+				AF83C5D618FC2C42004C63BF /* IntegrationSpecs */,
 				AF32F073174671D400EC79F7 /* Frameworks */,
 				AF32F072174671D400EC79F7 /* Products */,
 				1605CAC6AD2D4E1DA42A4891 /* Pods-Specs.xcconfig */,
+				7C128FC982CE4914AED8F2D3 /* Pods-IntegrationSpecs.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -152,6 +150,7 @@
 			children = (
 				AF32F071174671D400EC79F7 /* Swizzlean.app */,
 				AFEBB7B018FB560400129A10 /* Specs.octest */,
+				AF83C5D118FC2C42004C63BF /* IntegrationSpecs.octest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -165,6 +164,7 @@
 				AF02D0C618E884FE003F42D0 /* XCTest.framework */,
 				AFEBB7B118FB560400129A10 /* SenTestingKit.framework */,
 				8864377F4522485E83D44623 /* libPods-Specs.a */,
+				FB74F9CBB7994476A057ECFA /* libPods-IntegrationSpecs.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -206,6 +206,24 @@
 				AF6B25E817467588006A312B /* FirstViewController.xib */,
 			);
 			name = AppCode;
+			sourceTree = "<group>";
+		};
+		AF83C5D618FC2C42004C63BF /* IntegrationSpecs */ = {
+			isa = PBXGroup;
+			children = (
+				AF83C5D718FC2C42004C63BF /* Supporting Files */,
+			);
+			path = IntegrationSpecs;
+			sourceTree = "<group>";
+		};
+		AF83C5D718FC2C42004C63BF /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				AF83C5D818FC2C42004C63BF /* IntegrationSpecs-Info.plist */,
+				AF83C5D918FC2C42004C63BF /* InfoPlist.strings */,
+				AF83C5DF18FC2C42004C63BF /* IntegrationSpecs-Prefix.pch */,
+			);
+			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 		AF9AE53818FB8E6C00C87424 /* TestClasses */ = {
@@ -262,6 +280,26 @@
 			productReference = AF32F071174671D400EC79F7 /* Swizzlean.app */;
 			productType = "com.apple.product-type.application";
 		};
+		AF83C5D018FC2C42004C63BF /* IntegrationSpecs */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AF83C5E018FC2C42004C63BF /* Build configuration list for PBXNativeTarget "IntegrationSpecs" */;
+			buildPhases = (
+				CB5AA3C553634EFB8ED536FC /* Check Pods Manifest.lock */,
+				AF83C5CC18FC2C42004C63BF /* Sources */,
+				AF83C5CD18FC2C42004C63BF /* Frameworks */,
+				AF83C5CE18FC2C42004C63BF /* Resources */,
+				AF83C5CF18FC2C42004C63BF /* ShellScript */,
+				E361E267DE3147DB924A4ACA /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = IntegrationSpecs;
+			productName = IntegrationSpecs;
+			productReference = AF83C5D118FC2C42004C63BF /* IntegrationSpecs.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
 		AFEBB7AF18FB560400129A10 /* Specs */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = AFEBB7C018FB560400129A10 /* Build configuration list for PBXNativeTarget "Specs" */;
@@ -292,6 +330,9 @@
 				LastUpgradeCheck = 0460;
 				ORGANIZATIONNAME = "RKB Designs";
 				TargetAttributes = {
+					AF83C5D018FC2C42004C63BF = {
+						TestTargetID = AF32F070174671D400EC79F7;
+					};
 					AFEBB7AF18FB560400129A10 = {
 						TestTargetID = AF32F070174671D400EC79F7;
 					};
@@ -311,6 +352,7 @@
 			targets = (
 				AF32F070174671D400EC79F7 /* Swizzlean */,
 				AFEBB7AF18FB560400129A10 /* Specs */,
+				AF83C5D018FC2C42004C63BF /* IntegrationSpecs */,
 			);
 		};
 /* End PBXProject section */
@@ -325,6 +367,14 @@
 				AF32F089174671D400EC79F7 /* Default@2x.png in Resources */,
 				AF32F08B174671D400EC79F7 /* Default-568h@2x.png in Resources */,
 				AF6B25EB17467588006A312B /* FirstViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AF83C5CE18FC2C42004C63BF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AF83C5DB18FC2C42004C63BF /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -370,6 +420,19 @@
 			shellScript = "\"${SRCROOT}/Pods/Pods-Specs-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		AF83C5CF18FC2C42004C63BF /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
 		AFEBB7AE18FB560400129A10 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -383,6 +446,36 @@
 			shellPath = /bin/sh;
 			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
 		};
+		CB5AA3C553634EFB8ED536FC /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		E361E267DE3147DB924A4ACA /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-IntegrationSpecs-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -395,6 +488,13 @@
 				AF6B25E917467588006A312B /* FirstViewController.m in Sources */,
 				AFF33E1517A01FD300B1F7ED /* RuntimeUtils.m in Sources */,
 				AFF33E1617A01FD300B1F7ED /* Swizzlean.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AF83C5CC18FC2C42004C63BF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -418,18 +518,18 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		AF02D0CD18E884FE003F42D0 /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				AF02D0CE18E884FE003F42D0 /* en */,
-			);
-			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
 		AF32F07D174671D400EC79F7 /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
 				AF32F07E174671D400EC79F7 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		AF83C5D918FC2C42004C63BF /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AF83C5DA18FC2C42004C63BF /* en */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
@@ -525,6 +625,79 @@
 			};
 			name = Release;
 		};
+		AF83C5E118FC2C42004C63BF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7C128FC982CE4914AED8F2D3 /* Pods-IntegrationSpecs.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Swizzlean.app/Swizzlean";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "IntegrationSpecs/IntegrationSpecs-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				INFOPLIST_FILE = "IntegrationSpecs/IntegrationSpecs-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-all_load",
+					"-lstdc++",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		AF83C5E218FC2C42004C63BF /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7C128FC982CE4914AED8F2D3 /* Pods-IntegrationSpecs.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Swizzlean.app/Swizzlean";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				ENABLE_NS_ASSERTIONS = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "IntegrationSpecs/IntegrationSpecs-Prefix.pch";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				INFOPLIST_FILE = "IntegrationSpecs/IntegrationSpecs-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-all_load",
+					"-lstdc++",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
 		AFEBB7C118FB560400129A10 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 1605CAC6AD2D4E1DA42A4891 /* Pods-Specs.xcconfig */;
@@ -615,6 +788,15 @@
 			buildConfigurations = (
 				AF32F08F174671D400EC79F7 /* Debug */,
 				AF32F090174671D400EC79F7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AF83C5E018FC2C42004C63BF /* Build configuration list for PBXNativeTarget "IntegrationSpecs" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AF83C5E118FC2C42004C63BF /* Debug */,
+				AF83C5E218FC2C42004C63BF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
