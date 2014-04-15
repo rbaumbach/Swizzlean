@@ -55,7 +55,7 @@ def run_tests(test_target_name)
 end
 
 def execute_xcodebuild(target_name, build_action = "build")
-  sh "xcodebuild -workspace Swizzlean.xcworkspace -scheme '#{target_name}' -sdk iphonesimulator -configuration Release #{build_action} | xcpretty -c ; exit ${PIPESTATUS[0]}" rescue nil
+  sh "xcodebuild -workspace Swizzlean.xcworkspace -scheme '#{target_name}' -sdk iphonesimulator -configuration Release #{build_action} | xcpretty -tc ; exit ${PIPESTATUS[0]}" rescue nil
 end
 
 def tests_failed(test_target_name)
