@@ -53,7 +53,7 @@ NSLog(@"The int value for number7 is: %d", [number7 intValue]);
 
 * Prerequisites: [ruby gems](https://rubygems.org/pages/download), [bundler](http://bundler.io)
 
-To use the included Rakefile, run the setup.sh script to install submodules (xctool) and bundle gems (rake):
+To use the included Rakefile to run Cedar specs, run the setup.sh script to bundle gems and install pods:
 
 ```bash
 $ ./setup.sh
@@ -69,10 +69,12 @@ Additional rake tasks can be seen using -T:
 
 ```bash
 $ rake -T
-rake build_specs      # Build Specs
-rake build_swizzlean  # Build Swizzlean
-rake clean            # Clean all targets
-rake specs            # Run Specs
+rake build_swizzlean    # Build Swizzlean
+rake clean[target]      # Clean target
+rake clean_all_targets  # Clean all target
+rake integration_specs  # Run Integration Specs
+rake run_all_specs      # Run all Specs
+rake specs              # Run Specs
 ```
 
 ## Suggestions, requests, feedback and acknowledgements
