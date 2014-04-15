@@ -1,8 +1,7 @@
 #!/bin/bash
 
-# Install xctool
-git submodule init
-git submodule update
-
-# Install Rake
+# Install Rake, xcpretty
 bundle install
+
+# Install Cedar
+pod install
