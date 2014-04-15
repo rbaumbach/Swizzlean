@@ -1,4 +1,4 @@
-# Swizzlean  [![Build Status](https://travis-ci.org/rbaumbach/Swizzlean.png)](https://travis-ci.org/rbaumbach/Swizzlean)
+# Swizzlean  [![Build Status](https://travis-ci.org/rbaumbach/Swizzlean.png)](https://travis-ci.org/rbaumbach/Swizzlean) [![Cocoapods](https://cocoapod-badges.herokuapp.com/v/Swizzlean/badge.png)](http://cocoapods.org/?q=Swizzlean)
 
 A quick and "lean" way to swizzle methods for your Objective-C development needs.
 
