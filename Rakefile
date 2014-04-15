@@ -2,7 +2,7 @@ include FileUtils::Verbose
 
 task :default => :run_all_specs
 
-desc "Clean all target"
+desc "Clean all targets"
 task :clean_all_targets do
   clean_all_targets
 end
