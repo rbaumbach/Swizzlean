@@ -11,6 +11,7 @@ using namespace Cedar::Doubles;
 
 @end
 
+
 SPEC_BEGIN(AppDelegateSpec)
 
 describe(@"AppDelegate", ^{

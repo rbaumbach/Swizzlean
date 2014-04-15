@@ -16,6 +16,10 @@
 		AF32F087174671D400EC79F7 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = AF32F086174671D400EC79F7 /* Default.png */; };
 		AF32F089174671D400EC79F7 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AF32F088174671D400EC79F7 /* Default@2x.png */; };
 		AF32F08B174671D400EC79F7 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AF32F08A174671D400EC79F7 /* Default-568h@2x.png */; };
+		AF55538D18FC2E1200CD4402 /* SwizzleanIntegrationSpec.mm in Sources */ = {isa = PBXBuildFile; fileRef = AF55538C18FC2E1200CD4402 /* SwizzleanIntegrationSpec.mm */; };
+		AF55539118FC2EA800CD4402 /* IntegrationTestClass.m in Sources */ = {isa = PBXBuildFile; fileRef = AF55539018FC2EA800CD4402 /* IntegrationTestClass.m */; };
+		AF55539218FCC6E800CD4402 /* Swizzlean.m in Sources */ = {isa = PBXBuildFile; fileRef = AFF33E1417A01FD300B1F7ED /* Swizzlean.m */; };
+		AF55539318FCC6FA00CD4402 /* RuntimeUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = AFF33E1217A01FD300B1F7ED /* RuntimeUtils.m */; };
 		AF6B25E917467588006A312B /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF6B25E717467588006A312B /* FirstViewController.m */; };
 		AF6B25EB17467588006A312B /* FirstViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF6B25E817467588006A312B /* FirstViewController.xib */; };
 		AF83C5D218FC2C42004C63BF /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFEBB7B118FB560400129A10 /* SenTestingKit.framework */; };
@@ -63,6 +67,9 @@
 		AF32F086174671D400EC79F7 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		AF32F088174671D400EC79F7 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		AF32F08A174671D400EC79F7 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		AF55538C18FC2E1200CD4402 /* SwizzleanIntegrationSpec.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = SwizzleanIntegrationSpec.mm; sourceTree = "<group>"; };
+		AF55538F18FC2EA800CD4402 /* IntegrationTestClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IntegrationTestClass.h; sourceTree = "<group>"; };
+		AF55539018FC2EA800CD4402 /* IntegrationTestClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IntegrationTestClass.m; sourceTree = "<group>"; };
 		AF6B25E617467588006A312B /* FirstViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
 		AF6B25E717467588006A312B /* FirstViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
 		AF6B25E817467588006A312B /* FirstViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FirstViewController.xib; sourceTree = "<group>"; };
@@ -196,6 +203,15 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		AF55538E18FC2E8800CD4402 /* Test Classes */ = {
+			isa = PBXGroup;
+			children = (
+				AF55538F18FC2EA800CD4402 /* IntegrationTestClass.h */,
+				AF55539018FC2EA800CD4402 /* IntegrationTestClass.m */,
+			);
+			name = "Test Classes";
+			sourceTree = "<group>";
+		};
 		AF7268121774CF8A0073205C /* AppCode */ = {
 			isa = PBXGroup;
 			children = (
@@ -211,6 +227,8 @@
 		AF83C5D618FC2C42004C63BF /* IntegrationSpecs */ = {
 			isa = PBXGroup;
 			children = (
+				AF55538C18FC2E1200CD4402 /* SwizzleanIntegrationSpec.mm */,
+				AF55538E18FC2E8800CD4402 /* Test Classes */,
 				AF83C5D718FC2C42004C63BF /* Supporting Files */,
 			);
 			path = IntegrationSpecs;
@@ -226,7 +244,7 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		AF9AE53818FB8E6C00C87424 /* TestClasses */ = {
+		AF9AE53818FB8E6C00C87424 /* Test Classes */ = {
 			isa = PBXGroup;
 			children = (
 				AF9AE53918FB8E8400C87424 /* FakeRuntimeUtils.h */,
@@ -234,7 +252,7 @@
 				AF9AE53B18FB8E8400C87424 /* TestClass.h */,
 				AF9AE53C18FB8E8400C87424 /* TestClass.m */,
 			);
-			name = TestClasses;
+			name = "Test Classes";
 			sourceTree = "<group>";
 		};
 		AFEBB7B618FB560400129A10 /* Specs */ = {
@@ -244,7 +262,7 @@
 				AF9AE53118FB8E6700C87424 /* FirstViewControllerSpec.mm */,
 				AF9AE53218FB8E6700C87424 /* RuntimeUtilsSpec.mm */,
 				AF9AE53318FB8E6700C87424 /* SwizzleanSpec.mm */,
-				AF9AE53818FB8E6C00C87424 /* TestClasses */,
+				AF9AE53818FB8E6C00C87424 /* Test Classes */,
 				AFEBB7B718FB560400129A10 /* Supporting Files */,
 			);
 			path = Specs;
@@ -495,6 +513,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AF55538D18FC2E1200CD4402 /* SwizzleanIntegrationSpec.mm in Sources */,
+				AF55539218FCC6E800CD4402 /* Swizzlean.m in Sources */,
+				AF55539318FCC6FA00CD4402 /* RuntimeUtils.m in Sources */,
+				AF55539118FC2EA800CD4402 /* IntegrationTestClass.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

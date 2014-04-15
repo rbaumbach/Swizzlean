@@ -5,3 +5,4 @@ before_install:
 script: 
   - xcodebuild -workspace Swizzlean.xcworkspace -scheme Swizzlean -sdk iphonesimulator -configuration Release build | xcpretty -c
   - xcodebuild -workspace Swizzlean.xcworkspace -scheme Specs -sdk iphonesimulator -configuration Release test | xcpretty -c
+  - xcodebuild -workspace Swizzlean.xcworkspace -scheme IntegrationSpecs -sdk iphonesimulator -configuration Release test | xcpretty -c

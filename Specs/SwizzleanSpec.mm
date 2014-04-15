@@ -247,7 +247,11 @@ describe(@"Swizzlean", ^{
                     swizzleanObj.isClassMethodSwizzled = NO;
                     swizzleanObj.runtimeUtils = nice_fake_for([RuntimeUtils class]);
                     
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wundeclared-selector"
                     burritoMethodSEL = @selector(returnStringInstanceMethod:);
+#pragma clang diagnostic pop
+                    
                     swizzleanObj.runtimeUtils stub_method("getClassMethodWithClass:selector:").with(swizzleanObj.classToSwizzle).and_with(burritoMethodSEL).and_return((Method)NULL);
                 });
                 
