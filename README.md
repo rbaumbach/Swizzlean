@@ -1,4 +1,4 @@
-# Swizzlean  [![Build Status](https://travis-ci.org/rbaumbach/Swizzlean.png)](https://travis-ci.org/rbaumbach/Swizzlean) [![Cocoapod Version](https://cocoapod-badges.herokuapp.com/v/Swizzlean/badge.png)](http://cocoapods.org/?q=Swizzlean) [![License](http://b.repl.ca/v1/License-MIT-blue.png)](https://github.com/rbaumbach/Swizzlean/blob/master/MIT.LICENSE)
+# Swizzlean  [![Build Status](https://travis-ci.org/rbaumbach/Swizzlean.png)](https://travis-ci.org/rbaumbach/Swizzlean) [![Cocoapod Version](https://cocoapod-badges.herokuapp.com/v/Swizzlean/badge.png)](http://cocoapods.org/?q=Swizzlean) [![Cocoapod Platform](https://cocoapod-badges.herokuapp.com/p/Swizzlean/badge.png)](http://cocoapods.org/?q=Swizzlean) [![License](http://b.repl.ca/v1/License-MIT-blue.png)](https://github.com/rbaumbach/Swizzlean/blob/master/MIT.LICENSE)
 
 A quick and "lean" way to swizzle methods for your Objective-C development needs.
 
