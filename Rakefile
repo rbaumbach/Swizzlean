@@ -14,23 +14,26 @@ end
 
 desc "Build Swizzlean"
 task :build_swizzlean do
+  Rake::Task[:clean].invoke "Swizzlean"
   build "Swizzlean"
 end
 
 desc "Run Specs"
 task :specs do
+  Rake::Task[:clean].invoke "Specs"
   run_tests "Specs"
 end
 
 desc "Run Integration Specs"
 task :integration_specs do
+  Rake::Task[:clean].invoke "IntegrationSpecs"
   run_tests "IntegrationSpecs"
 end
 
 desc "Run all Specs"
 task :run_all_specs do
-  run_tests "Specs"
-  run_tests "IntegrationSpecs"
+  Rake::Task[:specs].invoke
+  Rake::Task[:integration_specs].invoke
 end
 
 private
@@ -44,12 +47,10 @@ def clean_all_targets
 end
 
 def build(target_name)
-  clean target_name
   execute_xcodebuild target_name
 end
 
 def run_tests(test_target_name)
-  clean test_target_name
   execute_xcodebuild test_target_name, "test"
   tests_failed test_target_name unless $?.success?
 end
