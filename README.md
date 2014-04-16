@@ -49,11 +49,11 @@ NSLog(@"The int value for number7 is: %d", [number7 intValue]);
 // returns - The int value for number7 is: 7
 ```
 
-## Development
+## Testing
 
 * Prerequisites: [ruby](https://github.com/sstephenson/rbenv), [ruby gems](https://rubygems.org/pages/download), [bundler](http://bundler.io)
 
-To use the included Rakefile to run Cedar specs, run the setup.sh script to bundle gems and install pods:
+To use the included Rakefile to run Cedar specs, run the setup.sh script to bundle required gems and cocoapods:
 
 ```bash
 $ ./setup.sh
@@ -65,7 +65,7 @@ Then run rake to run cedar specs on the command line:
 $ rake
 ```
 
-Additional rake tasks can be seen using -T:
+Additional rake tasks can be seen using rake -T:
 
 ```bash
 $ rake -T
