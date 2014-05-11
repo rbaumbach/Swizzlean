@@ -1,5 +1,3 @@
-include FileUtils::Verbose
-
 task :default => :run_all_specs
 
 desc "Clean all targets"
