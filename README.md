@@ -10,7 +10,7 @@ A quick and "lean" way to swizzle methods for your Objective-C development needs
 
 1.  Add Swizzlean to your Podfile `pod 'Swizzlean', '~> 0.1.1'`.
 2.  Install the pod(s) by running `pod install`.
-3.  Include Swizzlean to your files with `#import "Swizzlean.h"`.
+3.  Include Swizzlean to your files with `#import <Swizzlean/Swizzlean.h>`.
 
 ### Clone from Github
 
