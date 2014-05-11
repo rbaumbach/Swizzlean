@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Install Rake, xcpretty
-bundle install
+bundle
 
 # Install Cedar
-pod install
+bundle exec pod install
