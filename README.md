@@ -8,7 +8,7 @@ A quick and "lean" way to swizzle methods for your Objective-C development needs
 
 [CocoaPods](http://cocoapods.org) is the recommended way to add Swizzlean to your project.
 
-1.  Add Swizzlean to your Podfile `pod 'Swizzlean', '~> 0.1.1'`.
+1.  Add Swizzlean to your Podfile `pod 'Swizzlean'`.
 2.  Install the pod(s) by running `pod install`.
 3.  Include Swizzlean to your files with `#import <Swizzlean/Swizzlean.h>`.
 
