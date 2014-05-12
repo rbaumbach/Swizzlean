@@ -62,7 +62,7 @@ $ ./setup.sh
 Then run rake to run cedar specs on the command line:
 
 ```bash
-$ rake
+$ bundle exec rake
 ```
 
 Additional rake tasks can be seen using rake -T:
