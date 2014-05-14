@@ -209,18 +209,16 @@ describe(@"Swizzlean", ^{
             
             describe(@"when instance method has not been swizzled", ^{
                 beforeEach(^{
+                    swizzleanObj.classToSwizzle = [NSObject class];
                     swizzleanObj.isInstanceMethodSwizzled = NO;
-                    
-                    spy_on(swizzleanObj.runtimeUtils);
-                    [swizzleanObj resetSwizzledInstanceMethod];
                 });
                 
-                afterEach(^{
-                    stop_spying_on(swizzleanObj.runtimeUtils);
-                });
-                
-                it(@"immediately returns", ^{
-                    swizzleanObj.runtimeUtils should_not have_received(@selector(updateMethod:withImplemenation:));
+                it(@"throws an exception", ^{
+                    NSString *className = NSStringFromClass([NSObject class]);
+                    NSString *reasonStr = [NSString stringWithFormat:@"Attempting to reset a swizzled instance method when one doesn't exist for class %@", className];
+                    ^{
+                        [swizzleanObj resetSwizzledInstanceMethod];
+                    } should raise_exception.with_name(@"Swizzlean").with_reason(reasonStr);
                 });
             });
         });
