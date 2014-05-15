@@ -109,7 +109,7 @@ describe(@"Swizzlean", ^{
                     NSString *reasonStr = [NSString stringWithFormat:@"Instance method doesn't exist: %@", methodName];
                     ^{
                         [swizzleanObj swizzleInstanceMethod:tacoMethodSEL withReplacementImplementation:replacementImpBlock];
-                    } should raise_exception([NSException exceptionWithName:@"Swizzlean" reason:reasonStr userInfo:nil]);
+                    } should raise_exception.with_name(@"Swizzlean").with_reason(reasonStr);
                 });
             });
             
@@ -260,7 +260,7 @@ describe(@"Swizzlean", ^{
                     NSString *reasonStr = [NSString stringWithFormat:@"Class method doesn't exist: %@", methodName];
                     ^{
                         [swizzleanObj swizzleClassMethod:burritoMethodSEL withReplacementImplementation:replacementImpBlock];
-                    } should raise_exception([NSException exceptionWithName:@"Swizzlean" reason:reasonStr userInfo:nil]);
+                    } should raise_exception.with_name(@"Swizzlean").with_reason(reasonStr);
                 });
             });
             
