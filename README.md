@@ -85,5 +85,5 @@ can be sent to: rbaumbach.github@gmail.com.
 This software is licensed under the MIT License.
 
 Thanks to the following contributors for keeping Swizzlean Swizzletastic:
-Erik Stromlund
+Erik Stromlund & Aaron Koop
 
