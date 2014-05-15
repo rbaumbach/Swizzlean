@@ -86,7 +86,7 @@ describe(@"SwizzleanIntegration", ^{
                     [swizz swizzleInstanceMethod:deftonesTrackSEL withReplacementImplementation:^(id self) {
                         return @"This doesn't matter";
                     }];
-                } should raise_exception([NSException exceptionWithName:@"Swizzlean" reason:reasonStr userInfo:nil]);
+                } should raise_exception.with_name(@"Swizzlean").with_reason(reasonStr);
             });
             
             it(@"throws exception when attempting to reset an unswizzled instance method", ^{
@@ -160,7 +160,7 @@ describe(@"SwizzleanIntegration", ^{
                     [swizz swizzleClassMethod:deftonesTrackSEL withReplacementImplementation:^(id self) {
                         return @"This doesn't matter";
                     }];
-                } should raise_exception([NSException exceptionWithName:@"Swizzlean" reason:reasonStr userInfo:nil]);
+                } should raise_exception.with_name(@"Swizzlean").with_reason(reasonStr);
             });
             
             it(@"throws exception when attempting to reset an unswizzled class method", ^{
