@@ -34,6 +34,8 @@
         <h1>
 <a name="swizzlean" class="anchor" href="#swizzlean"><span class="octicon octicon-link"></span></a>Swizzlean</h1>
 
+<p><a href="https://travis-ci.org/rbaumbach/Swizzlean"><img src="https://travis-ci.org/rbaumbach/Swizzlean.png" alt="Build Status"></a> <a href="http://cocoapods.org/?q=Swizzlean"><img src="https://cocoapod-badges.herokuapp.com/v/Swizzlean/badge.png" alt="Cocoapod Version"></a> <a href="http://cocoapods.org/?q=Swizzlean"><img src="https://cocoapod-badges.herokuapp.com/p/Swizzlean/badge.png" alt="Cocoapod Platform"></a> <a href="https://github.com/rbaumbach/Swizzlean/blob/master/MIT.LICENSE"><img src="http://b.repl.ca/v1/License-MIT-blue.png" alt="License"></a></p>
+
 <p>A quick and "lean" way to swizzle methods for your Objective-C development needs.</p>
 
 <h2>
@@ -45,9 +47,9 @@
 <p><a href="http://cocoapods.org">CocoaPods</a> is the recommended way to add Swizzlean to your project.</p>
 
 <ol>
-<li> Add Swizzlean to your Podfile <code>pod 'Swizzlean', '~&gt; 0.1.0'</code>.</li>
+<li> Add Swizzlean to your Podfile <code>pod 'Swizzlean'</code>.</li>
 <li> Install the pod(s) by running <code>pod install</code>.</li>
-<li> Include Swizzlean to your files with <code>#import "Swizzlean.h"</code>.</li>
+<li> Include Swizzlean to your files with <code>#import &lt;Swizzlean/Swizzlean.h&gt;</code>.</li>
 </ol><h3>
 <a name="clone-from-github" class="anchor" href="#clone-from-github"><span class="octicon octicon-link"></span></a>Clone from Github</h3>
 
@@ -75,7 +77,7 @@ swizzled.</li>
 </ul><h3>
 <a name="example-usage" class="anchor" href="#example-usage"><span class="octicon octicon-link"></span></a>Example Usage</h3>
 
-<div class="highlight"><pre><span class="n">Swizzlean</span> <span class="o">*</span><span class="n">swizzle</span> <span class="o">=</span> <span class="p">[[</span><span class="n">Swizzlean</span> <span class="n">alloc</span><span class="p">]</span> <span class="n">initWithClassToSwizzle</span><span class="o">:</span><span class="p">[</span><span class="n">NSString</span> <span class="n">class</span><span class="p">]];</span>
+<div class="highlight highlight-objective-c"><pre><span class="n">Swizzlean</span> <span class="o">*</span><span class="n">swizzle</span> <span class="o">=</span> <span class="p">[[</span><span class="n">Swizzlean</span> <span class="n">alloc</span><span class="p">]</span> <span class="n">initWithClassToSwizzle</span><span class="o">:</span><span class="p">[</span><span class="n">NSString</span> <span class="n">class</span><span class="p">]];</span>
 <span class="p">[</span><span class="n">swizzle</span> <span class="n">swizzleInstanceMethod</span><span class="o">:</span><span class="k">@selector</span><span class="p">(</span><span class="n">intValue</span><span class="p">)</span> <span class="n">withReplacementImplementation</span><span class="o">:^</span><span class="p">(</span><span class="kt">id</span> <span class="n">_self</span><span class="p">)</span> <span class="p">{</span>
     <span class="k">return</span> <span class="mi">42</span><span class="p">;</span>
 <span class="p">}];</span>
@@ -88,12 +90,42 @@ swizzled.</li>
 </pre></div>
 
 <h2>
-<a name="suggestions-requests-and-feedback" class="anchor" href="#suggestions-requests-and-feedback"><span class="octicon octicon-link"></span></a>Suggestions, requests and feedback</h2>
+<a name="testing" class="anchor" href="#testing"><span class="octicon octicon-link"></span></a>Testing</h2>
+
+<ul>
+<li>Prerequisites: <a href="https://github.com/sstephenson/rbenv">ruby</a>, <a href="https://rubygems.org/pages/download">ruby gems</a>, <a href="http://bundler.io">bundler</a>
+</li>
+</ul><p>To use the included Rakefile to run Cedar specs, run the setup.sh script to bundle required gems and cocoapods:</p>
+
+<div class="highlight highlight-bash"><pre><span class="nv">$ </span>./setup.sh
+</pre></div>
+
+<p>Then run rake to run cedar specs on the command line:</p>
+
+<div class="highlight highlight-bash"><pre><span class="nv">$ </span>bundle <span class="nb">exec </span>rake
+</pre></div>
+
+<p>Additional rake tasks can be seen using rake -T:</p>
+
+<div class="highlight highlight-bash"><pre><span class="nv">$ </span>rake -T
+rake build_swizzlean    <span class="c"># Build Swizzlean</span>
+rake clean<span class="o">[</span>target<span class="o">]</span>      <span class="c"># Clean target</span>
+rake clean_all_targets  <span class="c"># Clean all target</span>
+rake integration_specs  <span class="c"># Run Integration Specs</span>
+rake run_all_specs      <span class="c"># Run all Specs</span>
+rake specs              <span class="c"># Run Specs</span>
+</pre></div>
+
+<h2>
+<a name="suggestions-requests-feedback-and-acknowledgements" class="anchor" href="#suggestions-requests-feedback-and-acknowledgements"><span class="octicon octicon-link"></span></a>Suggestions, requests, feedback and acknowledgements</h2>
 
 <p>Thanks for checking out Swizzlean for your swizzling.  Any feedback can be 
 can be sent to: <a href="mailto:rbaumbach.github@gmail.com">rbaumbach.github@gmail.com</a>.</p>
 
 <p>This software is licensed under the MIT License.</p>
+
+<p>Thanks to the following contributors for keeping Swizzlean Swizzletastic:
+Erik Stromlund &amp; Aaron Koop</p>
       </section>
     </div>
 
