@@ -115,9 +115,11 @@
 - (void)resetSwizzledInstanceMethod
 {
     if (!self.isInstanceMethodSwizzled) {
-        return;
+        NSString *className = NSStringFromClass(self.classToSwizzle);
+        NSString *reasonStr = [NSString stringWithFormat:@"Attempting to reset a swizzled instance method when one doesn't exist for class %@", className];
+        @throw [NSException exceptionWithName:@"Swizzlean" reason:reasonStr userInfo:nil];
     }
-        
+    
     [self.runtimeUtils updateMethod:self.originalInstanceMethod
                   withImplemenation:self.originalInstanceMethodImplementation];
     
@@ -131,7 +133,9 @@
 - (void)resetSwizzledClassMethod
 {
     if (!self.isClassMethodSwizzled) {
-        return;
+        NSString *className = NSStringFromClass(self.classToSwizzle);
+        NSString *reasonStr = [NSString stringWithFormat:@"Attempting to reset a swizzled class method when one doesn't exist for class %@", className];
+        @throw [NSException exceptionWithName:@"Swizzlean" reason:reasonStr userInfo:nil];
     }
     
     [self.runtimeUtils updateMethod:self.originalClassMethod

@@ -42,7 +42,7 @@ describe(@"FirstViewController", ^{
             [window makeKeyAndVisible];
             [controller viewDidLoad];
             
-            [swizzForViewDidLoad resetSwizzledClassMethod];
+            [swizzForViewDidLoad resetSwizzledInstanceMethod];
         });
         
         it(@"calls super, thanks for asking!", ^{
