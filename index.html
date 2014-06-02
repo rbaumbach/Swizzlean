@@ -32,9 +32,8 @@
     <div id="main_content_wrap" class="outer">
       <section id="main_content" class="inner">
         <h1>
-<a name="swizzlean" class="anchor" href="#swizzlean"><span class="octicon octicon-link"></span></a>Swizzlean</h1>
-
-<p><a href="https://travis-ci.org/rbaumbach/Swizzlean"><img src="https://travis-ci.org/rbaumbach/Swizzlean.png" alt="Build Status"></a> <a href="http://cocoapods.org/?q=Swizzlean"><img src="https://cocoapod-badges.herokuapp.com/v/Swizzlean/badge.png" alt="Cocoapod Version"></a> <a href="http://cocoapods.org/?q=Swizzlean"><img src="https://cocoapod-badges.herokuapp.com/p/Swizzlean/badge.png" alt="Cocoapod Platform"></a> <a href="https://github.com/rbaumbach/Swizzlean/blob/master/MIT.LICENSE"><img src="http://b.repl.ca/v1/License-MIT-blue.png" alt="License"></a></p>
+<a name="swizzlean-----" class="anchor" href="#swizzlean-----"><span class="octicon octicon-link"></span></a>Swizzlean  <a href="https://travis-ci.org/rbaumbach/Swizzlean"><img src="https://travis-ci.org/rbaumbach/Swizzlean.png" alt="Build Status"></a> <a href="http://cocoapods.org/?q=Swizzlean"><img src="https://cocoapod-badges.herokuapp.com/v/Swizzlean/badge.png" alt="Cocoapod Version"></a> <a href="http://cocoapods.org/?q=Swizzlean"><img src="https://cocoapod-badges.herokuapp.com/p/Swizzlean/badge.png" alt="Cocoapod Platform"></a> <a href="https://github.com/rbaumbach/Swizzlean/blob/master/MIT.LICENSE"><img src="http://b.repl.ca/v1/License-MIT-blue.png" alt="License"></a>
+</h1>
 
 <p>A quick and "lean" way to swizzle methods for your Objective-C development needs.</p>
 
@@ -74,6 +73,8 @@ currentInstanceMethodSwizzled and currentClassMethodSwizzled methods.</li>
 isClassMethodSwizzled.</li>
 <li>Use reset methods to unswizzle the instance/class methods that are currently being
 swizzled.</li>
+<li>Methods are automatically reset when the Swizzlean object is deallocated.  If you would like to
+keep the methods swizzled after dealloc is called, set the property resetWhenDeallocated = NO.</li>
 </ul><h3>
 <a name="example-usage" class="anchor" href="#example-usage"><span class="octicon octicon-link"></span></a>Example Usage</h3>
 
