@@ -79,6 +79,10 @@ rake run_all_specs      # Run all Specs
 rake specs              # Run Specs
 ```
 
+## Version History
+
+Version history can be found at the [Swizzlean wiki](https://github.com/rbaumbach/Swizzlean/wiki/Version-History).
+
 ## Suggestions, requests, feedback and acknowledgements
 
 Thanks for checking out Swizzlean for your swizzling.  Any feedback can be 
