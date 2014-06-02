@@ -33,6 +33,8 @@ A quick and "lean" way to swizzle methods for your Objective-C development needs
   isClassMethodSwizzled.
 * Use reset methods to unswizzle the instance/class methods that are currently being
   swizzled.
+* Methods are automatically reset when the Swizzlean object is deallocated.  If you would like to
+  keep the methods swizzled after dealloc is called, set the property resetWhenDeallocated = NO.
 
 ### Example Usage
 
