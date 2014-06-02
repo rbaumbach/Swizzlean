@@ -65,6 +65,10 @@ describe(@"Swizzlean", ^{
         swizzleanObj.isInstanceMethodSwizzled should_not be_truthy;
     });
     
+    it(@"sets resetWhenDeallocated to YES", ^{
+        swizzleanObj.resetWhenDeallocated should be_truthy;
+    });
+    
     it(@"has a currentInstanceMethodSwizzled: that is nil", ^{
         swizzleanObj.currentInstanceMethodSwizzled should be_nil;
     });

@@ -22,12 +22,12 @@ describe(@"SwizzleanIntegration", ^{
         swizz.isClassMethodSwizzled should be_falsy;
     });
     
+    it(@"sets resetWhenDeallocated to YES", ^{
+        swizz.resetWhenDeallocated should be_truthy;
+    });
+    
     describe(@"Instance Methods", ^{
         context(@"Correct Swizzles", ^{
-            afterEach(^{
-                [swizz resetSwizzledInstanceMethod];
-            });
-            
             it(@"correctly swizzles method with no parameters and void return type", ^{
                 __block NSString *testString;
                 
@@ -101,10 +101,6 @@ describe(@"SwizzleanIntegration", ^{
     
     describe(@"Class Methods", ^{
         context(@"Correct Swizzles", ^{
-            afterEach(^{
-                [swizz resetSwizzledClassMethod];
-            });
-            
             it(@"correctly swizzles method with no parameters and void return type", ^{
                 __block NSString *testString;
                 
@@ -169,6 +165,171 @@ describe(@"SwizzleanIntegration", ^{
                 ^{
                     [swizz resetSwizzledClassMethod];
                 } should raise_exception.with_name(@"Swizzlean").with_reason(reasonStr);
+            });
+        });
+    });
+    
+    describe(@"Deallocating", ^{
+        context(@"when there is only a swizzled instance method", ^{
+            __block IntegrationTestClass *testClass;
+            
+            beforeEach(^{
+                testClass = [[IntegrationTestClass alloc] init];
+                
+                [swizz swizzleInstanceMethod:@selector(instanceMethodReturnStringWithInput:andInput:)
+               withReplacementImplementation:^(id _self, NSString *param1, NSString *param2) {
+                   return [NSString stringWithFormat:@"Swizzled: %@ + %@", param1, param2];
+               }];
+            });
+            
+            it(@"has only a swizzled instance method before deallocating", ^{
+                swizz.isInstanceMethodSwizzled should be_truthy;
+                swizz.isClassMethodSwizzled should_not be_truthy;
+            });
+            
+            it(@"resets the swizzled method when resetWhenDeallocated is set to YES", ^{
+                swizz.resetWhenDeallocated = YES;
+                swizz = nil;
+                NSString *stringAfterDealloc = [testClass instanceMethodReturnStringWithInput:@"A" andInput:@"B"];
+                
+                stringAfterDealloc should equal(@"Instance Method: A + B");
+            });
+
+            it(@"doesn't reset the swizzled method when resetWhenDeallocated is set to NO", ^{
+                swizz.resetWhenDeallocated = NO;
+                swizz = nil;
+                NSString *stringAfterDealloc = [testClass instanceMethodReturnStringWithInput:@"A" andInput:@"B"];
+                
+                stringAfterDealloc should equal(@"Swizzled: A + B");
+                
+                // Subsequent tests may fail unless we put the original implementation back
+                // manually here. We cannot reset since swizz has been deallocated.
+                swizz = [[Swizzlean alloc] initWithClassToSwizzle:[IntegrationTestClass class]];
+                [swizz swizzleInstanceMethod:@selector(instanceMethodReturnStringWithInput:andInput:)
+               withReplacementImplementation:^(id _self, NSString *param1, NSString *param2) {
+                   return [NSString stringWithFormat:@"Instance Method: %@ + %@", param1, param2];
+               }];
+                
+                swizz.resetWhenDeallocated = NO;
+            });
+        });
+        
+        context(@"when there is only a swizzled class method", ^{
+            beforeEach(^{
+                [swizz swizzleClassMethod:@selector(classMethodReturnStringWithInput:andInput:)
+            withReplacementImplementation:^(id _self, NSString *param1, NSString *param2) {
+                return [NSString stringWithFormat:@"Swizzled: %@ + %@", param1, param2];
+            }];
+            });
+            
+            it(@"has a only a swizzled class method before deallocating", ^{
+                swizz.isInstanceMethodSwizzled should_not be_truthy;
+                swizz.isClassMethodSwizzled should be_truthy;
+            });
+            
+            it(@"resets the swizzled method when resetWhenDeallocated is set to YES", ^{
+                swizz.resetWhenDeallocated = YES;
+                swizz = nil;
+                NSString *stringAfterDealloc = [IntegrationTestClass classMethodReturnStringWithInput:@"A" andInput:@"B"];
+                
+                stringAfterDealloc should equal(@"Class Method: A + B");
+            });
+            
+            it(@"doesn't reset the swizzled method when resetWhenDeallocated is set to NO", ^{
+                swizz.resetWhenDeallocated = NO;
+                swizz = nil;
+                NSString *stringAfterDealloc = [IntegrationTestClass classMethodReturnStringWithInput:@"A" andInput:@"B"];
+                
+                stringAfterDealloc should equal(@"Swizzled: A + B");
+                
+                // Subsequent tests may fail unless we put the original implementation back
+                // manually here. We cannot reset since swizz has been deallocated.
+                swizz = [[Swizzlean alloc] initWithClassToSwizzle:[IntegrationTestClass class]];
+                [swizz swizzleClassMethod:@selector(classMethodReturnStringWithInput:andInput:)
+            withReplacementImplementation:^(id _self, NSString *param1, NSString *param2) {
+                return [NSString stringWithFormat:@"Class Method: %@ + %@", param1, param2];
+            }];
+                
+                swizz.resetWhenDeallocated = NO;
+            });
+        });
+        
+        context(@"when both a class and instance method are swizzled", ^{
+            __block IntegrationTestClass *testClass;
+            
+            beforeEach(^{
+                testClass = [[IntegrationTestClass alloc] init];
+                
+                [swizz swizzleInstanceMethod:@selector(instanceMethodReturnStringWithInput:andInput:)
+               withReplacementImplementation:^(id _self, NSString *param1, NSString *param2) {
+                   return [NSString stringWithFormat:@"Swizzled Instance Method: %@ + %@", param1, param2];
+               }];
+                
+                [swizz swizzleClassMethod:@selector(classMethodReturnStringWithInput:andInput:)
+            withReplacementImplementation:^(id _self, NSString *param1, NSString *param2) {
+                return [NSString stringWithFormat:@"Swizzled Class Method: %@ + %@", param1, param2];
+            }];
+            });
+            
+            it(@"has both a class and instance method swizzled before deallocating", ^{
+                swizz.isInstanceMethodSwizzled should be_truthy;
+                swizz.isClassMethodSwizzled should be_truthy;
+            });
+            
+            it(@"resets both swizzled methods when resetWhenDeallocated is set to YES", ^{
+                swizz.resetWhenDeallocated = YES;
+                swizz = nil;
+                NSString *instanceMethodStringAfterDealloc = [testClass instanceMethodReturnStringWithInput:@"A" andInput:@"B"];
+                NSString *classMethodStringAfterDealloc = [IntegrationTestClass classMethodReturnStringWithInput:@"A" andInput:@"B"];
+                
+                instanceMethodStringAfterDealloc should equal(@"Instance Method: A + B");
+                classMethodStringAfterDealloc should equal(@"Class Method: A + B");
+            });
+            
+            it(@"doesn't reset either method when resetWhenDeallocated is set to NO", ^{
+                swizz.resetWhenDeallocated = NO;
+                swizz = nil;
+                NSString *instanceMethodStringAfterDealloc = [testClass instanceMethodReturnStringWithInput:@"A" andInput:@"B"];
+                NSString *classMethodStringAfterDealloc = [IntegrationTestClass classMethodReturnStringWithInput:@"A" andInput:@"B"];
+                
+                instanceMethodStringAfterDealloc should equal(@"Swizzled Instance Method: A + B");
+                classMethodStringAfterDealloc should equal(@"Swizzled Class Method: A + B");
+                
+                // Subsequent tests may fail unless we put the original implementation back
+                // manually here. We cannot reset since swizz has been deallocated.
+                swizz = [[Swizzlean alloc] initWithClassToSwizzle:[IntegrationTestClass class]];
+                [swizz swizzleInstanceMethod:@selector(instanceMethodReturnStringWithInput:andInput:)
+               withReplacementImplementation:^(id _self, NSString *param1, NSString *param2) {
+                   return [NSString stringWithFormat:@"Instance Method: %@ + %@", param1, param2];
+               }];
+                
+                [swizz swizzleClassMethod:@selector(classMethodReturnStringWithInput:andInput:)
+            withReplacementImplementation:^(id _self, NSString *param1, NSString *param2) {
+                return [NSString stringWithFormat:@"Class Method: %@ + %@", param1, param2];
+            }];
+                
+                swizz.resetWhenDeallocated = NO;
+            });
+        });
+        
+        context(@"when there are no swizzled methods", ^{
+            it(@"doesn't have any swizzled methods before deallocating", ^{
+                swizz.isInstanceMethodSwizzled should_not be_truthy;
+                swizz.isClassMethodSwizzled should_not be_truthy;
+            });
+            
+            it(@"doesn't throw an exception when resetWhenDeallocated is set to YES", ^{
+                swizz.resetWhenDeallocated = YES;
+                ^{
+                    swizz = nil;
+                } should_not raise_exception;
+            });
+            
+            it(@"doesn't throw an exception when resetWhenDeallocated is set to NO", ^{
+                swizz.resetWhenDeallocated = NO;
+                ^{
+                    swizz = nil;
+                } should_not raise_exception;
             });
         });
     });
