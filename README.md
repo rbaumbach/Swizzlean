@@ -19,22 +19,22 @@ A quick and "lean" way to swizzle methods for your Objective-C development needs
 
 ## How To
 
-* Create an instance of swizzlean passing in the class of the methods you want to swizzle.
-* Call swizzleInstanceMethod:withReplacementImplementation: for an instance method passing 
+* Create an instance of **swizzlean** passing in the class of the methods you want to swizzle.
+* Call `swizzleInstanceMethod:withReplacementImplementation:` for an instance method passing 
   in the selector of the method to be swizzled with the replacement implementation.  When
-  passing in the replacement implementation block, the first parameter is always id _self
+  passing in the replacement implementation block, the first parameter is always `id _self`
   (pointer to the 'Class' being swizzled), and the followed by any other parameters for the
   method being swizzled.
-* Call swizzleClassMethod:withReplacementImplementation: for a class method passing in
+* Call `swizzleClassMethod:withReplacementImplementation:` for a class method passing in
   the selector of the method to be swizzled with the replacement implementation.
 * You can check the current instance/class method that is swizzled by using the 
-  currentInstanceMethodSwizzled and currentClassMethodSwizzled methods.
-* The status of the swizzled methods can be seen by calling isInstanceMethodSwizzled and
-  isClassMethodSwizzled.
+  `currentInstanceMethodSwizzled` and `currentClassMethodSwizzled` methods.
+* The status of the swizzled methods can be seen by calling `isInstanceMethodSwizzled` and
+  `isClassMethodSwizzled`.
 * Use reset methods to unswizzle the instance/class methods that are currently being
   swizzled.
 * Methods are automatically reset when the Swizzlean object is deallocated.  If you would like to
-  keep the methods swizzled after dealloc is called, set the property resetWhenDeallocated = NO.
+  keep the methods swizzled after `dealloc` is called, set the property `resetWhenDeallocated = NO`.
 
 ### Example Usage
 
