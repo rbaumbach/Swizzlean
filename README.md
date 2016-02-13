@@ -4,7 +4,7 @@ A quick and "lean" way to swizzle methods for your Objective-C development needs
 
 ## Adding Swizzlean to your project
 
-### Cocoapods
+### CocoaPods
 
 [CocoaPods](http://cocoapods.org) is the recommended way to add Swizzlean to your project.
 
