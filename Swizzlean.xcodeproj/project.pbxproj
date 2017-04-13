@@ -7,26 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		AF32F075174671D400EC79F7 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF32F074174671D400EC79F7 /* UIKit.framework */; };
-		AF32F077174671D400EC79F7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF32F076174671D400EC79F7 /* Foundation.framework */; };
-		AF32F079174671D400EC79F7 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF32F078174671D400EC79F7 /* CoreGraphics.framework */; };
-		AF32F07F174671D400EC79F7 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = AF32F07D174671D400EC79F7 /* InfoPlist.strings */; };
+		94BE1D7C1EA038B10096916B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 94BE1D7B1EA038B10096916B /* Images.xcassets */; };
 		AF32F081174671D400EC79F7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AF32F080174671D400EC79F7 /* main.m */; };
 		AF32F085174671D400EC79F7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AF32F084174671D400EC79F7 /* AppDelegate.m */; };
-		AF32F087174671D400EC79F7 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = AF32F086174671D400EC79F7 /* Default.png */; };
-		AF32F089174671D400EC79F7 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AF32F088174671D400EC79F7 /* Default@2x.png */; };
-		AF32F08B174671D400EC79F7 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AF32F08A174671D400EC79F7 /* Default-568h@2x.png */; };
 		AF55538D18FC2E1200CD4402 /* SwizzleanIntegrationSpec.mm in Sources */ = {isa = PBXBuildFile; fileRef = AF55538C18FC2E1200CD4402 /* SwizzleanIntegrationSpec.mm */; };
 		AF55539118FC2EA800CD4402 /* IntegrationTestClass.m in Sources */ = {isa = PBXBuildFile; fileRef = AF55539018FC2EA800CD4402 /* IntegrationTestClass.m */; };
 		AF55539218FCC6E800CD4402 /* Swizzlean.m in Sources */ = {isa = PBXBuildFile; fileRef = AFF33E1417A01FD300B1F7ED /* Swizzlean.m */; };
 		AF55539318FCC6FA00CD4402 /* RuntimeUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = AFF33E1217A01FD300B1F7ED /* RuntimeUtils.m */; };
 		AF6B25E917467588006A312B /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF6B25E717467588006A312B /* FirstViewController.m */; };
 		AF6B25EB17467588006A312B /* FirstViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF6B25E817467588006A312B /* FirstViewController.xib */; };
-		AF83C5D218FC2C42004C63BF /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFEBB7B118FB560400129A10 /* SenTestingKit.framework */; };
-		AF83C5D318FC2C42004C63BF /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF32F078174671D400EC79F7 /* CoreGraphics.framework */; };
-		AF83C5D418FC2C42004C63BF /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF32F074174671D400EC79F7 /* UIKit.framework */; };
-		AF83C5D518FC2C42004C63BF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF32F076174671D400EC79F7 /* Foundation.framework */; };
-		AF83C5DB18FC2C42004C63BF /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = AF83C5D918FC2C42004C63BF /* InfoPlist.strings */; };
 		AF9AE52B18FB8D0200C87424 /* Swizzlean.m in Sources */ = {isa = PBXBuildFile; fileRef = AFF33E1417A01FD300B1F7ED /* Swizzlean.m */; };
 		AF9AE52C18FB8D0600C87424 /* RuntimeUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = AFF33E1217A01FD300B1F7ED /* RuntimeUtils.m */; };
 		AF9AE52D18FB8D0A00C87424 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AF32F084174671D400EC79F7 /* AppDelegate.m */; };
@@ -38,11 +27,6 @@
 		AF9AE53718FB8E6700C87424 /* SwizzleanSpec.mm in Sources */ = {isa = PBXBuildFile; fileRef = AF9AE53318FB8E6700C87424 /* SwizzleanSpec.mm */; };
 		AF9AE53D18FB8E8400C87424 /* FakeRuntimeUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = AF9AE53A18FB8E8400C87424 /* FakeRuntimeUtils.m */; };
 		AF9AE53E18FB8E8400C87424 /* TestClass.m in Sources */ = {isa = PBXBuildFile; fileRef = AF9AE53C18FB8E8400C87424 /* TestClass.m */; };
-		AFEBB7B218FB560400129A10 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFEBB7B118FB560400129A10 /* SenTestingKit.framework */; };
-		AFEBB7B318FB560400129A10 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF32F078174671D400EC79F7 /* CoreGraphics.framework */; };
-		AFEBB7B418FB560400129A10 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF32F074174671D400EC79F7 /* UIKit.framework */; };
-		AFEBB7B518FB560400129A10 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF32F076174671D400EC79F7 /* Foundation.framework */; };
-		AFEBB7BB18FB560400129A10 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = AFEBB7B918FB560400129A10 /* InfoPlist.strings */; };
 		AFF33E1517A01FD300B1F7ED /* RuntimeUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = AFF33E1217A01FD300B1F7ED /* RuntimeUtils.m */; };
 		AFF33E1617A01FD300B1F7ED /* Swizzlean.m in Sources */ = {isa = PBXBuildFile; fileRef = AFF33E1417A01FD300B1F7ED /* Swizzlean.m */; };
 		B5EC04E20AFF46A19189C83B /* libPods-Specs.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8864377F4522485E83D44623 /* libPods-Specs.a */; };
@@ -53,20 +37,16 @@
 		1605CAC6AD2D4E1DA42A4891 /* Pods-Specs.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Specs.xcconfig"; path = "Pods/Pods-Specs.xcconfig"; sourceTree = "<group>"; };
 		7C128FC982CE4914AED8F2D3 /* Pods-IntegrationSpecs.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IntegrationSpecs.xcconfig"; path = "Pods/Pods-IntegrationSpecs.xcconfig"; sourceTree = "<group>"; };
 		8864377F4522485E83D44623 /* libPods-Specs.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Specs.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		94BE1D7B1EA038B10096916B /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		AF02D0C618E884FE003F42D0 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		AF32F071174671D400EC79F7 /* Swizzlean.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Swizzlean.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF32F074174671D400EC79F7 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		AF32F076174671D400EC79F7 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		AF32F078174671D400EC79F7 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		AF32F07C174671D400EC79F7 /* Swizzlean-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Swizzlean-Info.plist"; sourceTree = "<group>"; };
-		AF32F07E174671D400EC79F7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		AF32F080174671D400EC79F7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		AF32F082174671D400EC79F7 /* Swizzlean-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Swizzlean-Prefix.pch"; sourceTree = "<group>"; };
 		AF32F083174671D400EC79F7 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		AF32F084174671D400EC79F7 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		AF32F086174671D400EC79F7 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
-		AF32F088174671D400EC79F7 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
-		AF32F08A174671D400EC79F7 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		AF55538C18FC2E1200CD4402 /* SwizzleanIntegrationSpec.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = SwizzleanIntegrationSpec.mm; sourceTree = "<group>"; };
 		AF55538F18FC2EA800CD4402 /* IntegrationTestClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IntegrationTestClass.h; sourceTree = "<group>"; };
 		AF55539018FC2EA800CD4402 /* IntegrationTestClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IntegrationTestClass.m; sourceTree = "<group>"; };
@@ -75,9 +55,6 @@
 		AF6B25E817467588006A312B /* FirstViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FirstViewController.xib; sourceTree = "<group>"; };
 		AF83C5D118FC2C42004C63BF /* IntegrationSpecs.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IntegrationSpecs.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF83C5D818FC2C42004C63BF /* IntegrationSpecs-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "IntegrationSpecs-Info.plist"; sourceTree = "<group>"; };
-		AF83C5DA18FC2C42004C63BF /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		AF83C5DF18FC2C42004C63BF /* IntegrationSpecs-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "IntegrationSpecs-Prefix.pch"; sourceTree = "<group>"; };
-		AF97A4D71771FA4000664D38 /* MIT.LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = MIT.LICENSE; sourceTree = "<group>"; };
 		AF9AE53018FB8E6700C87424 /* AppDelegateSpec.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = AppDelegateSpec.mm; sourceTree = "<group>"; };
 		AF9AE53118FB8E6700C87424 /* FirstViewControllerSpec.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = FirstViewControllerSpec.mm; sourceTree = "<group>"; };
 		AF9AE53218FB8E6700C87424 /* RuntimeUtilsSpec.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = RuntimeUtilsSpec.mm; sourceTree = "<group>"; };
@@ -86,12 +63,9 @@
 		AF9AE53A18FB8E8400C87424 /* FakeRuntimeUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FakeRuntimeUtils.m; sourceTree = "<group>"; };
 		AF9AE53B18FB8E8400C87424 /* TestClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestClass.h; sourceTree = "<group>"; };
 		AF9AE53C18FB8E8400C87424 /* TestClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestClass.m; sourceTree = "<group>"; };
-		AFE194DE176F538B0009D34D /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
 		AFEBB7B018FB560400129A10 /* Specs.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Specs.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFEBB7B118FB560400129A10 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		AFEBB7B818FB560400129A10 /* Specs-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Specs-Info.plist"; sourceTree = "<group>"; };
-		AFEBB7BA18FB560400129A10 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		AFEBB7BF18FB560400129A10 /* Specs-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Specs-Prefix.pch"; sourceTree = "<group>"; };
 		AFF33E1117A01FD300B1F7ED /* RuntimeUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RuntimeUtils.h; path = Source/RuntimeUtils.h; sourceTree = "<group>"; };
 		AFF33E1217A01FD300B1F7ED /* RuntimeUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RuntimeUtils.m; path = Source/RuntimeUtils.m; sourceTree = "<group>"; };
 		AFF33E1317A01FD300B1F7ED /* Swizzlean.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Swizzlean.h; path = Source/Swizzlean.h; sourceTree = "<group>"; };
@@ -104,9 +78,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AF32F075174671D400EC79F7 /* UIKit.framework in Frameworks */,
-				AF32F077174671D400EC79F7 /* Foundation.framework in Frameworks */,
-				AF32F079174671D400EC79F7 /* CoreGraphics.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -114,10 +85,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AF83C5D318FC2C42004C63BF /* CoreGraphics.framework in Frameworks */,
-				AF83C5D418FC2C42004C63BF /* UIKit.framework in Frameworks */,
-				AF83C5D218FC2C42004C63BF /* SenTestingKit.framework in Frameworks */,
-				AF83C5D518FC2C42004C63BF /* Foundation.framework in Frameworks */,
 				B655AE52B3734C72A5ABB5D2 /* libPods-IntegrationSpecs.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -126,10 +93,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AFEBB7B318FB560400129A10 /* CoreGraphics.framework in Frameworks */,
-				AFEBB7B418FB560400129A10 /* UIKit.framework in Frameworks */,
-				AFEBB7B218FB560400129A10 /* SenTestingKit.framework in Frameworks */,
-				AFEBB7B518FB560400129A10 /* Foundation.framework in Frameworks */,
 				B5EC04E20AFF46A19189C83B /* libPods-Specs.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -140,8 +103,6 @@
 		AF32F068174671D400EC79F7 = {
 			isa = PBXGroup;
 			children = (
-				AF97A4D71771FA4000664D38 /* MIT.LICENSE */,
-				AFE194DE176F538B0009D34D /* README.md */,
 				AF32F07A174671D400EC79F7 /* Swizzlean */,
 				AFEBB7B618FB560400129A10 /* Specs */,
 				AF83C5D618FC2C42004C63BF /* IntegrationSpecs */,
@@ -184,6 +145,7 @@
 				AFF33E1117A01FD300B1F7ED /* RuntimeUtils.h */,
 				AFF33E1217A01FD300B1F7ED /* RuntimeUtils.m */,
 				AF7268121774CF8A0073205C /* AppCode */,
+				94BE1D7B1EA038B10096916B /* Images.xcassets */,
 				AF32F07B174671D400EC79F7 /* Supporting Files */,
 			);
 			path = Swizzlean;
@@ -193,12 +155,7 @@
 			isa = PBXGroup;
 			children = (
 				AF32F07C174671D400EC79F7 /* Swizzlean-Info.plist */,
-				AF32F07D174671D400EC79F7 /* InfoPlist.strings */,
 				AF32F080174671D400EC79F7 /* main.m */,
-				AF32F082174671D400EC79F7 /* Swizzlean-Prefix.pch */,
-				AF32F086174671D400EC79F7 /* Default.png */,
-				AF32F088174671D400EC79F7 /* Default@2x.png */,
-				AF32F08A174671D400EC79F7 /* Default-568h@2x.png */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -238,8 +195,6 @@
 			isa = PBXGroup;
 			children = (
 				AF83C5D818FC2C42004C63BF /* IntegrationSpecs-Info.plist */,
-				AF83C5D918FC2C42004C63BF /* InfoPlist.strings */,
-				AF83C5DF18FC2C42004C63BF /* IntegrationSpecs-Prefix.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -272,8 +227,6 @@
 			isa = PBXGroup;
 			children = (
 				AFEBB7B818FB560400129A10 /* Specs-Info.plist */,
-				AFEBB7B918FB560400129A10 /* InfoPlist.strings */,
-				AFEBB7BF18FB560400129A10 /* Specs-Prefix.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -345,13 +298,18 @@
 			isa = PBXProject;
 			attributes = {
 				LastTestingUpgradeCheck = 0510;
-				LastUpgradeCheck = 0460;
+				LastUpgradeCheck = 0830;
 				ORGANIZATIONNAME = "RKB Designs";
 				TargetAttributes = {
+					AF32F070174671D400EC79F7 = {
+						ProvisioningStyle = Manual;
+					};
 					AF83C5D018FC2C42004C63BF = {
+						ProvisioningStyle = Manual;
 						TestTargetID = AF32F070174671D400EC79F7;
 					};
 					AFEBB7AF18FB560400129A10 = {
+						ProvisioningStyle = Manual;
 						TestTargetID = AF32F070174671D400EC79F7;
 					};
 				};
@@ -380,10 +338,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AF32F07F174671D400EC79F7 /* InfoPlist.strings in Resources */,
-				AF32F087174671D400EC79F7 /* Default.png in Resources */,
-				AF32F089174671D400EC79F7 /* Default@2x.png in Resources */,
-				AF32F08B174671D400EC79F7 /* Default-568h@2x.png in Resources */,
+				94BE1D7C1EA038B10096916B /* Images.xcassets in Resources */,
 				AF6B25EB17467588006A312B /* FirstViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -392,7 +347,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AF83C5DB18FC2C42004C63BF /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -400,7 +354,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AFEBB7BB18FB560400129A10 /* InfoPlist.strings in Resources */,
 				AF9AE52F18FB8D1500C87424 /* FirstViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -539,33 +492,6 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
-/* Begin PBXVariantGroup section */
-		AF32F07D174671D400EC79F7 /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				AF32F07E174671D400EC79F7 /* en */,
-			);
-			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		AF83C5D918FC2C42004C63BF /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				AF83C5DA18FC2C42004C63BF /* en */,
-			);
-			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		AFEBB7B918FB560400129A10 /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				AFEBB7BA18FB560400129A10 /* en */,
-			);
-			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
-
 /* Begin XCBuildConfiguration section */
 		AF32F08C174671D400EC79F7 /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -574,25 +500,35 @@
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
 				);
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_LDFLAGS = "$(inherited)";
 				SDKROOT = iphoneos;
@@ -606,18 +542,27 @@
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				OTHER_LDFLAGS = "$(inherited)";
 				SDKROOT = iphoneos;
@@ -628,10 +573,16 @@
 		AF32F08F174671D400EC79F7 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Swizzlean/Swizzlean-Prefix.pch";
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
+				DEVELOPMENT_TEAM = "";
+				GCC_PRECOMPILE_PREFIX_HEADER = NO;
+				GCC_PREFIX_HEADER = "";
 				INFOPLIST_FILE = "Swizzlean/Swizzlean-Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "rkbdesigns.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -639,10 +590,16 @@
 		AF32F090174671D400EC79F7 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Swizzlean/Swizzlean-Prefix.pch";
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
+				DEVELOPMENT_TEAM = "";
+				GCC_PRECOMPILE_PREFIX_HEADER = NO;
+				GCC_PREFIX_HEADER = "";
 				INFOPLIST_FILE = "Swizzlean/Swizzlean-Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "rkbdesigns.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -656,6 +613,8 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				DEVELOPMENT_TEAM = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
@@ -673,13 +632,15 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				INFOPLIST_FILE = "IntegrationSpecs/IntegrationSpecs-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-all_load",
 					"-lstdc++",
 				);
+				PRODUCT_BUNDLE_IDENTIFIER = "rkbdesigns.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = octest;
 			};
@@ -694,6 +655,8 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				DEVELOPMENT_TEAM = "";
 				ENABLE_NS_ASSERTIONS = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
@@ -708,13 +671,15 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				INFOPLIST_FILE = "IntegrationSpecs/IntegrationSpecs-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-all_load",
 					"-lstdc++",
 				);
+				PRODUCT_BUNDLE_IDENTIFIER = "rkbdesigns.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = octest;
 			};
@@ -729,6 +694,8 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				DEVELOPMENT_TEAM = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
@@ -746,13 +713,15 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				INFOPLIST_FILE = "Specs/Specs-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-all_load",
 					"-lstdc++",
 				);
+				PRODUCT_BUNDLE_IDENTIFIER = "rkbdesigns.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = octest;
 			};
@@ -767,6 +736,8 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				DEVELOPMENT_TEAM = "";
 				ENABLE_NS_ASSERTIONS = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
@@ -781,13 +752,15 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				INFOPLIST_FILE = "Specs/Specs-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-all_load",
 					"-lstdc++",
 				);
+				PRODUCT_BUNDLE_IDENTIFIER = "rkbdesigns.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = octest;
 			};

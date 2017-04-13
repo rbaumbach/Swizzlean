@@ -16,4 +16,16 @@ profile
 DerivedData
 .idea/
 Pods/
+ObjectiveC.gcda
+ObjectiveC.gcno
 
+# Carthage
+Carthage
+Swizzlean.framework.zip
+
+# Fastlane
+fastlane/report.xml
+fastlane/.env*private*
+fastlane/test-output/
+fastlane/test_output/
+fastlane/README.md
