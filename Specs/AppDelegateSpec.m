@@ -1,9 +1,9 @@
+#import <Specta/Specta.h>
+#import <Expecta/Expecta.h>
+#import <OCMock/OCMock.h>
+
 #import "AppDelegate.h"
 #import "FirstViewController.h"
-
-
-using namespace Cedar::Matchers;
-using namespace Cedar::Doubles;
 
 @interface AppDelegate ()
 
@@ -11,8 +11,7 @@ using namespace Cedar::Doubles;
 
 @end
 
-
-SPEC_BEGIN(AppDelegateSpec)
+SpecBegin(AppDelegateSpec)
 
 describe(@"AppDelegate", ^{
     __block AppDelegate *appDelegate;
@@ -22,34 +21,36 @@ describe(@"AppDelegate", ^{
     });
     
     it(@"conforms to <UIApplicationDelegate>", ^{
-        [appDelegate conformsToProtocol:@protocol(UIApplicationDelegate)] should be_truthy;
+        expect(appDelegate).to.conformTo(@protocol(UIApplicationDelegate));
     });
     
     describe(@"#application:didFinishLaunchingWithOptions:", ^{
         __block BOOL retAppDelegate;
+        __block id fakeApplication;
         
         beforeEach(^{
-            retAppDelegate = [appDelegate application:nil didFinishLaunchingWithOptions:nil];
+            fakeApplication = OCMClassMock([UIApplication class]);
+            retAppDelegate = [appDelegate application:fakeApplication didFinishLaunchingWithOptions:nil];
         });
         
         context(@"ui window", ^{
             it(@"is not nil", ^{
-                appDelegate.uiWindow should_not be_nil;
+                expect(appDelegate.uiWindow).toNot.beNil();
             });
             
             it(@"has a root view controller ", ^{
-                appDelegate.uiWindow.rootViewController should be_instance_of([FirstViewController class]);
+                expect(appDelegate.uiWindow.rootViewController).to.beInstanceOf([FirstViewController class]);
             });
             
             it(@"is displayed", ^{
-                [appDelegate.uiWindow isKeyWindow] should be_truthy;
+                expect(appDelegate.uiWindow.isKeyWindow).to.beTruthy();
             });
         });
         
         it(@"returns YES", ^{
-            retAppDelegate should be_truthy;
+            expect(retAppDelegate).to.beTruthy();
         });
     });
 });
 
-SPEC_END
+SpecEnd
