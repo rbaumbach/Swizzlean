@@ -1,7 +1,6 @@
 #import "AppDelegate.h"
 #import "FirstViewController.h"
 
-
 @interface AppDelegate ()
 
 @property (strong, nonatomic) UIWindow *uiWindow;

@@ -1,5 +1,4 @@
-#import <UIKit/UIKit.h>
-
+@import UIKit;
 
 @interface FirstViewController : UIViewController
 

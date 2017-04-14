@@ -1,7 +1,6 @@
 #import "FirstViewController.h"
 #import "Swizzlean.h"
 
-
 @interface FirstViewController ()
 
 @property(strong, nonatomic) Swizzlean *swizzlean;

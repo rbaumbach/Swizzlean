@@ -1,4 +1,4 @@
-//Copyright (c) 2013 Ryan Baumbach <rbaumbach.github@gmail.com>
+//Copyright (c) 2017 Ryan Baumbach <github@ryan.codes>
 //
 //Permission is hereby granted, free of charge, to any person obtaining
 //a copy of this software and associated documentation files (the "Software"),
@@ -19,9 +19,7 @@
 //OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
 //WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
-
-#import <Foundation/Foundation.h>
-
+@import Foundation;
 
 @interface Swizzlean : NSObject
 
