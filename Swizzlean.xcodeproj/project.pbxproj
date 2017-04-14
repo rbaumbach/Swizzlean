@@ -12,6 +12,7 @@
 		94BE1DB01EA07B700096916B /* FakeRuntimeUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 94BE1DAF1EA07B700096916B /* FakeRuntimeUtils.m */; };
 		94BE1DB31EA07B8C0096916B /* TestClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 94BE1DB21EA07B8C0096916B /* TestClass.m */; };
 		94BE1DB51EA07BCD0096916B /* RuntimeUtilsSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 94BE1DB41EA07BCD0096916B /* RuntimeUtilsSpec.m */; };
+		94BE1DB81EA07CEB0096916B /* FirstViewControllerSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 94BE1DB71EA07CEB0096916B /* FirstViewControllerSpec.m */; };
 		A90A86930379FBF12A35E0A5 /* libPods-Specs.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 72A6D53B330DF5942EDE5D70 /* libPods-Specs.a */; };
 		AF32F081174671D400EC79F7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AF32F080174671D400EC79F7 /* main.m */; };
 		AF32F085174671D400EC79F7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AF32F084174671D400EC79F7 /* AppDelegate.m */; };
@@ -54,6 +55,7 @@
 		94BE1DB11EA07B8C0096916B /* TestClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestClass.h; sourceTree = "<group>"; };
 		94BE1DB21EA07B8C0096916B /* TestClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestClass.m; sourceTree = "<group>"; };
 		94BE1DB41EA07BCD0096916B /* RuntimeUtilsSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RuntimeUtilsSpec.m; sourceTree = "<group>"; };
+		94BE1DB71EA07CEB0096916B /* FirstViewControllerSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FirstViewControllerSpec.m; sourceTree = "<group>"; };
 		953C1BE9EEF224D75E11E569 /* Pods-Specs.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Specs.release.xcconfig"; path = "Pods/Target Support Files/Pods-Specs/Pods-Specs.release.xcconfig"; sourceTree = "<group>"; };
 		AF32F071174671D400EC79F7 /* Swizzlean.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Swizzlean.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF32F07C174671D400EC79F7 /* Swizzlean-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Swizzlean-Info.plist"; sourceTree = "<group>"; };
@@ -114,6 +116,7 @@
 			children = (
 				94BE1DAD1EA07B4C0096916B /* Fakes */,
 				94BE1D9D1EA074380096916B /* AppDelegateSpec.m */,
+				94BE1DB71EA07CEB0096916B /* FirstViewControllerSpec.m */,
 				94BE1DB41EA07BCD0096916B /* RuntimeUtilsSpec.m */,
 				94BE1DB61EA07BEB0096916B /* Resources */,
 			);
@@ -447,6 +450,7 @@
 				94BE1D9E1EA074380096916B /* AppDelegateSpec.m in Sources */,
 				94BE1DB01EA07B700096916B /* FakeRuntimeUtils.m in Sources */,
 				94BE1DB51EA07BCD0096916B /* RuntimeUtilsSpec.m in Sources */,
+				94BE1DB81EA07CEB0096916B /* FirstViewControllerSpec.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

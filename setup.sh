@@ -1,7 +1,7 @@
 #!/bin/bash
 
-# Install Rake, xcpretty
+# Install Gem Dependencies
 bundle
 
-# Install Cedar
+# Install Project Dependencies
 bundle exec pod install

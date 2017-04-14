@@ -1,10 +1,8 @@
 #import <Specta/Specta.h>
 #import <Expecta/Expecta.h>
-#import <OCMock/OCMock.h>
 
 #import "FakeRuntimeUtils.h"
 #import "TestClass.h"
-
 
 SpecBegin(RuntimeUtilsSpec)
 
