@@ -78,7 +78,7 @@ $ bundle exec fastlane specs
 
 ## Version History
 
-Version history can be found at the [Swizzlean wiki](https://github.com/rbaumbach/Swizzlean/wiki/Version-History).
+Version history can be found [on releases page](https://github.com/rbaumbach/Swizzlean/releases).
 
 ## Suggestions, requests, feedback and acknowledgements
 
