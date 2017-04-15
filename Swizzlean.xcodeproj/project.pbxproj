@@ -18,7 +18,7 @@
 		944C7B731EA26277003A06C4 /* TestClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 944C7B721EA26277003A06C4 /* TestClass.m */; };
 		944C7B7E1EA2643A003A06C4 /* Swizzlean.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 944C7B461EA25FB5003A06C4 /* Swizzlean.framework */; };
 		944C7B881EA2648A003A06C4 /* IntegrationTestClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 944C7B871EA2648A003A06C4 /* IntegrationTestClass.m */; };
-		944C7B8A1EA26492003A06C4 /* SwizzleanIntegrationSpec.mm in Sources */ = {isa = PBXBuildFile; fileRef = 944C7B891EA26492003A06C4 /* SwizzleanIntegrationSpec.mm */; };
+		944C7B8A1EA26492003A06C4 /* SwizzleanIntegrationSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 944C7B891EA26492003A06C4 /* SwizzleanIntegrationSpec.m */; };
 		970477ACA2B27A3B23D3C1E9 /* libPods-Specs.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 72A6D53B330DF5942EDE5D70 /* libPods-Specs.a */; };
 		C254371D29C85DE126318566 /* libPods-IntegrationSpecs.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 49F0A343DC95C9BB40D5243E /* libPods-IntegrationSpecs.a */; };
 /* End PBXBuildFile section */
@@ -62,7 +62,7 @@
 		944C7B7D1EA2643A003A06C4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		944C7B861EA2648A003A06C4 /* IntegrationTestClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IntegrationTestClass.h; sourceTree = "<group>"; };
 		944C7B871EA2648A003A06C4 /* IntegrationTestClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IntegrationTestClass.m; sourceTree = "<group>"; };
-		944C7B891EA26492003A06C4 /* SwizzleanIntegrationSpec.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = SwizzleanIntegrationSpec.mm; sourceTree = "<group>"; };
+		944C7B891EA26492003A06C4 /* SwizzleanIntegrationSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SwizzleanIntegrationSpec.m; sourceTree = "<group>"; };
 		953C1BE9EEF224D75E11E569 /* Pods-Specs.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Specs.release.xcconfig"; path = "Pods/Target Support Files/Pods-Specs/Pods-Specs.release.xcconfig"; sourceTree = "<group>"; };
 		DBCAFF6777107717CD828CD3 /* Pods-IntegrationSpecs.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IntegrationSpecs.release.xcconfig"; path = "Pods/Target Support Files/Pods-IntegrationSpecs/Pods-IntegrationSpecs.release.xcconfig"; sourceTree = "<group>"; };
 		FB1A2226EDD135EA495C96C2 /* Pods-Specs.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Specs.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Specs/Pods-Specs.debug.xcconfig"; sourceTree = "<group>"; };
@@ -170,7 +170,7 @@
 			isa = PBXGroup;
 			children = (
 				944C7B851EA26481003A06C4 /* Fakes */,
-				944C7B891EA26492003A06C4 /* SwizzleanIntegrationSpec.mm */,
+				944C7B891EA26492003A06C4 /* SwizzleanIntegrationSpec.m */,
 				944C7B841EA26479003A06C4 /* Resources */,
 			);
 			path = IntegrationSpecs;
@@ -486,7 +486,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				944C7B881EA2648A003A06C4 /* IntegrationTestClass.m in Sources */,
-				944C7B8A1EA26492003A06C4 /* SwizzleanIntegrationSpec.mm in Sources */,
+				944C7B8A1EA26492003A06C4 /* SwizzleanIntegrationSpec.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
