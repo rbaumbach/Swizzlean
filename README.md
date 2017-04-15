@@ -1,4 +1,4 @@
-# Swizzlean [![Build Status](https://travis-ci.org/rbaumbach/Swizzlean.svg?branch=master)](https://travis-ci.org/rbaumbach/Swizzlean) [![codecov](https://codecov.io/gh/rbaumbach/Swizzlean/branch/master/graph/badge.svg)](https://codecov.io/gh/rbaumbach/Swizzlean) [![Cocoapod Version](http://img.shields.io/badge/pod-v0.1.1-blue.svg)](http://cocoapods.org/?q=Swizzlean) [![Cocoapod Platform](http://img.shields.io/badge/platform-iOS-blue.svg)](http://cocoapods.org/?q=Swizzlean) [![License](https://img.shields.io/dub/l/vibe-d.svg)](https://github.com/rbaumbach/Swizzlean/blob/master/MIT-LICENSE.txt)
+# Swizzlean [![Build Status](https://travis-ci.org/rbaumbach/Swizzlean.svg?branch=master)](https://travis-ci.org/rbaumbach/Swizzlean) [![codecov](https://codecov.io/gh/rbaumbach/Swizzlean/branch/master/graph/badge.svg)](https://codecov.io/gh/rbaumbach/Swizzlean) [![Cocoapod Version](http://img.shields.io/badge/pod-v1.0.0-blue.svg)](http://cocoapods.org/?q=Swizzlean) [![Cocoapod Platform](http://img.shields.io/badge/platform-iOS-blue.svg)](http://cocoapods.org/?q=Swizzlean) [![Carthage Compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage) [![License](https://img.shields.io/dub/l/vibe-d.svg)](https://github.com/rbaumbach/Swizzlean/blob/master/MIT-LICENSE.txt)
 
 A quick and "lean" way to swizzle methods for your Objective-C development needs.
 
@@ -11,6 +11,13 @@ A quick and "lean" way to swizzle methods for your Objective-C development needs
 1.  Add Swizzlean to your Podfile `pod 'Swizzlean'`.
 2.  Install the pod(s) by running `pod install`.
 3.  Add Swizzlean to your files with `#import <Swizzlean/Swizzlean.h>`.
+
+### Carthage
+
+You can also use [Carthage](https://github.com/Carthage/Carthage) to manually add the Swizzlean dynamic framework to your project.
+
+1. Add `github "rbaumbach/Swizzlean"` to your [Cartfile](https://github.com/Carthage/Carthage/blob/master/Documentation/Artifacts.md#cartfile).
+2. [Follow instructions to manually add](https://github.com/Carthage/Carthage#adding-frameworks-to-an-application) Swizzlean dynamic framework to your project.
 
 ### Clone from Github
 
