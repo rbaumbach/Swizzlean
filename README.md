@@ -1,5 +1,4 @@
-# Swizzlean [![Build Status](https://travis-ci.org/rbaumbach/Swizzlean.png)](https://travis-ci.org/rbaumbach/Swizzlean) [![codecov](https://codecov.io/gh/rbaumbach/Swizzlean/branch/master/graph/badge.svg)](https://codecov.io/gh/rbaumbach/Swizzlean)
- [![Cocoapod Version](https://cocoapod-badges.herokuapp.com/v/Swizzlean/badge.png)](http://cocoapods.org/?q=Swizzlean) [![Cocoapod Platform](http://img.shields.io/badge/platform-iOS-blue.svg)](http://cocoapods.org/?q=Swizzlean) [![License](https://img.shields.io/dub/l/vibe-d.svg)](https://github.com/rbaumbach/Swizzlean/blob/master/MIT.LICENSE)
+# Swizzlean [![Build Status](https://travis-ci.org/rbaumbach/Swizzlean.svg?branch=master)](https://travis-ci.org/rbaumbach/Swizzlean) [![codecov](https://codecov.io/gh/rbaumbach/Swizzlean/branch/master/graph/badge.svg)](https://codecov.io/gh/rbaumbach/Swizzlean) [![Cocoapod Version](http://img.shields.io/badge/pod-v0.1.1-blue.svg)](http://cocoapods.org/?q=Swizzlean) [![Cocoapod Platform](http://img.shields.io/badge/platform-iOS-blue.svg)](http://cocoapods.org/?q=Swizzlean) [![License](https://img.shields.io/dub/l/vibe-d.svg)](https://github.com/rbaumbach/Swizzlean/blob/master/MIT-LICENSE.txt)
 
 A quick and "lean" way to swizzle methods for your Objective-C development needs.
 
