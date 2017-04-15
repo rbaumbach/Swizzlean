@@ -27,3 +27,4 @@ comment:
 
 ignore:
   - Specs
+  - IntegrationSpecs
