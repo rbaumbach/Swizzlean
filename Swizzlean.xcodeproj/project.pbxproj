@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		944C7B531EA260D2003A06C4 /* RuntimeUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = 944C7B4F1EA260D2003A06C4 /* RuntimeUtils.h */; };
 		944C7B541EA260D2003A06C4 /* RuntimeUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 944C7B501EA260D2003A06C4 /* RuntimeUtils.m */; };
-		944C7B551EA260D2003A06C4 /* Swizzlean.h in Headers */ = {isa = PBXBuildFile; fileRef = 944C7B511EA260D2003A06C4 /* Swizzlean.h */; };
+		944C7B551EA260D2003A06C4 /* Swizzlean.h in Headers */ = {isa = PBXBuildFile; fileRef = 944C7B511EA260D2003A06C4 /* Swizzlean.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		944C7B561EA260D2003A06C4 /* Swizzlean.m in Sources */ = {isa = PBXBuildFile; fileRef = 944C7B521EA260D2003A06C4 /* Swizzlean.m */; };
 		944C7B621EA261E5003A06C4 /* Swizzlean.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 944C7B461EA25FB5003A06C4 /* Swizzlean.framework */; };
 		944C7B6C1EA26251003A06C4 /* FakeRuntimeUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 944C7B6B1EA26251003A06C4 /* FakeRuntimeUtils.m */; };
@@ -120,10 +120,10 @@
 		944C7B4E1EA260C6003A06C4 /* Source */ = {
 			isa = PBXGroup;
 			children = (
-				944C7B4F1EA260D2003A06C4 /* RuntimeUtils.h */,
-				944C7B501EA260D2003A06C4 /* RuntimeUtils.m */,
 				944C7B511EA260D2003A06C4 /* Swizzlean.h */,
 				944C7B521EA260D2003A06C4 /* Swizzlean.m */,
+				944C7B4F1EA260D2003A06C4 /* RuntimeUtils.h */,
+				944C7B501EA260D2003A06C4 /* RuntimeUtils.m */,
 			);
 			name = Source;
 			sourceTree = "<group>";
@@ -781,6 +781,7 @@
 				944C7B831EA2643A003A06C4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		AF32F06C174671D400EC79F7 /* Build configuration list for PBXProject "Swizzlean" */ = {
 			isa = XCConfigurationList;
