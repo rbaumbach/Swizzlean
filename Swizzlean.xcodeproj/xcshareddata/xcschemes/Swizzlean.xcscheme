@@ -14,8 +14,8 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "AF32F070174671D400EC79F7"
-               BuildableName = "Swizzlean.app"
+               BlueprintIdentifier = "944C7B451EA25FB5003A06C4"
+               BuildableName = "Swizzlean.framework"
                BlueprintName = "Swizzlean"
                ReferencedContainer = "container:Swizzlean.xcodeproj">
             </BuildableReference>
@@ -32,7 +32,7 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "94BE1D921EA0722A0096916B"
+               BlueprintIdentifier = "944C7B5C1EA261E5003A06C4"
                BuildableName = "Specs.xctest"
                BlueprintName = "Specs"
                ReferencedContainer = "container:Swizzlean.xcodeproj">
@@ -42,8 +42,8 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "AF32F070174671D400EC79F7"
-            BuildableName = "Swizzlean.app"
+            BlueprintIdentifier = "944C7B451EA25FB5003A06C4"
+            BuildableName = "Swizzlean.framework"
             BlueprintName = "Swizzlean"
             ReferencedContainer = "container:Swizzlean.xcodeproj">
          </BuildableReference>
@@ -65,8 +65,8 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "AF32F070174671D400EC79F7"
-            BuildableName = "Swizzlean.app"
+            BlueprintIdentifier = "944C7B451EA25FB5003A06C4"
+            BuildableName = "Swizzlean.framework"
             BlueprintName = "Swizzlean"
             ReferencedContainer = "container:Swizzlean.xcodeproj">
          </BuildableReference>
@@ -84,8 +84,8 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "AF32F070174671D400EC79F7"
-            BuildableName = "Swizzlean.app"
+            BlueprintIdentifier = "944C7B451EA25FB5003A06C4"
+            BuildableName = "Swizzlean.framework"
             BlueprintName = "Swizzlean"
             ReferencedContainer = "container:Swizzlean.xcodeproj">
          </BuildableReference>

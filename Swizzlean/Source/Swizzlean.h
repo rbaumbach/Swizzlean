@@ -19,7 +19,13 @@
 //OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
 //WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
-@import Foundation;
+#import <Foundation/Foundation.h>
+
+//! Project version number for Swizzlean.
+FOUNDATION_EXPORT double SwizzleanVersionNumber;
+
+//! Project version string for Swizzlean.
+FOUNDATION_EXPORT const unsigned char SwizzleanVersionString[];
 
 @interface Swizzlean : NSObject
 

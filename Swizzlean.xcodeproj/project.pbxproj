@@ -7,36 +7,35 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		94BE1D7C1EA038B10096916B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 94BE1D7B1EA038B10096916B /* Images.xcassets */; };
-		94BE1D9E1EA074380096916B /* AppDelegateSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 94BE1D9D1EA074380096916B /* AppDelegateSpec.m */; };
-		94BE1DB01EA07B700096916B /* FakeRuntimeUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 94BE1DAF1EA07B700096916B /* FakeRuntimeUtils.m */; };
-		94BE1DB31EA07B8C0096916B /* TestClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 94BE1DB21EA07B8C0096916B /* TestClass.m */; };
-		94BE1DB51EA07BCD0096916B /* RuntimeUtilsSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 94BE1DB41EA07BCD0096916B /* RuntimeUtilsSpec.m */; };
-		94BE1DB81EA07CEB0096916B /* FirstViewControllerSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 94BE1DB71EA07CEB0096916B /* FirstViewControllerSpec.m */; };
-		94BE1DBA1EA1110D0096916B /* SwizzleanSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 94BE1DB91EA1110D0096916B /* SwizzleanSpec.m */; };
-		A90A86930379FBF12A35E0A5 /* libPods-Specs.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 72A6D53B330DF5942EDE5D70 /* libPods-Specs.a */; };
-		AF32F081174671D400EC79F7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AF32F080174671D400EC79F7 /* main.m */; };
-		AF32F085174671D400EC79F7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AF32F084174671D400EC79F7 /* AppDelegate.m */; };
-		AF6B25E917467588006A312B /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF6B25E717467588006A312B /* FirstViewController.m */; };
-		AF6B25EB17467588006A312B /* FirstViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF6B25E817467588006A312B /* FirstViewController.xib */; };
-		AFF33E1517A01FD300B1F7ED /* RuntimeUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = AFF33E1217A01FD300B1F7ED /* RuntimeUtils.m */; };
-		AFF33E1617A01FD300B1F7ED /* Swizzlean.m in Sources */ = {isa = PBXBuildFile; fileRef = AFF33E1417A01FD300B1F7ED /* Swizzlean.m */; };
-		BB0829F29BAA166F11E6B12C /* libPods-IntegrationSpecs.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 49F0A343DC95C9BB40D5243E /* libPods-IntegrationSpecs.a */; };
+		944C7B531EA260D2003A06C4 /* RuntimeUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = 944C7B4F1EA260D2003A06C4 /* RuntimeUtils.h */; };
+		944C7B541EA260D2003A06C4 /* RuntimeUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 944C7B501EA260D2003A06C4 /* RuntimeUtils.m */; };
+		944C7B551EA260D2003A06C4 /* Swizzlean.h in Headers */ = {isa = PBXBuildFile; fileRef = 944C7B511EA260D2003A06C4 /* Swizzlean.h */; };
+		944C7B561EA260D2003A06C4 /* Swizzlean.m in Sources */ = {isa = PBXBuildFile; fileRef = 944C7B521EA260D2003A06C4 /* Swizzlean.m */; };
+		944C7B621EA261E5003A06C4 /* Swizzlean.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 944C7B461EA25FB5003A06C4 /* Swizzlean.framework */; };
+		944C7B6C1EA26251003A06C4 /* FakeRuntimeUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 944C7B6B1EA26251003A06C4 /* FakeRuntimeUtils.m */; };
+		944C7B6F1EA26270003A06C4 /* RuntimeUtilsSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 944C7B6D1EA26270003A06C4 /* RuntimeUtilsSpec.m */; };
+		944C7B701EA26270003A06C4 /* SwizzleanSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 944C7B6E1EA26270003A06C4 /* SwizzleanSpec.m */; };
+		944C7B731EA26277003A06C4 /* TestClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 944C7B721EA26277003A06C4 /* TestClass.m */; };
+		944C7B7E1EA2643A003A06C4 /* Swizzlean.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 944C7B461EA25FB5003A06C4 /* Swizzlean.framework */; };
+		944C7B881EA2648A003A06C4 /* IntegrationTestClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 944C7B871EA2648A003A06C4 /* IntegrationTestClass.m */; };
+		944C7B8A1EA26492003A06C4 /* SwizzleanIntegrationSpec.mm in Sources */ = {isa = PBXBuildFile; fileRef = 944C7B891EA26492003A06C4 /* SwizzleanIntegrationSpec.mm */; };
+		970477ACA2B27A3B23D3C1E9 /* libPods-Specs.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 72A6D53B330DF5942EDE5D70 /* libPods-Specs.a */; };
+		C254371D29C85DE126318566 /* libPods-IntegrationSpecs.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 49F0A343DC95C9BB40D5243E /* libPods-IntegrationSpecs.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		94BE1D981EA0722A0096916B /* PBXContainerItemProxy */ = {
+		944C7B631EA261E5003A06C4 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = AF32F069174671D400EC79F7 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = AF32F070174671D400EC79F7;
+			remoteGlobalIDString = 944C7B451EA25FB5003A06C4;
 			remoteInfo = Swizzlean;
 		};
-		94BE1DA81EA079710096916B /* PBXContainerItemProxy */ = {
+		944C7B7F1EA2643A003A06C4 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = AF32F069174671D400EC79F7 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = AF32F070174671D400EC79F7;
+			remoteGlobalIDString = 944C7B451EA25FB5003A06C4;
 			remoteInfo = Swizzlean;
 		};
 /* End PBXContainerItemProxy section */
@@ -45,57 +44,53 @@
 		087B7D7E1C2B7E5D299D0016 /* Pods-IntegrationSpecs.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IntegrationSpecs.debug.xcconfig"; path = "Pods/Target Support Files/Pods-IntegrationSpecs/Pods-IntegrationSpecs.debug.xcconfig"; sourceTree = "<group>"; };
 		49F0A343DC95C9BB40D5243E /* libPods-IntegrationSpecs.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-IntegrationSpecs.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		72A6D53B330DF5942EDE5D70 /* libPods-Specs.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Specs.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		94BE1D7B1EA038B10096916B /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		94BE1D931EA0722A0096916B /* Specs.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Specs.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		94BE1D971EA0722A0096916B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		94BE1D9D1EA074380096916B /* AppDelegateSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegateSpec.m; sourceTree = "<group>"; };
-		94BE1DA31EA079710096916B /* IntegrationSpecs.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IntegrationSpecs.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		94BE1DA71EA079710096916B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		94BE1DAE1EA07B700096916B /* FakeRuntimeUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FakeRuntimeUtils.h; sourceTree = "<group>"; };
-		94BE1DAF1EA07B700096916B /* FakeRuntimeUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FakeRuntimeUtils.m; sourceTree = "<group>"; };
-		94BE1DB11EA07B8C0096916B /* TestClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestClass.h; sourceTree = "<group>"; };
-		94BE1DB21EA07B8C0096916B /* TestClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestClass.m; sourceTree = "<group>"; };
-		94BE1DB41EA07BCD0096916B /* RuntimeUtilsSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RuntimeUtilsSpec.m; sourceTree = "<group>"; };
-		94BE1DB71EA07CEB0096916B /* FirstViewControllerSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FirstViewControllerSpec.m; sourceTree = "<group>"; };
-		94BE1DB91EA1110D0096916B /* SwizzleanSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SwizzleanSpec.m; sourceTree = "<group>"; };
+		944C7B461EA25FB5003A06C4 /* Swizzlean.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Swizzlean.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		944C7B491EA25FB5003A06C4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		944C7B4F1EA260D2003A06C4 /* RuntimeUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RuntimeUtils.h; path = Source/RuntimeUtils.h; sourceTree = "<group>"; };
+		944C7B501EA260D2003A06C4 /* RuntimeUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RuntimeUtils.m; path = Source/RuntimeUtils.m; sourceTree = "<group>"; };
+		944C7B511EA260D2003A06C4 /* Swizzlean.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Swizzlean.h; path = Source/Swizzlean.h; sourceTree = "<group>"; };
+		944C7B521EA260D2003A06C4 /* Swizzlean.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Swizzlean.m; path = Source/Swizzlean.m; sourceTree = "<group>"; };
+		944C7B5D1EA261E5003A06C4 /* Specs.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Specs.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		944C7B611EA261E5003A06C4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		944C7B6A1EA26251003A06C4 /* FakeRuntimeUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FakeRuntimeUtils.h; sourceTree = "<group>"; };
+		944C7B6B1EA26251003A06C4 /* FakeRuntimeUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FakeRuntimeUtils.m; sourceTree = "<group>"; };
+		944C7B6D1EA26270003A06C4 /* RuntimeUtilsSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RuntimeUtilsSpec.m; sourceTree = "<group>"; };
+		944C7B6E1EA26270003A06C4 /* SwizzleanSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SwizzleanSpec.m; sourceTree = "<group>"; };
+		944C7B711EA26277003A06C4 /* TestClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestClass.h; sourceTree = "<group>"; };
+		944C7B721EA26277003A06C4 /* TestClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestClass.m; sourceTree = "<group>"; };
+		944C7B791EA2643A003A06C4 /* IntegrationSpecs.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IntegrationSpecs.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		944C7B7D1EA2643A003A06C4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		944C7B861EA2648A003A06C4 /* IntegrationTestClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IntegrationTestClass.h; sourceTree = "<group>"; };
+		944C7B871EA2648A003A06C4 /* IntegrationTestClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IntegrationTestClass.m; sourceTree = "<group>"; };
+		944C7B891EA26492003A06C4 /* SwizzleanIntegrationSpec.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = SwizzleanIntegrationSpec.mm; sourceTree = "<group>"; };
 		953C1BE9EEF224D75E11E569 /* Pods-Specs.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Specs.release.xcconfig"; path = "Pods/Target Support Files/Pods-Specs/Pods-Specs.release.xcconfig"; sourceTree = "<group>"; };
-		AF32F071174671D400EC79F7 /* Swizzlean.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Swizzlean.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		AF32F07C174671D400EC79F7 /* Swizzlean-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Swizzlean-Info.plist"; sourceTree = "<group>"; };
-		AF32F080174671D400EC79F7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		AF32F083174671D400EC79F7 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		AF32F084174671D400EC79F7 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		AF6B25E617467588006A312B /* FirstViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
-		AF6B25E717467588006A312B /* FirstViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
-		AF6B25E817467588006A312B /* FirstViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FirstViewController.xib; sourceTree = "<group>"; };
-		AFF33E1117A01FD300B1F7ED /* RuntimeUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RuntimeUtils.h; path = Source/RuntimeUtils.h; sourceTree = "<group>"; };
-		AFF33E1217A01FD300B1F7ED /* RuntimeUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RuntimeUtils.m; path = Source/RuntimeUtils.m; sourceTree = "<group>"; };
-		AFF33E1317A01FD300B1F7ED /* Swizzlean.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Swizzlean.h; path = Source/Swizzlean.h; sourceTree = "<group>"; };
-		AFF33E1417A01FD300B1F7ED /* Swizzlean.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Swizzlean.m; path = Source/Swizzlean.m; sourceTree = "<group>"; };
 		DBCAFF6777107717CD828CD3 /* Pods-IntegrationSpecs.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IntegrationSpecs.release.xcconfig"; path = "Pods/Target Support Files/Pods-IntegrationSpecs/Pods-IntegrationSpecs.release.xcconfig"; sourceTree = "<group>"; };
 		FB1A2226EDD135EA495C96C2 /* Pods-Specs.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Specs.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Specs/Pods-Specs.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		94BE1D901EA0722A0096916B /* Frameworks */ = {
+		944C7B421EA25FB5003A06C4 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A90A86930379FBF12A35E0A5 /* libPods-Specs.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		94BE1DA01EA079710096916B /* Frameworks */ = {
+		944C7B5A1EA261E5003A06C4 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BB0829F29BAA166F11E6B12C /* libPods-IntegrationSpecs.a in Frameworks */,
+				944C7B621EA261E5003A06C4 /* Swizzlean.framework in Frameworks */,
+				970477ACA2B27A3B23D3C1E9 /* libPods-Specs.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		AF32F06E174671D400EC79F7 /* Frameworks */ = {
+		944C7B761EA2643A003A06C4 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				944C7B7E1EA2643A003A06C4 /* Swizzlean.framework in Frameworks */,
+				C254371D29C85DE126318566 /* libPods-IntegrationSpecs.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -113,52 +108,97 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
-		94BE1D941EA0722A0096916B /* Specs */ = {
+		944C7B471EA25FB5003A06C4 /* Swizzlean */ = {
 			isa = PBXGroup;
 			children = (
-				94BE1DAD1EA07B4C0096916B /* Fakes */,
-				94BE1D9D1EA074380096916B /* AppDelegateSpec.m */,
-				94BE1DB71EA07CEB0096916B /* FirstViewControllerSpec.m */,
-				94BE1DB41EA07BCD0096916B /* RuntimeUtilsSpec.m */,
-				94BE1DB91EA1110D0096916B /* SwizzleanSpec.m */,
-				94BE1DB61EA07BEB0096916B /* Resources */,
+				944C7B4E1EA260C6003A06C4 /* Source */,
+				944C7B741EA263EA003A06C4 /* Resources */,
+			);
+			path = Swizzlean;
+			sourceTree = "<group>";
+		};
+		944C7B4E1EA260C6003A06C4 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				944C7B4F1EA260D2003A06C4 /* RuntimeUtils.h */,
+				944C7B501EA260D2003A06C4 /* RuntimeUtils.m */,
+				944C7B511EA260D2003A06C4 /* Swizzlean.h */,
+				944C7B521EA260D2003A06C4 /* Swizzlean.m */,
+			);
+			name = Source;
+			sourceTree = "<group>";
+		};
+		944C7B5E1EA261E5003A06C4 /* Specs */ = {
+			isa = PBXGroup;
+			children = (
+				944C7B691EA26242003A06C4 /* Fakes */,
+				944C7B6D1EA26270003A06C4 /* RuntimeUtilsSpec.m */,
+				944C7B6E1EA26270003A06C4 /* SwizzleanSpec.m */,
+				944C7B681EA26237003A06C4 /* Resources */,
 			);
 			path = Specs;
 			sourceTree = "<group>";
 		};
-		94BE1DA41EA079710096916B /* IntegrationSpecs */ = {
+		944C7B681EA26237003A06C4 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				94BE1DA71EA079710096916B /* Info.plist */,
+				944C7B611EA261E5003A06C4 /* Info.plist */,
 			);
-			path = IntegrationSpecs;
+			name = Resources;
 			sourceTree = "<group>";
 		};
-		94BE1DAD1EA07B4C0096916B /* Fakes */ = {
+		944C7B691EA26242003A06C4 /* Fakes */ = {
 			isa = PBXGroup;
 			children = (
-				94BE1DAE1EA07B700096916B /* FakeRuntimeUtils.h */,
-				94BE1DAF1EA07B700096916B /* FakeRuntimeUtils.m */,
-				94BE1DB11EA07B8C0096916B /* TestClass.h */,
-				94BE1DB21EA07B8C0096916B /* TestClass.m */,
+				944C7B711EA26277003A06C4 /* TestClass.h */,
+				944C7B721EA26277003A06C4 /* TestClass.m */,
+				944C7B6A1EA26251003A06C4 /* FakeRuntimeUtils.h */,
+				944C7B6B1EA26251003A06C4 /* FakeRuntimeUtils.m */,
 			);
 			name = Fakes;
 			sourceTree = "<group>";
 		};
-		94BE1DB61EA07BEB0096916B /* Resources */ = {
+		944C7B741EA263EA003A06C4 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				94BE1D971EA0722A0096916B /* Info.plist */,
+				944C7B491EA25FB5003A06C4 /* Info.plist */,
 			);
 			name = Resources;
+			sourceTree = "<group>";
+		};
+		944C7B7A1EA2643A003A06C4 /* IntegrationSpecs */ = {
+			isa = PBXGroup;
+			children = (
+				944C7B851EA26481003A06C4 /* Fakes */,
+				944C7B891EA26492003A06C4 /* SwizzleanIntegrationSpec.mm */,
+				944C7B841EA26479003A06C4 /* Resources */,
+			);
+			path = IntegrationSpecs;
+			sourceTree = "<group>";
+		};
+		944C7B841EA26479003A06C4 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				944C7B7D1EA2643A003A06C4 /* Info.plist */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		944C7B851EA26481003A06C4 /* Fakes */ = {
+			isa = PBXGroup;
+			children = (
+				944C7B861EA2648A003A06C4 /* IntegrationTestClass.h */,
+				944C7B871EA2648A003A06C4 /* IntegrationTestClass.m */,
+			);
+			name = Fakes;
 			sourceTree = "<group>";
 		};
 		AF32F068174671D400EC79F7 = {
 			isa = PBXGroup;
 			children = (
-				AF32F07A174671D400EC79F7 /* Swizzlean */,
-				94BE1D941EA0722A0096916B /* Specs */,
-				94BE1DA41EA079710096916B /* IntegrationSpecs */,
+				944C7B471EA25FB5003A06C4 /* Swizzlean */,
+				944C7B5E1EA261E5003A06C4 /* Specs */,
+				944C7B7A1EA2643A003A06C4 /* IntegrationSpecs */,
 				AF32F073174671D400EC79F7 /* Frameworks */,
 				AF32F072174671D400EC79F7 /* Products */,
 				856653F7E066C59131F7D3DF /* Pods */,
@@ -168,9 +208,9 @@
 		AF32F072174671D400EC79F7 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				AF32F071174671D400EC79F7 /* Swizzlean.app */,
-				94BE1D931EA0722A0096916B /* Specs.xctest */,
-				94BE1DA31EA079710096916B /* IntegrationSpecs.xctest */,
+				944C7B461EA25FB5003A06C4 /* Swizzlean.framework */,
+				944C7B5D1EA261E5003A06C4 /* Specs.xctest */,
+				944C7B791EA2643A003A06C4 /* IntegrationSpecs.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -184,93 +224,29 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		AF32F07A174671D400EC79F7 /* Swizzlean */ = {
-			isa = PBXGroup;
-			children = (
-				AFF33E1317A01FD300B1F7ED /* Swizzlean.h */,
-				AFF33E1417A01FD300B1F7ED /* Swizzlean.m */,
-				AFF33E1117A01FD300B1F7ED /* RuntimeUtils.h */,
-				AFF33E1217A01FD300B1F7ED /* RuntimeUtils.m */,
-				AF7268121774CF8A0073205C /* AppCode */,
-				AF32F07B174671D400EC79F7 /* Supporting Files */,
-			);
-			path = Swizzlean;
-			sourceTree = "<group>";
-		};
-		AF32F07B174671D400EC79F7 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				94BE1D7B1EA038B10096916B /* Images.xcassets */,
-				AF32F07C174671D400EC79F7 /* Swizzlean-Info.plist */,
-				AF32F080174671D400EC79F7 /* main.m */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		AF7268121774CF8A0073205C /* AppCode */ = {
-			isa = PBXGroup;
-			children = (
-				AF32F083174671D400EC79F7 /* AppDelegate.h */,
-				AF32F084174671D400EC79F7 /* AppDelegate.m */,
-				AF6B25E617467588006A312B /* FirstViewController.h */,
-				AF6B25E717467588006A312B /* FirstViewController.m */,
-				AF6B25E817467588006A312B /* FirstViewController.xib */,
-			);
-			name = AppCode;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
+/* Begin PBXHeadersBuildPhase section */
+		944C7B431EA25FB5003A06C4 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				944C7B551EA260D2003A06C4 /* Swizzlean.h in Headers */,
+				944C7B531EA260D2003A06C4 /* RuntimeUtils.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
 /* Begin PBXNativeTarget section */
-		94BE1D921EA0722A0096916B /* Specs */ = {
+		944C7B451EA25FB5003A06C4 /* Swizzlean */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 94BE1D9A1EA0722A0096916B /* Build configuration list for PBXNativeTarget "Specs" */;
+			buildConfigurationList = 944C7B4B1EA25FB5003A06C4 /* Build configuration list for PBXNativeTarget "Swizzlean" */;
 			buildPhases = (
-				C6DE43FA157A5128CF9C5AF9 /* [CP] Check Pods Manifest.lock */,
-				94BE1D8F1EA0722A0096916B /* Sources */,
-				94BE1D901EA0722A0096916B /* Frameworks */,
-				94BE1D911EA0722A0096916B /* Resources */,
-				2B0EB84AE444FB339702969A /* [CP] Embed Pods Frameworks */,
-				4E13E80B7D812042B7E56529 /* [CP] Copy Pods Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				94BE1D991EA0722A0096916B /* PBXTargetDependency */,
-			);
-			name = Specs;
-			productName = Specs;
-			productReference = 94BE1D931EA0722A0096916B /* Specs.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		94BE1DA21EA079710096916B /* IntegrationSpecs */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 94BE1DAC1EA079710096916B /* Build configuration list for PBXNativeTarget "IntegrationSpecs" */;
-			buildPhases = (
-				EE051B3A5C6E6120C5DAEA5F /* [CP] Check Pods Manifest.lock */,
-				94BE1D9F1EA079710096916B /* Sources */,
-				94BE1DA01EA079710096916B /* Frameworks */,
-				94BE1DA11EA079710096916B /* Resources */,
-				3BD781F96F39C7AD2DF529C4 /* [CP] Embed Pods Frameworks */,
-				AC154DB62CC9559B9BBE8B05 /* [CP] Copy Pods Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				94BE1DA91EA079710096916B /* PBXTargetDependency */,
-			);
-			name = IntegrationSpecs;
-			productName = IntegrationSpecs;
-			productReference = 94BE1DA31EA079710096916B /* IntegrationSpecs.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		AF32F070174671D400EC79F7 /* Swizzlean */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = AF32F08E174671D400EC79F7 /* Build configuration list for PBXNativeTarget "Swizzlean" */;
-			buildPhases = (
-				AF32F06D174671D400EC79F7 /* Sources */,
-				AF32F06E174671D400EC79F7 /* Frameworks */,
-				AF32F06F174671D400EC79F7 /* Resources */,
+				944C7B411EA25FB5003A06C4 /* Sources */,
+				944C7B421EA25FB5003A06C4 /* Frameworks */,
+				944C7B431EA25FB5003A06C4 /* Headers */,
+				944C7B441EA25FB5003A06C4 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -278,8 +254,50 @@
 			);
 			name = Swizzlean;
 			productName = Swizzlean;
-			productReference = AF32F071174671D400EC79F7 /* Swizzlean.app */;
-			productType = "com.apple.product-type.application";
+			productReference = 944C7B461EA25FB5003A06C4 /* Swizzlean.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		944C7B5C1EA261E5003A06C4 /* Specs */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 944C7B651EA261E5003A06C4 /* Build configuration list for PBXNativeTarget "Specs" */;
+			buildPhases = (
+				578D50B06C3349689E7C685C /* [CP] Check Pods Manifest.lock */,
+				944C7B591EA261E5003A06C4 /* Sources */,
+				944C7B5A1EA261E5003A06C4 /* Frameworks */,
+				944C7B5B1EA261E5003A06C4 /* Resources */,
+				1BDF943530D5B55ABB71C7B3 /* [CP] Embed Pods Frameworks */,
+				570C143C04DB0B7663F42019 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				944C7B641EA261E5003A06C4 /* PBXTargetDependency */,
+			);
+			name = Specs;
+			productName = Specs;
+			productReference = 944C7B5D1EA261E5003A06C4 /* Specs.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		944C7B781EA2643A003A06C4 /* IntegrationSpecs */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 944C7B811EA2643A003A06C4 /* Build configuration list for PBXNativeTarget "IntegrationSpecs" */;
+			buildPhases = (
+				F5797F3549F768A9497182EA /* [CP] Check Pods Manifest.lock */,
+				944C7B751EA2643A003A06C4 /* Sources */,
+				944C7B761EA2643A003A06C4 /* Frameworks */,
+				944C7B771EA2643A003A06C4 /* Resources */,
+				F571FDC93DDE3DC987D200AB /* [CP] Embed Pods Frameworks */,
+				CDE0ADF1B6100F72C99C0EAD /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				944C7B801EA2643A003A06C4 /* PBXTargetDependency */,
+			);
+			name = IntegrationSpecs;
+			productName = IntegrationSpecs;
+			productReference = 944C7B791EA2643A003A06C4 /* IntegrationSpecs.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
@@ -291,17 +309,16 @@
 				LastUpgradeCheck = 0830;
 				ORGANIZATIONNAME = "RKB Designs";
 				TargetAttributes = {
-					94BE1D921EA0722A0096916B = {
-						CreatedOnToolsVersion = 8.3;
+					944C7B451EA25FB5003A06C4 = {
+						CreatedOnToolsVersion = 8.3.1;
 						ProvisioningStyle = Manual;
-						TestTargetID = AF32F070174671D400EC79F7;
 					};
-					94BE1DA21EA079710096916B = {
-						CreatedOnToolsVersion = 8.3;
+					944C7B5C1EA261E5003A06C4 = {
+						CreatedOnToolsVersion = 8.3.1;
 						ProvisioningStyle = Manual;
-						TestTargetID = AF32F070174671D400EC79F7;
 					};
-					AF32F070174671D400EC79F7 = {
+					944C7B781EA2643A003A06C4 = {
+						CreatedOnToolsVersion = 8.3.1;
 						ProvisioningStyle = Manual;
 					};
 				};
@@ -312,47 +329,46 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
 			mainGroup = AF32F068174671D400EC79F7;
 			productRefGroup = AF32F072174671D400EC79F7 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				AF32F070174671D400EC79F7 /* Swizzlean */,
-				94BE1D921EA0722A0096916B /* Specs */,
-				94BE1DA21EA079710096916B /* IntegrationSpecs */,
+				944C7B451EA25FB5003A06C4 /* Swizzlean */,
+				944C7B5C1EA261E5003A06C4 /* Specs */,
+				944C7B781EA2643A003A06C4 /* IntegrationSpecs */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		94BE1D911EA0722A0096916B /* Resources */ = {
+		944C7B441EA25FB5003A06C4 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		94BE1DA11EA079710096916B /* Resources */ = {
+		944C7B5B1EA261E5003A06C4 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		AF32F06F174671D400EC79F7 /* Resources */ = {
+		944C7B771EA2643A003A06C4 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				94BE1D7C1EA038B10096916B /* Images.xcassets in Resources */,
-				AF6B25EB17467588006A312B /* FirstViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		2B0EB84AE444FB339702969A /* [CP] Embed Pods Frameworks */ = {
+		1BDF943530D5B55ABB71C7B3 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -367,22 +383,7 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Specs/Pods-Specs-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		3BD781F96F39C7AD2DF529C4 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-IntegrationSpecs/Pods-IntegrationSpecs-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		4E13E80B7D812042B7E56529 /* [CP] Copy Pods Resources */ = {
+		570C143C04DB0B7663F42019 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -397,22 +398,7 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Specs/Pods-Specs-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		AC154DB62CC9559B9BBE8B05 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-IntegrationSpecs/Pods-IntegrationSpecs-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		C6DE43FA157A5128CF9C5AF9 /* [CP] Check Pods Manifest.lock */ = {
+		578D50B06C3349689E7C685C /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -427,7 +413,37 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		EE051B3A5C6E6120C5DAEA5F /* [CP] Check Pods Manifest.lock */ = {
+		CDE0ADF1B6100F72C99C0EAD /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-IntegrationSpecs/Pods-IntegrationSpecs-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F571FDC93DDE3DC987D200AB /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-IntegrationSpecs/Pods-IntegrationSpecs-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F5797F3549F768A9497182EA /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -445,122 +461,181 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		94BE1D8F1EA0722A0096916B /* Sources */ = {
+		944C7B411EA25FB5003A06C4 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				94BE1DB31EA07B8C0096916B /* TestClass.m in Sources */,
-				94BE1D9E1EA074380096916B /* AppDelegateSpec.m in Sources */,
-				94BE1DB01EA07B700096916B /* FakeRuntimeUtils.m in Sources */,
-				94BE1DB51EA07BCD0096916B /* RuntimeUtilsSpec.m in Sources */,
-				94BE1DBA1EA1110D0096916B /* SwizzleanSpec.m in Sources */,
-				94BE1DB81EA07CEB0096916B /* FirstViewControllerSpec.m in Sources */,
+				944C7B541EA260D2003A06C4 /* RuntimeUtils.m in Sources */,
+				944C7B561EA260D2003A06C4 /* Swizzlean.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		94BE1D9F1EA079710096916B /* Sources */ = {
+		944C7B591EA261E5003A06C4 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				944C7B731EA26277003A06C4 /* TestClass.m in Sources */,
+				944C7B6C1EA26251003A06C4 /* FakeRuntimeUtils.m in Sources */,
+				944C7B701EA26270003A06C4 /* SwizzleanSpec.m in Sources */,
+				944C7B6F1EA26270003A06C4 /* RuntimeUtilsSpec.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		AF32F06D174671D400EC79F7 /* Sources */ = {
+		944C7B751EA2643A003A06C4 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AF32F081174671D400EC79F7 /* main.m in Sources */,
-				AF32F085174671D400EC79F7 /* AppDelegate.m in Sources */,
-				AF6B25E917467588006A312B /* FirstViewController.m in Sources */,
-				AFF33E1517A01FD300B1F7ED /* RuntimeUtils.m in Sources */,
-				AFF33E1617A01FD300B1F7ED /* Swizzlean.m in Sources */,
+				944C7B881EA2648A003A06C4 /* IntegrationTestClass.m in Sources */,
+				944C7B8A1EA26492003A06C4 /* SwizzleanIntegrationSpec.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		94BE1D991EA0722A0096916B /* PBXTargetDependency */ = {
+		944C7B641EA261E5003A06C4 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = AF32F070174671D400EC79F7 /* Swizzlean */;
-			targetProxy = 94BE1D981EA0722A0096916B /* PBXContainerItemProxy */;
+			target = 944C7B451EA25FB5003A06C4 /* Swizzlean */;
+			targetProxy = 944C7B631EA261E5003A06C4 /* PBXContainerItemProxy */;
 		};
-		94BE1DA91EA079710096916B /* PBXTargetDependency */ = {
+		944C7B801EA2643A003A06C4 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = AF32F070174671D400EC79F7 /* Swizzlean */;
-			targetProxy = 94BE1DA81EA079710096916B /* PBXContainerItemProxy */;
+			target = 944C7B451EA25FB5003A06C4 /* Swizzlean */;
+			targetProxy = 944C7B7F1EA2643A003A06C4 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		94BE1D9B1EA0722A0096916B /* Debug */ = {
+		944C7B4C1EA25FB5003A06C4 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = FB1A2226EDD135EA495C96C2 /* Pods-Specs.debug.xcconfig */;
 			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				CODE_SIGN_IDENTITY = "";
+				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = "";
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				INFOPLIST_FILE = Specs/Info.plist;
+				INFOPLIST_FILE = Swizzlean/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = com.rkb.Specs;
+				PRODUCT_BUNDLE_IDENTIFIER = com.rkb.swizzlean;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Swizzlean.app/Swizzlean";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
 			};
 			name = Debug;
 		};
-		94BE1D9C1EA0722A0096916B /* Release */ = {
+		944C7B4D1EA25FB5003A06C4 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 953C1BE9EEF224D75E11E569 /* Pods-Specs.release.xcconfig */;
 			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				CODE_SIGN_IDENTITY = "";
 				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = "";
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_NS_ASSERTIONS = NO;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				INFOPLIST_FILE = Specs/Info.plist;
+				INFOPLIST_FILE = Swizzlean/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_BUNDLE_IDENTIFIER = com.rkb.Specs;
+				PRODUCT_BUNDLE_IDENTIFIER = com.rkb.swizzlean;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Swizzlean.app/Swizzlean";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
 		};
-		94BE1DAA1EA079710096916B /* Debug */ = {
+		944C7B661EA261E5003A06C4 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 087B7D7E1C2B7E5D299D0016 /* Pods-IntegrationSpecs.debug.xcconfig */;
+			baseConfigurationReference = FB1A2226EDD135EA495C96C2 /* Pods-Specs.debug.xcconfig */;
 			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = "";
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				INFOPLIST_FILE = Specs/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.rkb.Specs;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+			};
+			name = Debug;
+		};
+		944C7B671EA261E5003A06C4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 953C1BE9EEF224D75E11E569 /* Pods-Specs.release.xcconfig */;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = "";
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				INFOPLIST_FILE = Specs/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = com.rkb.Specs;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+			};
+			name = Release;
+		};
+		944C7B821EA2643A003A06C4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 087B7D7E1C2B7E5D299D0016 /* Pods-IntegrationSpecs.debug.xcconfig */;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				DEVELOPMENT_TEAM = "";
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
@@ -572,22 +647,19 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.rkb.IntegrationSpecs;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Swizzlean.app/Swizzlean";
 			};
 			name = Debug;
 		};
-		94BE1DAB1EA079710096916B /* Release */ = {
+		944C7B831EA2643A003A06C4 /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = DBCAFF6777107717CD828CD3 /* Pods-IntegrationSpecs.release.xcconfig */;
 			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = "";
@@ -601,7 +673,6 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.rkb.IntegrationSpecs;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Swizzlean.app/Swizzlean";
 			};
 			name = Release;
 		};
@@ -682,75 +753,40 @@
 			};
 			name = Release;
 		};
-		AF32F08F174671D400EC79F7 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CLANG_ENABLE_MODULES = YES;
-				DEVELOPMENT_TEAM = "";
-				GCC_PRECOMPILE_PREFIX_HEADER = NO;
-				GCC_PREFIX_HEADER = "";
-				INFOPLIST_FILE = "Swizzlean/Swizzlean-Info.plist";
-				PRODUCT_BUNDLE_IDENTIFIER = "rkbdesigns.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
-				WRAPPER_EXTENSION = app;
-			};
-			name = Debug;
-		};
-		AF32F090174671D400EC79F7 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CLANG_ENABLE_MODULES = YES;
-				DEVELOPMENT_TEAM = "";
-				GCC_PRECOMPILE_PREFIX_HEADER = NO;
-				GCC_PREFIX_HEADER = "";
-				INFOPLIST_FILE = "Swizzlean/Swizzlean-Info.plist";
-				PRODUCT_BUNDLE_IDENTIFIER = "rkbdesigns.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
-				WRAPPER_EXTENSION = app;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		94BE1D9A1EA0722A0096916B /* Build configuration list for PBXNativeTarget "Specs" */ = {
+		944C7B4B1EA25FB5003A06C4 /* Build configuration list for PBXNativeTarget "Swizzlean" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				94BE1D9B1EA0722A0096916B /* Debug */,
-				94BE1D9C1EA0722A0096916B /* Release */,
+				944C7B4C1EA25FB5003A06C4 /* Debug */,
+				944C7B4D1EA25FB5003A06C4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		94BE1DAC1EA079710096916B /* Build configuration list for PBXNativeTarget "IntegrationSpecs" */ = {
+		944C7B651EA261E5003A06C4 /* Build configuration list for PBXNativeTarget "Specs" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				94BE1DAA1EA079710096916B /* Debug */,
-				94BE1DAB1EA079710096916B /* Release */,
+				944C7B661EA261E5003A06C4 /* Debug */,
+				944C7B671EA261E5003A06C4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		944C7B811EA2643A003A06C4 /* Build configuration list for PBXNativeTarget "IntegrationSpecs" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				944C7B821EA2643A003A06C4 /* Debug */,
+				944C7B831EA2643A003A06C4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 		AF32F06C174671D400EC79F7 /* Build configuration list for PBXProject "Swizzlean" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				AF32F08C174671D400EC79F7 /* Debug */,
 				AF32F08D174671D400EC79F7 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		AF32F08E174671D400EC79F7 /* Build configuration list for PBXNativeTarget "Swizzlean" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				AF32F08F174671D400EC79F7 /* Debug */,
-				AF32F090174671D400EC79F7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
