@@ -83,7 +83,7 @@ Version history can be found [on releases page](https://github.com/rbaumbach/Swi
 ## Suggestions, requests, feedback and acknowledgements
 
 Thanks for checking out Swizzlean for your swizzling needs.  Any feedback can be
-can be sent to: <github@ryan.com>.
+can be sent to: <github@ryan.codes>.
 
 Thanks to the following contributors for keeping Swizzlean Swizzletastic:
 [Erik Stromlund](https://github.com/estromlund) & [Aaron Koop](https://github.com/aaronkoop)
