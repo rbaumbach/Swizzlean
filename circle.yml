@@ -1,0 +1,13 @@
+machine:
+  xcode:
+    version: "8.2.1"
+
+dependencies:
+  post:
+    - ./setup.sh
+
+test:
+  override:
+    - bundle exec fastlane specs
+  post:
+    - bash <(curl -s https://codecov.io/bash)
