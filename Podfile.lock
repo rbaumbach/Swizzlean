@@ -4,15 +4,15 @@ PODS:
   - Specta (1.0.6)
 
 DEPENDENCIES:
-  - Expecta (~> 1.0)
-  - OCMock (~> 3.0)
-  - Specta (~> 1.0)
+  - Expecta
+  - OCMock
+  - Specta
 
 SPEC CHECKSUMS:
   Expecta: e1c022fcd33910b6be89c291d2775b3fe27a89fe
   OCMock: 35ae71d6a8fcc1b59434d561d1520b9dd4f15765
   Specta: f506f3a8361de16bc0dcf3b17b75e269072ba465
 
-PODFILE CHECKSUM: b48041f813c47c60492896949fb4df140a8c158f
+PODFILE CHECKSUM: c43dc820eeb25e43398aae8a31f14fe4e7b13e6f
 
 COCOAPODS: 1.2.1
