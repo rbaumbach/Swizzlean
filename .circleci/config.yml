@@ -4,14 +4,14 @@ jobs:
     macos:
       xcode: "9.3.1"
 
-    shell: /bin/bash --login -eo pipefail
-
     steps:
       - checkout
 
       - run:
           name: Setup Ruby version
-          command: echo "ruby-2.4.0" > ~/.ruby_version
+          command: |
+            echo "ruby-2.4.4" > ~/.ruby_version
+            chruby 2.4.4
 
       - run:
           name: Bundle Gems
