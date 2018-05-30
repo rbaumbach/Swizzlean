@@ -41,7 +41,7 @@
 {
     self.getImplementationBlock = [blockImplemenation copy];
     
-    void (^emptyBlock)() = ^void() { };
+    void (^emptyBlock)(void) = ^void() { };
     self.getImplementationBlockImp = imp_implementationWithBlock(emptyBlock);
     
     return self.getImplementationBlockImp;
@@ -54,7 +54,7 @@
     self.updateMethod = method;
     self.updateMethodImplementation = implementation;
     
-    void (^emptyBlock)() = ^void() { };
+    void (^emptyBlock)(void) = ^void() { };
     self.updateMethodSetImplementation = imp_implementationWithBlock(emptyBlock);
     
     return self.updateMethodSetImplementation;
