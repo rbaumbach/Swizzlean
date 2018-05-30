@@ -1,18 +1,24 @@
 PODS:
-  - Expecta (1.0.5)
-  - OCMock (3.4)
-  - Specta (1.0.6)
+  - Expecta (1.0.6)
+  - OCMock (3.4.1)
+  - Specta (1.0.7)
 
 DEPENDENCIES:
   - Expecta
   - OCMock
   - Specta
 
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Expecta
+    - OCMock
+    - Specta
+
 SPEC CHECKSUMS:
-  Expecta: e1c022fcd33910b6be89c291d2775b3fe27a89fe
-  OCMock: 35ae71d6a8fcc1b59434d561d1520b9dd4f15765
-  Specta: f506f3a8361de16bc0dcf3b17b75e269072ba465
+  Expecta: 3b6bd90a64b9a1dcb0b70aa0e10a7f8f631667d5
+  OCMock: 2cd0716969bab32a2283ff3a46fd26a8c8b4c5e3
+  Specta: 3e1bd89c3517421982dc4d1c992503e48bd5fe66
 
 PODFILE CHECKSUM: c43dc820eeb25e43398aae8a31f14fe4e7b13e6f
 
-COCOAPODS: 1.2.1
+COCOAPODS: 1.5.3
