@@ -10,15 +10,11 @@ jobs:
       - checkout
 
       - run:
-          name: Setup Ruby version
+          name: Bundle Gems
           command: |
             echo "ruby-2.4.4" > ~/.ruby_version
             chruby 2.4.4
             ruby -v
-
-      - run:
-          name: Bundle Gems
-          command: |
             gem install bundler
             bundle install
 
