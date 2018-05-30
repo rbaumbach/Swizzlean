@@ -4,19 +4,12 @@ jobs:
     macos:
       xcode: "9.3.1"
 
-    shell: /bin/bash --login -eo pipefail
-
     steps:
       - checkout
 
       - run:
           name: Bundle Gems
-          command: |
-            echo "ruby-2.4.4" > ~/.ruby_version
-            chruby 2.4.4
-            ruby -v
-            gem install bundler
-            bundle install
+          command: bundle install
 
       - run:
           name: Fetch CocoaPods Specs
