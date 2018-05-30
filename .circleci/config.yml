@@ -4,12 +4,18 @@ jobs:
     macos:
       xcode: "9.3.1"
 
+    shell: /bin/bash --login -eo pipefail
+
     steps:
       - checkout
 
       - run:
           name: Bundle Gems
-          command: bundle install
+          command: |
+            echo "ruby-2.4.4" > ~/.ruby_version
+            chruby 2.4.4 && ruby -v
+            gem install bundler
+            bundle install
 
       - run:
           name: Fetch CocoaPods Specs
@@ -17,8 +23,8 @@ jobs:
 
       - run:
           name: Install CocoaPods
-          command: bundle exec pod install
+          command: chruby 2.4.4 && bundle exec pod install
 
       - run:
           name: Run specs
-          command: bundle exec fastlane specs
+          command: chruby 2.4.4 && bundle exec fastlane specs
