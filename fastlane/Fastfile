@@ -1,5 +1,9 @@
 default_platform :ios
 
+# Note: Add the following ENVs to get rid of warnings
+# export LC_ALL=en_US.UTF-8
+# export LANG=en_US.UTF-8
+
 platform :ios do
 
   before_all do
