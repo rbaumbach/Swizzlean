@@ -1,0 +1,30 @@
+version: 2
+jobs:
+  build-and-test:
+    macos:
+      xcode: "9.3.1"
+
+    steps:
+      - checkout
+
+      - run:
+          name: Setup Ruby version
+          command: echo "ruby-2.4.0" > ~/.ruby_version
+
+      - run:
+          name: Bundle Gems
+          command: |
+            gem install bundler
+            bundle install
+
+      - run:
+          name: Fetch CocoaPods Specs
+          command: curl https://cocoapods-specs.circleci.com/fetch-cocoapods-repo-from-s3.sh | bash -s cf
+
+      - run:
+          name: Install CocoaPods
+          command: bundle exec pod install
+
+      - run:
+          name: Run specs
+          command: bundle exec fastlane specs
