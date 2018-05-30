@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name                  = 'Swizzlean'
-  s.version               = '1.0.0'
+  s.version               = '1.0.1'
   s.summary               = 'A quick and lean way to swizzle methods for your Objective-C development needs.'
   s.homepage              = 'https://github.com/rbaumbach/Swizzlean'
   s.license               = { :type => 'MIT', :file => 'MIT-LICENSE.txt' }
