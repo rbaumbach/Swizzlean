@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		944C7B531EA260D2003A06C4 /* RuntimeUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = 944C7B4F1EA260D2003A06C4 /* RuntimeUtils.h */; };
+		944C7B531EA260D2003A06C4 /* RuntimeUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = 944C7B4F1EA260D2003A06C4 /* RuntimeUtils.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		944C7B541EA260D2003A06C4 /* RuntimeUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 944C7B501EA260D2003A06C4 /* RuntimeUtils.m */; };
 		944C7B551EA260D2003A06C4 /* Swizzlean.h in Headers */ = {isa = PBXBuildFile; fileRef = 944C7B511EA260D2003A06C4 /* Swizzlean.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		944C7B561EA260D2003A06C4 /* Swizzlean.m in Sources */ = {isa = PBXBuildFile; fileRef = 944C7B521EA260D2003A06C4 /* Swizzlean.m */; };
