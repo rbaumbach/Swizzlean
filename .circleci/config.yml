@@ -27,3 +27,7 @@ jobs:
       - run:
           name: Run specs
           command: bundle exec fastlane specs
+
+      - run:
+          name: Handle coverage reports
+          command: bash <(curl -s https://codecov.io/bash)
