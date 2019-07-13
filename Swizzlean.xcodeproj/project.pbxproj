@@ -131,31 +131,11 @@
 		944C7B5E1EA261E5003A06C4 /* Specs */ = {
 			isa = PBXGroup;
 			children = (
-				944C7B691EA26242003A06C4 /* Fakes */,
-				944C7B6D1EA26270003A06C4 /* RuntimeUtilsSpec.m */,
-				944C7B6E1EA26270003A06C4 /* SwizzleanSpec.m */,
-				944C7B681EA26237003A06C4 /* Resources */,
+				946059E022DA18F100936CCF /* Swizzlean */,
+				946059DE22DA18B500936CCF /* Fakes */,
+				946059DF22DA18D800936CCF /* Supporting Files */,
 			);
 			path = Specs;
-			sourceTree = "<group>";
-		};
-		944C7B681EA26237003A06C4 /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				944C7B611EA261E5003A06C4 /* Info.plist */,
-			);
-			name = Resources;
-			sourceTree = "<group>";
-		};
-		944C7B691EA26242003A06C4 /* Fakes */ = {
-			isa = PBXGroup;
-			children = (
-				944C7B711EA26277003A06C4 /* TestClass.h */,
-				944C7B721EA26277003A06C4 /* TestClass.m */,
-				944C7B6A1EA26251003A06C4 /* FakeRuntimeUtils.h */,
-				944C7B6B1EA26251003A06C4 /* FakeRuntimeUtils.m */,
-			);
-			name = Fakes;
 			sourceTree = "<group>";
 		};
 		944C7B741EA263EA003A06C4 /* Resources */ = {
@@ -191,6 +171,34 @@
 				944C7B871EA2648A003A06C4 /* IntegrationTestClass.m */,
 			);
 			name = Fakes;
+			sourceTree = "<group>";
+		};
+		946059DE22DA18B500936CCF /* Fakes */ = {
+			isa = PBXGroup;
+			children = (
+				944C7B711EA26277003A06C4 /* TestClass.h */,
+				944C7B721EA26277003A06C4 /* TestClass.m */,
+				944C7B6A1EA26251003A06C4 /* FakeRuntimeUtils.h */,
+				944C7B6B1EA26251003A06C4 /* FakeRuntimeUtils.m */,
+			);
+			path = Fakes;
+			sourceTree = "<group>";
+		};
+		946059DF22DA18D800936CCF /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				944C7B611EA261E5003A06C4 /* Info.plist */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		946059E022DA18F100936CCF /* Swizzlean */ = {
+			isa = PBXGroup;
+			children = (
+				944C7B6E1EA26270003A06C4 /* SwizzleanSpec.m */,
+				944C7B6D1EA26270003A06C4 /* RuntimeUtilsSpec.m */,
+			);
+			path = Swizzlean;
 			sourceTree = "<group>";
 		};
 		AF32F068174671D400EC79F7 = {
@@ -324,6 +332,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -533,8 +542,8 @@
 				DEVELOPMENT_TEAM = "";
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				INFOPLIST_FILE = Specs/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				INFOPLIST_FILE = "Specs/Supporting Files/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.rkb.Specs;
@@ -560,8 +569,8 @@
 				ENABLE_NS_ASSERTIONS = NO;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				INFOPLIST_FILE = Specs/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				INFOPLIST_FILE = "Specs/Supporting Files/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = com.rkb.Specs;
@@ -586,7 +595,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				INFOPLIST_FILE = IntegrationSpecs/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.rkb.IntegrationSpecs;
@@ -613,7 +622,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				INFOPLIST_FILE = IntegrationSpecs/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = com.rkb.IntegrationSpecs;
