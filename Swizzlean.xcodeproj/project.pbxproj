@@ -46,10 +46,10 @@
 		72A6D53B330DF5942EDE5D70 /* libPods-Specs.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Specs.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		944C7B461EA25FB5003A06C4 /* Swizzlean.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Swizzlean.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		944C7B491EA25FB5003A06C4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		944C7B4F1EA260D2003A06C4 /* RuntimeUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RuntimeUtils.h; path = Source/RuntimeUtils.h; sourceTree = "<group>"; };
-		944C7B501EA260D2003A06C4 /* RuntimeUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RuntimeUtils.m; path = Source/RuntimeUtils.m; sourceTree = "<group>"; };
-		944C7B511EA260D2003A06C4 /* Swizzlean.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Swizzlean.h; path = Source/Swizzlean.h; sourceTree = "<group>"; };
-		944C7B521EA260D2003A06C4 /* Swizzlean.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Swizzlean.m; path = Source/Swizzlean.m; sourceTree = "<group>"; };
+		944C7B4F1EA260D2003A06C4 /* RuntimeUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RuntimeUtils.h; sourceTree = "<group>"; };
+		944C7B501EA260D2003A06C4 /* RuntimeUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RuntimeUtils.m; sourceTree = "<group>"; };
+		944C7B511EA260D2003A06C4 /* Swizzlean.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Swizzlean.h; sourceTree = "<group>"; };
+		944C7B521EA260D2003A06C4 /* Swizzlean.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Swizzlean.m; sourceTree = "<group>"; };
 		944C7B5D1EA261E5003A06C4 /* Specs.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Specs.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		944C7B611EA261E5003A06C4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		944C7B6A1EA26251003A06C4 /* FakeRuntimeUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FakeRuntimeUtils.h; sourceTree = "<group>"; };
@@ -111,43 +111,33 @@
 		944C7B471EA25FB5003A06C4 /* Swizzlean */ = {
 			isa = PBXGroup;
 			children = (
-				944C7B4E1EA260C6003A06C4 /* Source */,
-				944C7B741EA263EA003A06C4 /* Resources */,
+				946059E522DA1EEA00936CCF /* Source */,
+				946059E422DA1EBB00936CCF /* Supporting Files */,
 			);
 			path = Swizzlean;
-			sourceTree = "<group>";
-		};
-		944C7B4E1EA260C6003A06C4 /* Source */ = {
-			isa = PBXGroup;
-			children = (
-				944C7B511EA260D2003A06C4 /* Swizzlean.h */,
-				944C7B521EA260D2003A06C4 /* Swizzlean.m */,
-				944C7B4F1EA260D2003A06C4 /* RuntimeUtils.h */,
-				944C7B501EA260D2003A06C4 /* RuntimeUtils.m */,
-			);
-			name = Source;
 			sourceTree = "<group>";
 		};
 		944C7B5E1EA261E5003A06C4 /* Specs */ = {
 			isa = PBXGroup;
 			children = (
-				944C7B691EA26242003A06C4 /* Fakes */,
-				944C7B6D1EA26270003A06C4 /* RuntimeUtilsSpec.m */,
-				944C7B6E1EA26270003A06C4 /* SwizzleanSpec.m */,
-				944C7B681EA26237003A06C4 /* Resources */,
+				946059E022DA18F100936CCF /* Swizzlean */,
+				946059DE22DA18B500936CCF /* Fakes */,
+				946059DF22DA18D800936CCF /* Supporting Files */,
 			);
 			path = Specs;
 			sourceTree = "<group>";
 		};
-		944C7B681EA26237003A06C4 /* Resources */ = {
+		944C7B7A1EA2643A003A06C4 /* IntegrationSpecs */ = {
 			isa = PBXGroup;
 			children = (
-				944C7B611EA261E5003A06C4 /* Info.plist */,
+				946059E222DA1E4000936CCF /* Swizzlean */,
+				946059E122DA1E3600936CCF /* Fakes */,
+				946059E322DA1E5400936CCF /* Supporting Files */,
 			);
-			name = Resources;
+			path = IntegrationSpecs;
 			sourceTree = "<group>";
 		};
-		944C7B691EA26242003A06C4 /* Fakes */ = {
+		946059DE22DA18B500936CCF /* Fakes */ = {
 			isa = PBXGroup;
 			children = (
 				944C7B711EA26277003A06C4 /* TestClass.h */,
@@ -155,42 +145,68 @@
 				944C7B6A1EA26251003A06C4 /* FakeRuntimeUtils.h */,
 				944C7B6B1EA26251003A06C4 /* FakeRuntimeUtils.m */,
 			);
-			name = Fakes;
+			path = Fakes;
 			sourceTree = "<group>";
 		};
-		944C7B741EA263EA003A06C4 /* Resources */ = {
+		946059DF22DA18D800936CCF /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				944C7B491EA25FB5003A06C4 /* Info.plist */,
+				944C7B611EA261E5003A06C4 /* Info.plist */,
 			);
-			name = Resources;
+			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		944C7B7A1EA2643A003A06C4 /* IntegrationSpecs */ = {
+		946059E022DA18F100936CCF /* Swizzlean */ = {
 			isa = PBXGroup;
 			children = (
-				944C7B851EA26481003A06C4 /* Fakes */,
-				944C7B891EA26492003A06C4 /* SwizzleanIntegrationSpec.m */,
-				944C7B841EA26479003A06C4 /* Resources */,
+				944C7B6E1EA26270003A06C4 /* SwizzleanSpec.m */,
+				944C7B6D1EA26270003A06C4 /* RuntimeUtilsSpec.m */,
 			);
-			path = IntegrationSpecs;
+			path = Swizzlean;
 			sourceTree = "<group>";
 		};
-		944C7B841EA26479003A06C4 /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				944C7B7D1EA2643A003A06C4 /* Info.plist */,
-			);
-			name = Resources;
-			sourceTree = "<group>";
-		};
-		944C7B851EA26481003A06C4 /* Fakes */ = {
+		946059E122DA1E3600936CCF /* Fakes */ = {
 			isa = PBXGroup;
 			children = (
 				944C7B861EA2648A003A06C4 /* IntegrationTestClass.h */,
 				944C7B871EA2648A003A06C4 /* IntegrationTestClass.m */,
 			);
-			name = Fakes;
+			path = Fakes;
+			sourceTree = "<group>";
+		};
+		946059E222DA1E4000936CCF /* Swizzlean */ = {
+			isa = PBXGroup;
+			children = (
+				944C7B891EA26492003A06C4 /* SwizzleanIntegrationSpec.m */,
+			);
+			path = Swizzlean;
+			sourceTree = "<group>";
+		};
+		946059E322DA1E5400936CCF /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				944C7B7D1EA2643A003A06C4 /* Info.plist */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		946059E422DA1EBB00936CCF /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				944C7B491EA25FB5003A06C4 /* Info.plist */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		946059E522DA1EEA00936CCF /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				944C7B511EA260D2003A06C4 /* Swizzlean.h */,
+				944C7B521EA260D2003A06C4 /* Swizzlean.m */,
+				944C7B4F1EA260D2003A06C4 /* RuntimeUtils.h */,
+				944C7B501EA260D2003A06C4 /* RuntimeUtils.m */,
+			);
+			path = Source;
 			sourceTree = "<group>";
 		};
 		AF32F068174671D400EC79F7 = {
@@ -302,7 +318,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastTestingUpgradeCheck = 0510;
-				LastUpgradeCheck = 0930;
+				LastUpgradeCheck = 1020;
 				ORGANIZATIONNAME = "RKB Designs";
 				TargetAttributes = {
 					944C7B451EA25FB5003A06C4 = {
@@ -321,7 +337,7 @@
 			};
 			buildConfigurationList = AF32F06C174671D400EC79F7 /* Build configuration list for PBXProject "Swizzlean" */;
 			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
+			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				English,
@@ -468,7 +484,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				INFOPLIST_FILE = Swizzlean/Info.plist;
+				INFOPLIST_FILE = "Swizzlean/Supporting Files/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -504,7 +520,7 @@
 				ENABLE_NS_ASSERTIONS = NO;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				INFOPLIST_FILE = Swizzlean/Info.plist;
+				INFOPLIST_FILE = "Swizzlean/Supporting Files/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -534,8 +550,8 @@
 				DEVELOPMENT_TEAM = "";
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				INFOPLIST_FILE = Specs/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				INFOPLIST_FILE = "Specs/Supporting Files/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.rkb.Specs;
@@ -561,8 +577,8 @@
 				ENABLE_NS_ASSERTIONS = NO;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				INFOPLIST_FILE = Specs/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				INFOPLIST_FILE = "Specs/Supporting Files/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = com.rkb.Specs;
@@ -586,8 +602,8 @@
 				DEVELOPMENT_TEAM = "";
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				INFOPLIST_FILE = IntegrationSpecs/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				INFOPLIST_FILE = "IntegrationSpecs/Supporting Files/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.rkb.IntegrationSpecs;
@@ -613,8 +629,8 @@
 				ENABLE_NS_ASSERTIONS = NO;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				INFOPLIST_FILE = IntegrationSpecs/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				INFOPLIST_FILE = "IntegrationSpecs/Supporting Files/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = com.rkb.IntegrationSpecs;
@@ -627,6 +643,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_OBJC_ARC = YES;
@@ -677,6 +694,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_OBJC_ARC = YES;
