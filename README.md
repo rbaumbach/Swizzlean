@@ -26,7 +26,7 @@ You can also use [Carthage](https://github.com/Carthage/Carthage) to manually ad
 
 ## How To
 
-* Create an instance of **swizzlean** passing in the class of the methods you want to swizzle.
+* Create an instance of **Swizzlean** passing in the class of the methods you want to swizzle.
 * Call `swizzleInstanceMethod:withReplacementImplementation:` for an instance method passing
   in the selector of the method to be swizzled with the replacement implementation.  When
   passing in the replacement implementation block, the first parameter is always `id _self`
