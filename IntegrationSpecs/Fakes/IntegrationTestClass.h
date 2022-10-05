@@ -1,6 +1,5 @@
 #import <Foundation/Foundation.h>
 
-
 @interface IntegrationTestClass : NSObject
 
 - (void)instanceMethod;

@@ -1,4 +1,4 @@
-//Copyright (c) 2013-2019 Ryan Baumbach <github@ryan.codes>
+//Copyright (c) 2013-2022 Ryan Baumbach <github@ryan.codes>
 //
 //Permission is hereby granted, free of charge, to any person obtaining
 //a copy of this software and associated documentation files (the "Software"),
