@@ -1,6 +1,5 @@
 #import "IntegrationTestClass.h"
 
-
 @implementation IntegrationTestClass
 
 #pragma mark - Instance Methods
