@@ -17,11 +17,6 @@ platform :ios do
          configuration: "Debug",
          output_style: "rspec",
          code_coverage: false)
-
-    scan(scheme: "Swizzlean IntegrationSpecs",
-         configuration: "Debug",
-         output_style: "rspec",
-         code_coverage: false)
   end
 
   after_all do |lane|

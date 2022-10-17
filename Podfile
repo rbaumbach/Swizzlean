@@ -8,9 +8,3 @@ target :Specs do
   pod 'Expecta'
   pod 'OCMock'
 end
-
-target :IntegrationSpecs do
-  pod 'Specta'
-  pod 'Expecta'
-  pod 'OCMock'
-end
