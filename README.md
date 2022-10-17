@@ -6,15 +6,22 @@ A quick and "lean" way to swizzle methods for your Objective-C development needs
 
 ### Cocoapods
 
-[CocoaPods](http://cocoapods.org) is the recommended way to add Swizzlean to your project.
+[CocoaPods](http://cocoapods.org) is the recommended way to add `Swizzlean` to your project.
 
 1.  Add Swizzlean to your Podfile `pod 'Swizzlean'`.
 2.  Install the pod(s) by running `pod install`.
 3.  Add Swizzlean to your files with `#import <Swizzlean/Swizzlean.h>`.
 
+### Swift Package Manager (SPM)
+
+[Swift Package Manager](https://swift.org/package-manager/) can be used to add `Swizzlean` the to your project:
+
+1.  Add `.package(url: "https://github.com/rbaumbach/Swizzlean", from: "1.1.0")`
+2.  [Follow intructions to add](https://swift.org/getting-started/#using-the-package-manager) the `Swizzlean` package to your project.
+
 ### Carthage
 
-You can also use [Carthage](https://github.com/Carthage/Carthage) to manually add the Swizzlean dynamic framework to your project.
+You can also use [Carthage](https://github.com/Carthage/Carthage) to manually add the `Swizzlean` framework to your project.
 
 1. Add `github "rbaumbach/Swizzlean"` to your [Cartfile](https://github.com/Carthage/Carthage/blob/master/Documentation/Artifacts.md#cartfile).
 2. [Follow instructions to manually add](https://github.com/Carthage/Carthage#adding-frameworks-to-an-application) Swizzlean dynamic framework to your project.
@@ -64,13 +71,13 @@ NSLog(@"The int value for number7 is: %d", [number7 intValue]);
 
 This project has been setup to use [fastlane](https://fastlane.tools) to run the specs.
 
-First, run the setup.sh script to bundle required gems and Cocoapods when in the project directory:
+First, run the `setup.sh` script to bundle required gems and `Cocoapods` when in the project directory:
 
 ```bash
 $ ./setup.sh
 ```
 
-And then use fastlane to run all the specs on the command line:
+And then use `fastlane` to run all the specs on the command line:
 
 ```bash
 $ bundle exec fastlane specs
@@ -82,8 +89,8 @@ Version history can be found [on releases page](https://github.com/rbaumbach/Swi
 
 ## Suggestions, requests, feedback and acknowledgements
 
-Thanks for checking out Swizzlean for your swizzling needs.  Any feedback can be
+Thanks for checking out `Swizzlean` for your swizzling needs.  Any feedback can be
 can be sent to: <github@ryan.codes>.
 
-Thanks to the following contributors for keeping Swizzlean Swizzletastic:
+Thanks to the following contributors for keeping `Swizzlean` Swizzletastic:
 [Erik Stromlund](https://github.com/estromlund) & [Aaron Koop](https://github.com/aaronkoop)
