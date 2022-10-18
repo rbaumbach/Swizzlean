@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9409BCD328FDEFAF002B5761 /* IntegrationTestClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 944C7B871EA2648A003A06C4 /* IntegrationTestClass.m */; };
+		9409BCD428FDF0A1002B5761 /* SwizzleanIntegrationSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 944C7B891EA26492003A06C4 /* SwizzleanIntegrationSpec.m */; };
 		944C7B531EA260D2003A06C4 /* RuntimeUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = 944C7B4F1EA260D2003A06C4 /* RuntimeUtils.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		944C7B541EA260D2003A06C4 /* RuntimeUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 944C7B501EA260D2003A06C4 /* RuntimeUtils.m */; };
 		944C7B551EA260D2003A06C4 /* Swizzlean.h in Headers */ = {isa = PBXBuildFile; fileRef = 944C7B511EA260D2003A06C4 /* Swizzlean.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -16,22 +18,11 @@
 		944C7B6F1EA26270003A06C4 /* RuntimeUtilsSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 944C7B6D1EA26270003A06C4 /* RuntimeUtilsSpec.m */; };
 		944C7B701EA26270003A06C4 /* SwizzleanSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 944C7B6E1EA26270003A06C4 /* SwizzleanSpec.m */; };
 		944C7B731EA26277003A06C4 /* TestClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 944C7B721EA26277003A06C4 /* TestClass.m */; };
-		944C7B7E1EA2643A003A06C4 /* Swizzlean.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 944C7B461EA25FB5003A06C4 /* Swizzlean.framework */; };
-		944C7B881EA2648A003A06C4 /* IntegrationTestClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 944C7B871EA2648A003A06C4 /* IntegrationTestClass.m */; };
-		944C7B8A1EA26492003A06C4 /* SwizzleanIntegrationSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 944C7B891EA26492003A06C4 /* SwizzleanIntegrationSpec.m */; };
 		970477ACA2B27A3B23D3C1E9 /* libPods-Specs.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 72A6D53B330DF5942EDE5D70 /* libPods-Specs.a */; };
-		C254371D29C85DE126318566 /* libPods-IntegrationSpecs.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 49F0A343DC95C9BB40D5243E /* libPods-IntegrationSpecs.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
 		944C7B631EA261E5003A06C4 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = AF32F069174671D400EC79F7 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 944C7B451EA25FB5003A06C4;
-			remoteInfo = Swizzlean;
-		};
-		944C7B7F1EA2643A003A06C4 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = AF32F069174671D400EC79F7 /* Project object */;
 			proxyType = 1;
@@ -44,13 +35,14 @@
 		087B7D7E1C2B7E5D299D0016 /* Pods-IntegrationSpecs.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IntegrationSpecs.debug.xcconfig"; path = "Pods/Target Support Files/Pods-IntegrationSpecs/Pods-IntegrationSpecs.debug.xcconfig"; sourceTree = "<group>"; };
 		49F0A343DC95C9BB40D5243E /* libPods-IntegrationSpecs.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-IntegrationSpecs.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		72A6D53B330DF5942EDE5D70 /* libPods-Specs.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Specs.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9409BCD528FDF1F8002B5761 /* Package.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
 		944C7B461EA25FB5003A06C4 /* Swizzlean.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Swizzlean.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		944C7B491EA25FB5003A06C4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		944C7B4F1EA260D2003A06C4 /* RuntimeUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RuntimeUtils.h; sourceTree = "<group>"; };
 		944C7B501EA260D2003A06C4 /* RuntimeUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RuntimeUtils.m; sourceTree = "<group>"; };
 		944C7B511EA260D2003A06C4 /* Swizzlean.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Swizzlean.h; sourceTree = "<group>"; };
 		944C7B521EA260D2003A06C4 /* Swizzlean.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Swizzlean.m; sourceTree = "<group>"; };
-		944C7B5D1EA261E5003A06C4 /* Specs.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Specs.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		944C7B5D1EA261E5003A06C4 /* Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		944C7B611EA261E5003A06C4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		944C7B6A1EA26251003A06C4 /* FakeRuntimeUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FakeRuntimeUtils.h; sourceTree = "<group>"; };
 		944C7B6B1EA26251003A06C4 /* FakeRuntimeUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FakeRuntimeUtils.m; sourceTree = "<group>"; };
@@ -58,8 +50,6 @@
 		944C7B6E1EA26270003A06C4 /* SwizzleanSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SwizzleanSpec.m; sourceTree = "<group>"; };
 		944C7B711EA26277003A06C4 /* TestClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestClass.h; sourceTree = "<group>"; };
 		944C7B721EA26277003A06C4 /* TestClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestClass.m; sourceTree = "<group>"; };
-		944C7B791EA2643A003A06C4 /* IntegrationSpecs.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IntegrationSpecs.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		944C7B7D1EA2643A003A06C4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		944C7B861EA2648A003A06C4 /* IntegrationTestClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IntegrationTestClass.h; sourceTree = "<group>"; };
 		944C7B871EA2648A003A06C4 /* IntegrationTestClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IntegrationTestClass.m; sourceTree = "<group>"; };
 		944C7B891EA26492003A06C4 /* SwizzleanIntegrationSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SwizzleanIntegrationSpec.m; sourceTree = "<group>"; };
@@ -85,15 +75,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		944C7B761EA2643A003A06C4 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				944C7B7E1EA2643A003A06C4 /* Swizzlean.framework in Frameworks */,
-				C254371D29C85DE126318566 /* libPods-IntegrationSpecs.a in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -108,38 +89,47 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		9409BCD028FDE934002B5761 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				944C7B471EA25FB5003A06C4 /* Swizzlean */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		9409BCD128FDED63002B5761 /* include */ = {
+			isa = PBXGroup;
+			children = (
+				944C7B511EA260D2003A06C4 /* Swizzlean.h */,
+			);
+			path = include;
+			sourceTree = "<group>";
+		};
 		944C7B471EA25FB5003A06C4 /* Swizzlean */ = {
 			isa = PBXGroup;
 			children = (
-				946059E522DA1EEA00936CCF /* Source */,
+				9409BCD128FDED63002B5761 /* include */,
+				944C7B521EA260D2003A06C4 /* Swizzlean.m */,
+				944C7B4F1EA260D2003A06C4 /* RuntimeUtils.h */,
+				944C7B501EA260D2003A06C4 /* RuntimeUtils.m */,
 				946059E422DA1EBB00936CCF /* Supporting Files */,
 			);
 			path = Swizzlean;
 			sourceTree = "<group>";
 		};
-		944C7B5E1EA261E5003A06C4 /* Specs */ = {
+		944C7B5E1EA261E5003A06C4 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				946059E022DA18F100936CCF /* Swizzlean */,
-				946059DE22DA18B500936CCF /* Fakes */,
-				946059DF22DA18D800936CCF /* Supporting Files */,
+				946059E022DA18F100936CCF /* SwizzleanSpecs */,
 			);
-			path = Specs;
-			sourceTree = "<group>";
-		};
-		944C7B7A1EA2643A003A06C4 /* IntegrationSpecs */ = {
-			isa = PBXGroup;
-			children = (
-				946059E222DA1E4000936CCF /* Swizzlean */,
-				946059E122DA1E3600936CCF /* Fakes */,
-				946059E322DA1E5400936CCF /* Supporting Files */,
-			);
-			path = IntegrationSpecs;
+			path = Tests;
 			sourceTree = "<group>";
 		};
 		946059DE22DA18B500936CCF /* Fakes */ = {
 			isa = PBXGroup;
 			children = (
+				944C7B861EA2648A003A06C4 /* IntegrationTestClass.h */,
+				944C7B871EA2648A003A06C4 /* IntegrationTestClass.m */,
 				944C7B711EA26277003A06C4 /* TestClass.h */,
 				944C7B721EA26277003A06C4 /* TestClass.m */,
 				944C7B6A1EA26251003A06C4 /* FakeRuntimeUtils.h */,
@@ -156,38 +146,16 @@
 			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		946059E022DA18F100936CCF /* Swizzlean */ = {
+		946059E022DA18F100936CCF /* SwizzleanSpecs */ = {
 			isa = PBXGroup;
 			children = (
 				944C7B6E1EA26270003A06C4 /* SwizzleanSpec.m */,
 				944C7B6D1EA26270003A06C4 /* RuntimeUtilsSpec.m */,
-			);
-			path = Swizzlean;
-			sourceTree = "<group>";
-		};
-		946059E122DA1E3600936CCF /* Fakes */ = {
-			isa = PBXGroup;
-			children = (
-				944C7B861EA2648A003A06C4 /* IntegrationTestClass.h */,
-				944C7B871EA2648A003A06C4 /* IntegrationTestClass.m */,
-			);
-			path = Fakes;
-			sourceTree = "<group>";
-		};
-		946059E222DA1E4000936CCF /* Swizzlean */ = {
-			isa = PBXGroup;
-			children = (
 				944C7B891EA26492003A06C4 /* SwizzleanIntegrationSpec.m */,
+				946059DE22DA18B500936CCF /* Fakes */,
+				946059DF22DA18D800936CCF /* Supporting Files */,
 			);
-			path = Swizzlean;
-			sourceTree = "<group>";
-		};
-		946059E322DA1E5400936CCF /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				944C7B7D1EA2643A003A06C4 /* Info.plist */,
-			);
-			path = "Supporting Files";
+			path = SwizzleanSpecs;
 			sourceTree = "<group>";
 		};
 		946059E422DA1EBB00936CCF /* Supporting Files */ = {
@@ -198,23 +166,12 @@
 			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		946059E522DA1EEA00936CCF /* Source */ = {
-			isa = PBXGroup;
-			children = (
-				944C7B511EA260D2003A06C4 /* Swizzlean.h */,
-				944C7B521EA260D2003A06C4 /* Swizzlean.m */,
-				944C7B4F1EA260D2003A06C4 /* RuntimeUtils.h */,
-				944C7B501EA260D2003A06C4 /* RuntimeUtils.m */,
-			);
-			path = Source;
-			sourceTree = "<group>";
-		};
 		AF32F068174671D400EC79F7 = {
 			isa = PBXGroup;
 			children = (
-				944C7B471EA25FB5003A06C4 /* Swizzlean */,
-				944C7B5E1EA261E5003A06C4 /* Specs */,
-				944C7B7A1EA2643A003A06C4 /* IntegrationSpecs */,
+				9409BCD528FDF1F8002B5761 /* Package.swift */,
+				9409BCD028FDE934002B5761 /* Sources */,
+				944C7B5E1EA261E5003A06C4 /* Tests */,
 				AF32F073174671D400EC79F7 /* Frameworks */,
 				AF32F072174671D400EC79F7 /* Products */,
 				856653F7E066C59131F7D3DF /* Pods */,
@@ -225,8 +182,7 @@
 			isa = PBXGroup;
 			children = (
 				944C7B461EA25FB5003A06C4 /* Swizzlean.framework */,
-				944C7B5D1EA261E5003A06C4 /* Specs.xctest */,
-				944C7B791EA2643A003A06C4 /* IntegrationSpecs.xctest */,
+				944C7B5D1EA261E5003A06C4 /* Tests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -273,9 +229,9 @@
 			productReference = 944C7B461EA25FB5003A06C4 /* Swizzlean.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		944C7B5C1EA261E5003A06C4 /* Specs */ = {
+		944C7B5C1EA261E5003A06C4 /* Tests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 944C7B651EA261E5003A06C4 /* Build configuration list for PBXNativeTarget "Specs" */;
+			buildConfigurationList = 944C7B651EA261E5003A06C4 /* Build configuration list for PBXNativeTarget "Tests" */;
 			buildPhases = (
 				578D50B06C3349689E7C685C /* [CP] Check Pods Manifest.lock */,
 				944C7B591EA261E5003A06C4 /* Sources */,
@@ -287,28 +243,9 @@
 			dependencies = (
 				944C7B641EA261E5003A06C4 /* PBXTargetDependency */,
 			);
-			name = Specs;
+			name = Tests;
 			productName = Specs;
-			productReference = 944C7B5D1EA261E5003A06C4 /* Specs.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		944C7B781EA2643A003A06C4 /* IntegrationSpecs */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 944C7B811EA2643A003A06C4 /* Build configuration list for PBXNativeTarget "IntegrationSpecs" */;
-			buildPhases = (
-				F5797F3549F768A9497182EA /* [CP] Check Pods Manifest.lock */,
-				944C7B751EA2643A003A06C4 /* Sources */,
-				944C7B761EA2643A003A06C4 /* Frameworks */,
-				944C7B771EA2643A003A06C4 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				944C7B801EA2643A003A06C4 /* PBXTargetDependency */,
-			);
-			name = IntegrationSpecs;
-			productName = IntegrationSpecs;
-			productReference = 944C7B791EA2643A003A06C4 /* IntegrationSpecs.xctest */;
+			productReference = 944C7B5D1EA261E5003A06C4 /* Tests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -323,13 +260,10 @@
 				TargetAttributes = {
 					944C7B451EA25FB5003A06C4 = {
 						CreatedOnToolsVersion = 8.3.1;
+						LastSwiftMigration = 1400;
 						ProvisioningStyle = Manual;
 					};
 					944C7B5C1EA261E5003A06C4 = {
-						CreatedOnToolsVersion = 8.3.1;
-						ProvisioningStyle = Manual;
-					};
-					944C7B781EA2643A003A06C4 = {
 						CreatedOnToolsVersion = 8.3.1;
 						ProvisioningStyle = Manual;
 					};
@@ -349,8 +283,7 @@
 			projectRoot = "";
 			targets = (
 				944C7B451EA25FB5003A06C4 /* Swizzlean */,
-				944C7B5C1EA261E5003A06C4 /* Specs */,
-				944C7B781EA2643A003A06C4 /* IntegrationSpecs */,
+				944C7B5C1EA261E5003A06C4 /* Tests */,
 			);
 		};
 /* End PBXProject section */
@@ -364,13 +297,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		944C7B5B1EA261E5003A06C4 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		944C7B771EA2643A003A06C4 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -398,24 +324,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		F5797F3549F768A9497182EA /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-IntegrationSpecs-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -432,19 +340,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				944C7B731EA26277003A06C4 /* TestClass.m in Sources */,
-				944C7B6C1EA26251003A06C4 /* FakeRuntimeUtils.m in Sources */,
 				944C7B701EA26270003A06C4 /* SwizzleanSpec.m in Sources */,
 				944C7B6F1EA26270003A06C4 /* RuntimeUtilsSpec.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		944C7B751EA2643A003A06C4 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				944C7B881EA2648A003A06C4 /* IntegrationTestClass.m in Sources */,
-				944C7B8A1EA26492003A06C4 /* SwizzleanIntegrationSpec.m in Sources */,
+				9409BCD428FDF0A1002B5761 /* SwizzleanIntegrationSpec.m in Sources */,
+				9409BCD328FDEFAF002B5761 /* IntegrationTestClass.m in Sources */,
+				944C7B731EA26277003A06C4 /* TestClass.m in Sources */,
+				944C7B6C1EA26251003A06C4 /* FakeRuntimeUtils.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -455,11 +356,6 @@
 			isa = PBXTargetDependency;
 			target = 944C7B451EA25FB5003A06C4 /* Swizzlean */;
 			targetProxy = 944C7B631EA261E5003A06C4 /* PBXContainerItemProxy */;
-		};
-		944C7B801EA2643A003A06C4 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 944C7B451EA25FB5003A06C4 /* Swizzlean */;
-			targetProxy = 944C7B7F1EA2643A003A06C4 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -483,7 +379,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				INFOPLIST_FILE = "Swizzlean/Supporting Files/Info.plist";
+				INFOPLIST_FILE = "Sources/Swizzlean/Supporting Files/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -492,6 +388,8 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -519,7 +417,7 @@
 				ENABLE_NS_ASSERTIONS = NO;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				INFOPLIST_FILE = "Swizzlean/Supporting Files/Info.plist";
+				INFOPLIST_FILE = "Sources/Swizzlean/Supporting Files/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -528,6 +426,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -549,11 +448,11 @@
 				DEVELOPMENT_TEAM = "";
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				INFOPLIST_FILE = "Specs/Supporting Files/Info.plist";
+				INFOPLIST_FILE = "Tests/SwizzleanSpecs/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = com.rkb.Specs;
+				PRODUCT_BUNDLE_IDENTIFIER = com.rkb.Tests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 			};
@@ -576,63 +475,11 @@
 				ENABLE_NS_ASSERTIONS = NO;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				INFOPLIST_FILE = "Specs/Supporting Files/Info.plist";
+				INFOPLIST_FILE = "Tests/SwizzleanSpecs/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_BUNDLE_IDENTIFIER = com.rkb.Specs;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
-			};
-			name = Release;
-		};
-		944C7B821EA2643A003A06C4 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 087B7D7E1C2B7E5D299D0016 /* Pods-IntegrationSpecs.debug.xcconfig */;
-			buildSettings = {
-				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEVELOPMENT_TEAM = "";
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				INFOPLIST_FILE = "IntegrationSpecs/Supporting Files/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = com.rkb.IntegrationSpecs;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
-			};
-			name = Debug;
-		};
-		944C7B831EA2643A003A06C4 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = DBCAFF6777107717CD828CD3 /* Pods-IntegrationSpecs.release.xcconfig */;
-			buildSettings = {
-				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				COPY_PHASE_STRIP = NO;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEVELOPMENT_TEAM = "";
-				ENABLE_NS_ASSERTIONS = NO;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				INFOPLIST_FILE = "IntegrationSpecs/Supporting Files/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_BUNDLE_IDENTIFIER = com.rkb.IntegrationSpecs;
+				PRODUCT_BUNDLE_IDENTIFIER = com.rkb.Tests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 			};
@@ -747,20 +594,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		944C7B651EA261E5003A06C4 /* Build configuration list for PBXNativeTarget "Specs" */ = {
+		944C7B651EA261E5003A06C4 /* Build configuration list for PBXNativeTarget "Tests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				944C7B661EA261E5003A06C4 /* Debug */,
 				944C7B671EA261E5003A06C4 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		944C7B811EA2643A003A06C4 /* Build configuration list for PBXNativeTarget "IntegrationSpecs" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				944C7B821EA2643A003A06C4 /* Debug */,
-				944C7B831EA2643A003A06C4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

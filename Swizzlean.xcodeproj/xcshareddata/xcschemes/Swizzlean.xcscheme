@@ -42,8 +42,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "944C7B5C1EA261E5003A06C4"
-            BuildableName = "Specs.xctest"
-            BlueprintName = "Specs"
+            BuildableName = "Tests.xctest"
+            BlueprintName = "Tests"
             ReferencedContainer = "container:Swizzlean.xcodeproj">
          </BuildableReference>
          <BuildableReference
@@ -60,8 +60,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "944C7B5C1EA261E5003A06C4"
-               BuildableName = "Specs.xctest"
-               BlueprintName = "Specs"
+               BuildableName = "Tests.xctest"
+               BlueprintName = "Tests"
                ReferencedContainer = "container:Swizzlean.xcodeproj">
             </BuildableReference>
          </TestableReference>
