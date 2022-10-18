@@ -14,7 +14,7 @@ let package = Package(
         .target(
             name: "Swizzlean"),
         .testTarget(
-            name: "SwizzleanTests",
+            name: "SwizzleanSpecs",
             dependencies: ["Swizzlean"])
     ]
 )

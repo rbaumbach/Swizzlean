@@ -42,7 +42,7 @@
 		944C7B501EA260D2003A06C4 /* RuntimeUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RuntimeUtils.m; sourceTree = "<group>"; };
 		944C7B511EA260D2003A06C4 /* Swizzlean.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Swizzlean.h; sourceTree = "<group>"; };
 		944C7B521EA260D2003A06C4 /* Swizzlean.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Swizzlean.m; sourceTree = "<group>"; };
-		944C7B5D1EA261E5003A06C4 /* Specs.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Specs.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		944C7B5D1EA261E5003A06C4 /* Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		944C7B611EA261E5003A06C4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		944C7B6A1EA26251003A06C4 /* FakeRuntimeUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FakeRuntimeUtils.h; sourceTree = "<group>"; };
 		944C7B6B1EA26251003A06C4 /* FakeRuntimeUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FakeRuntimeUtils.m; sourceTree = "<group>"; };
@@ -120,7 +120,7 @@
 		944C7B5E1EA261E5003A06C4 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				946059E022DA18F100936CCF /* SwizzleanTests */,
+				946059E022DA18F100936CCF /* SwizzleanSpecs */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -146,7 +146,7 @@
 			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		946059E022DA18F100936CCF /* SwizzleanTests */ = {
+		946059E022DA18F100936CCF /* SwizzleanSpecs */ = {
 			isa = PBXGroup;
 			children = (
 				944C7B6E1EA26270003A06C4 /* SwizzleanSpec.m */,
@@ -155,7 +155,7 @@
 				946059DE22DA18B500936CCF /* Fakes */,
 				946059DF22DA18D800936CCF /* Supporting Files */,
 			);
-			path = SwizzleanTests;
+			path = SwizzleanSpecs;
 			sourceTree = "<group>";
 		};
 		946059E422DA1EBB00936CCF /* Supporting Files */ = {
@@ -182,7 +182,7 @@
 			isa = PBXGroup;
 			children = (
 				944C7B461EA25FB5003A06C4 /* Swizzlean.framework */,
-				944C7B5D1EA261E5003A06C4 /* Specs.xctest */,
+				944C7B5D1EA261E5003A06C4 /* Tests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -229,9 +229,9 @@
 			productReference = 944C7B461EA25FB5003A06C4 /* Swizzlean.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		944C7B5C1EA261E5003A06C4 /* Specs */ = {
+		944C7B5C1EA261E5003A06C4 /* Tests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 944C7B651EA261E5003A06C4 /* Build configuration list for PBXNativeTarget "Specs" */;
+			buildConfigurationList = 944C7B651EA261E5003A06C4 /* Build configuration list for PBXNativeTarget "Tests" */;
 			buildPhases = (
 				578D50B06C3349689E7C685C /* [CP] Check Pods Manifest.lock */,
 				944C7B591EA261E5003A06C4 /* Sources */,
@@ -243,9 +243,9 @@
 			dependencies = (
 				944C7B641EA261E5003A06C4 /* PBXTargetDependency */,
 			);
-			name = Specs;
+			name = Tests;
 			productName = Specs;
-			productReference = 944C7B5D1EA261E5003A06C4 /* Specs.xctest */;
+			productReference = 944C7B5D1EA261E5003A06C4 /* Tests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -283,7 +283,7 @@
 			projectRoot = "";
 			targets = (
 				944C7B451EA25FB5003A06C4 /* Swizzlean */,
-				944C7B5C1EA261E5003A06C4 /* Specs */,
+				944C7B5C1EA261E5003A06C4 /* Tests */,
 			);
 		};
 /* End PBXProject section */
@@ -448,11 +448,11 @@
 				DEVELOPMENT_TEAM = "";
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				INFOPLIST_FILE = "Tests/SwizzleanTests/Supporting Files/Info.plist";
+				INFOPLIST_FILE = "Tests/SwizzleanSpecs/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = com.rkb.Specs;
+				PRODUCT_BUNDLE_IDENTIFIER = com.rkb.Tests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 			};
@@ -475,11 +475,11 @@
 				ENABLE_NS_ASSERTIONS = NO;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				INFOPLIST_FILE = "Tests/SwizzleanTests/Supporting Files/Info.plist";
+				INFOPLIST_FILE = "Tests/SwizzleanSpecs/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_BUNDLE_IDENTIFIER = com.rkb.Specs;
+				PRODUCT_BUNDLE_IDENTIFIER = com.rkb.Tests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 			};
@@ -594,7 +594,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		944C7B651EA261E5003A06C4 /* Build configuration list for PBXNativeTarget "Specs" */ = {
+		944C7B651EA261E5003A06C4 /* Build configuration list for PBXNativeTarget "Tests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				944C7B661EA261E5003A06C4 /* Debug */,
