@@ -105,14 +105,6 @@
 			path = include;
 			sourceTree = "<group>";
 		};
-		9409BCD228FDEF9E002B5761 /* SwizzleanIntegrationTests */ = {
-			isa = PBXGroup;
-			children = (
-				944C7B891EA26492003A06C4 /* SwizzleanIntegrationSpec.m */,
-			);
-			path = SwizzleanIntegrationTests;
-			sourceTree = "<group>";
-		};
 		944C7B471EA25FB5003A06C4 /* Swizzlean */ = {
 			isa = PBXGroup;
 			children = (
@@ -129,9 +121,6 @@
 			isa = PBXGroup;
 			children = (
 				946059E022DA18F100936CCF /* SwizzleanTests */,
-				9409BCD228FDEF9E002B5761 /* SwizzleanIntegrationTests */,
-				946059DE22DA18B500936CCF /* Fakes */,
-				946059DF22DA18D800936CCF /* Supporting Files */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -162,6 +151,9 @@
 			children = (
 				944C7B6E1EA26270003A06C4 /* SwizzleanSpec.m */,
 				944C7B6D1EA26270003A06C4 /* RuntimeUtilsSpec.m */,
+				944C7B891EA26492003A06C4 /* SwizzleanIntegrationSpec.m */,
+				946059DE22DA18B500936CCF /* Fakes */,
+				946059DF22DA18D800936CCF /* Supporting Files */,
 			);
 			path = SwizzleanTests;
 			sourceTree = "<group>";
@@ -456,7 +448,7 @@
 				DEVELOPMENT_TEAM = "";
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				INFOPLIST_FILE = "Tests/Supporting Files/Info.plist";
+				INFOPLIST_FILE = "Tests/SwizzleanTests/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = YES;
@@ -483,7 +475,7 @@
 				ENABLE_NS_ASSERTIONS = NO;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				INFOPLIST_FILE = "Tests/Supporting Files/Info.plist";
+				INFOPLIST_FILE = "Tests/SwizzleanTests/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = NO;
