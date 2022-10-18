@@ -18,7 +18,7 @@
 		944C7B6F1EA26270003A06C4 /* RuntimeUtilsSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 944C7B6D1EA26270003A06C4 /* RuntimeUtilsSpec.m */; };
 		944C7B701EA26270003A06C4 /* SwizzleanSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 944C7B6E1EA26270003A06C4 /* SwizzleanSpec.m */; };
 		944C7B731EA26277003A06C4 /* TestClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 944C7B721EA26277003A06C4 /* TestClass.m */; };
-		970477ACA2B27A3B23D3C1E9 /* libPods-Specs.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 72A6D53B330DF5942EDE5D70 /* libPods-Specs.a */; };
+		D45518DDE58FC8B709247942 /* libPods-Tests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 42E8A47F16D10DA7E923E252 /* libPods-Tests.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,8 +33,9 @@
 
 /* Begin PBXFileReference section */
 		087B7D7E1C2B7E5D299D0016 /* Pods-IntegrationSpecs.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IntegrationSpecs.debug.xcconfig"; path = "Pods/Target Support Files/Pods-IntegrationSpecs/Pods-IntegrationSpecs.debug.xcconfig"; sourceTree = "<group>"; };
+		42E8A47F16D10DA7E923E252 /* libPods-Tests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Tests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		49F0A343DC95C9BB40D5243E /* libPods-IntegrationSpecs.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-IntegrationSpecs.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		72A6D53B330DF5942EDE5D70 /* libPods-Specs.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Specs.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8CC016DECDF85F0FBAB966C3 /* Pods-Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Tests/Pods-Tests.release.xcconfig"; sourceTree = "<group>"; };
 		9409BCD528FDF1F8002B5761 /* Package.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
 		944C7B461EA25FB5003A06C4 /* Swizzlean.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Swizzlean.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		944C7B491EA25FB5003A06C4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -54,6 +55,7 @@
 		944C7B871EA2648A003A06C4 /* IntegrationTestClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IntegrationTestClass.m; sourceTree = "<group>"; };
 		944C7B891EA26492003A06C4 /* SwizzleanIntegrationSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SwizzleanIntegrationSpec.m; sourceTree = "<group>"; };
 		953C1BE9EEF224D75E11E569 /* Pods-Specs.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Specs.release.xcconfig"; path = "Pods/Target Support Files/Pods-Specs/Pods-Specs.release.xcconfig"; sourceTree = "<group>"; };
+		A8D0C76F4928C75335C9D5F1 /* Pods-Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Tests/Pods-Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		DBCAFF6777107717CD828CD3 /* Pods-IntegrationSpecs.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IntegrationSpecs.release.xcconfig"; path = "Pods/Target Support Files/Pods-IntegrationSpecs/Pods-IntegrationSpecs.release.xcconfig"; sourceTree = "<group>"; };
 		FB1A2226EDD135EA495C96C2 /* Pods-Specs.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Specs.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Specs/Pods-Specs.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -71,7 +73,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				944C7B621EA261E5003A06C4 /* Swizzlean.framework in Frameworks */,
-				970477ACA2B27A3B23D3C1E9 /* libPods-Specs.a in Frameworks */,
+				D45518DDE58FC8B709247942 /* libPods-Tests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -85,6 +87,8 @@
 				DBCAFF6777107717CD828CD3 /* Pods-IntegrationSpecs.release.xcconfig */,
 				FB1A2226EDD135EA495C96C2 /* Pods-Specs.debug.xcconfig */,
 				953C1BE9EEF224D75E11E569 /* Pods-Specs.release.xcconfig */,
+				A8D0C76F4928C75335C9D5F1 /* Pods-Tests.debug.xcconfig */,
+				8CC016DECDF85F0FBAB966C3 /* Pods-Tests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -191,7 +195,7 @@
 			isa = PBXGroup;
 			children = (
 				49F0A343DC95C9BB40D5243E /* libPods-IntegrationSpecs.a */,
-				72A6D53B330DF5942EDE5D70 /* libPods-Specs.a */,
+				42E8A47F16D10DA7E923E252 /* libPods-Tests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -317,7 +321,7 @@
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Specs-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-Tests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -435,7 +439,7 @@
 		};
 		944C7B661EA261E5003A06C4 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = FB1A2226EDD135EA495C96C2 /* Pods-Specs.debug.xcconfig */;
+			baseConfigurationReference = A8D0C76F4928C75335C9D5F1 /* Pods-Tests.debug.xcconfig */;
 			buildSettings = {
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
@@ -460,7 +464,7 @@
 		};
 		944C7B671EA261E5003A06C4 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 953C1BE9EEF224D75E11E569 /* Pods-Specs.release.xcconfig */;
+			baseConfigurationReference = 8CC016DECDF85F0FBAB966C3 /* Pods-Tests.release.xcconfig */;
 			buildSettings = {
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
